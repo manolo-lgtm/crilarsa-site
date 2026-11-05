@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Crilarsa C.A.: carbonato de calcio, Cal Forte (hidróxido de calcio), zeolita y sulfato de calcio para camaroneras y el agro del Ecuador. Planta en Vía a la Costa km 22, Guayaquil, desde el año 2000.">
+<link rel="icon" type="image/png" href="logo-crilarsa-blanco.png"><title>Crilarsa · Minerales calcáreos para acuicultura y agro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: una sola página con menú fijo; bandas a todo el ancho; contenido en columna de 1180px; azul Crilarsa como acento */
+:root{
+  --navy:#0f1d44; --blue:#1f43a8; --blue-soft:#e8edf9; --stone:#f3f1ec; --line:#dcd8d0; --ink:#1a1d24; --muted:#5b6070; --white:#ffffff;
+  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --max:1180px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.6vw,44px);font-weight:700}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.inner{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.intro{max-width:62ch;color:var(--muted);font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;padding:13px 22px;border-radius:4px;border:1.5px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--blue);color:var(--white)}
+.btn-primary:hover{background:#18388d}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #7d9bff;outline-offset:3px}
+section{padding-block:clamp(56px,8vw,96px)}
+
+/* Aviso de vista previa */
+.preview{background:#f4d35e;color:#2a2205;font-family:var(--mono);font-size:12px;text-align:center;padding-block:7px}
+
+/* Menú */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);color:var(--white)}
+.nav .inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-family:var(--display);font-weight:500;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.85}
+.nav ul a:hover{opacity:1}
+.nav .right{display:flex;align-items:center;gap:16px}
+.menu-btn{display:none;background:none;border:1.5px solid rgba(255,255,255,.5);color:var(--white);border-radius:4px;padding:8px 12px;font:600 14px var(--display);cursor:pointer}
+
+/* Portada */
+.hero{position:relative;color:var(--white);background:var(--navy) url("portada-planta-oscura.jpg") center 35%/cover no-repeat;padding-block:clamp(72px,11vw,140px) clamp(40px,6vw,64px)}
+.hero h1{font-size:clamp(34px,5.4vw,64px);font-weight:700;max-width:16ch}
+.hero p{font-size:clamp(18px,1.8vw,21px);max-width:52ch;margin-top:20px;color:#dfe5f5}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:clamp(48px,7vw,80px);background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18)}
+.facts div{background:rgba(15,29,68,.72);padding:18px 20px;min-width:0}
+.facts strong{display:block;font-family:var(--display);font-size:clamp(20px,2.2vw,26px);font-weight:700}
+.facts span{font-size:14px;color:#c9d2ea}
+
+/* Nosotros */
+.about .inner{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.about .text{display:grid;gap:18px;min-width:0}
+.about .text p{color:var(--muted)}
+.about figure{margin:0}
+.about img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.about figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* Productos */
+.products{background:var(--stone)}
+.products header{display:grid;gap:14px;margin-bottom:40px}
+.grid-products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:24px;display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;min-width:0}
+.product .sack{background:#eef0f5;border-radius:4px;aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.product .sack img{width:82%;height:82%;object-fit:contain}
+.product .chem{font-family:var(--mono);font-size:12px;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
+.product p{color:var(--muted);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;background:var(--blue-soft);color:var(--blue);padding:4px 8px;border-radius:3px}
+.product.alt{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.product.alt p{color:#c9d2ea}
+.product.alt .chem{color:#9fb4ff}
+.product.alt .chips span{background:rgba(255,255,255,.12);color:var(--white)}
+.product.alt .icon{font-family:var(--display);font-size:52px;font-weight:700;line-height:1;color:#9fb4ff}
+
+/* Por qué */
+.why header{display:grid;gap:14px;margin-bottom:40px}
+.reasons{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.reason{display:grid;gap:10px;border-top:3px solid var(--blue);padding-top:18px;min-width:0}
+.reason p{color:var(--muted);font-size:16px}
+
+/* Planta */
+.plant{background:var(--stone)}
+.plant header{display:grid;gap:14px;margin-bottom:32px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(180px,22vw,280px);gap:12px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:4px;min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .wide{grid-column:span 2}
+.gallery .tall{grid-row:span 2}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;font-size:14px;color:var(--white);background:linear-gradient(transparent,rgba(10,18,40,.75))}
+
+/* Contacto */
+.contact .inner{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,64px)}
+.contact .text{display:grid;gap:18px;align-content:start;min-width:0}
+.contact dl{display:grid;gap:14px;margin:12px 0 0}
+.contact dt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contact dd{margin:2px 0 0;font-size:18px;font-weight:500;overflow-wrap:anywhere}
+form{display:grid;gap:18px;background:var(--stone);border:1px solid var(--line);border-radius:6px;padding:clamp(20px,3vw,32px);min-width:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px;min-width:0}
+label small{font-weight:400;color:var(--muted)}
+input,textarea,select{font:inherit;font-size:16px;font-weight:400;background:var(--white);border:1px solid #c9c4ba;border-radius:4px;padding:11px 12px;color:var(--ink);width:100%}
+textarea{min-height:120px;resize:vertical}
+form .btn{border:0;cursor:pointer;justify-self:start}
+.sent{font-size:15px;color:var(--blue);font-weight:600}
+
+/* Pie */
+footer{background:var(--navy);color:#c9d2ea;font-size:15px}
+footer .top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;padding-block:48px}
+footer img{height:52px;width:auto;margin-bottom:12px}
+footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:0 0 12px;font-weight:500}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24px;font-size:13px}
+
+/* Tablet */
+@media (max-width:980px){
+  .grid-products{grid-template-columns:repeat(2,1fr)}
+  .reasons{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+/* Teléfono */
+@media (max-width:760px){
+  .nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--navy);border-top:1px solid rgba(255,255,255,.15);padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .menu-btn{display:inline-block}
+  .nav .right .btn{display:none}
+  .nav img{height:38px}
+  .about .inner,.contact .inner{grid-template-columns:1fr}
+  .grid-products{grid-template-columns:1fr}
+  .reasons{grid-template-columns:1fr;gap:24px}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .gallery .wide{grid-column:span 2}
+  .gallery .tall{grid-row:span 1}
+  .row{grid-template-columns:1fr}
+  footer .top{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Principal">
+  <div class="inner">
+    <a href="#inicio" aria-label="Crilarsa, inicio"><img src="logo-crilarsa-blanco.png" alt="Crilarsa C.A. Química Inteligente"></a>
+    <ul id="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#por-que">Por qué Crilarsa</a></li>
+      <li><a href="#planta">Planta</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="right">
+      <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="inner">
+    <div class="eyebrow" style="color:#9fb4ff">Química inteligente · Guayaquil, Ecuador</div>
+    <h1 style="margin-top:14px">Minerales calcáreos para camaroneras y el agro</h1>
+    <p>Desde el año 2000 extraemos, molemos y envasamos carbonato de calcio, cal, zeolita y sulfato de calcio en nuestra planta de la Vía a la Costa, con entrega directa a su finca.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+      <a class="btn btn-ghost" href="#productos">Ver productos</a>
+    </div>
+    <div class="facts">
+      <div><strong>Desde 2000</strong><span>más de 25 años en el sector</span></div>
+      <div><strong>Planta propia</strong><span>Vía a la Costa km 22</span></div>
+      <div><strong>Registro INP</strong><span>Cal Forte, Neutrocal y Zeolita</span></div>
+      <div><strong>Mallas 40 a 325</strong><span>granulometría controlada</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="nosotros">
+  <div class="inner">
+    <div class="text">
+      <div class="eyebrow">Nosotros</div>
+      <h2>Una empresa ecuatoriana que produce lo que vende</h2>
+      <p>Crilarsa C.A. opera desde el año 2000 en la trituración y molienda de piedra caliza. Desde nuestra cantera y nuestras plantas en la Vía a la Costa abastecemos a camaroneras y productores agrícolas de todo el país.</p>
+      <p>Controlamos cada paso: la materia prima, la molienda, el envasado y el despacho. Eso nos permite ofrecer un producto de calidad constante, precios estables y asesoría técnica para mejorar el agua, el suelo y la productividad de cada ciclo.</p>
+      <div><a class="btn btn-primary" href="#contacto">Hablar con un asesor</a></div>
+    </div>
+    <figure>
+      <img src="crilarsa-DSC_7935.jpg" alt="Equipo técnico y clientes en la cantera de Crilarsa">
+      <figcaption>Visita técnica en nuestra cantera de la Vía a la Costa.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="products" id="productos">
+  <div class="inner">
+    <header>
+      <div class="eyebrow">Productos</div>
+      <h2>Insumos minerales para acuicultura y agricultura</h2>
+      <p class="intro">Saco de 25 kg, con ficha técnica para cada producto. Le ayudamos a elegir la malla y la dosis según su piscina o su cultivo.</p>
+    </header>
+    <div class="grid-products">
+      <article class="product">
+        <div class="sack"><img src="saco-neutrocal.png" alt="Saco Neutrocal, carbonato de calcio"></div>
+        <div><div class="chem">CaCO₃ · Neutrocal</div><h3>Carbonato de calcio</h3></div>
+        <p>Corrige la alcalinidad y estabiliza el pH del agua y del fondo de las piscinas. Nuestro producto de mayor volumen.</p>
+        <div class="chips"><span>Malla 200</span><span>Malla 100</span><span>Malla 40</span></div>
+      </article>
+      <article class="product">
+        <div class="sack"><img src="saco-calforte.png" alt="Saco Cal Forte Plus, hidróxido de calcio"></div>
+        <div><div class="chem">Ca(OH)₂ · Cal Forte</div><h3>Hidróxido de calcio</h3></div>
+        <p>Cal hidratada para la preparación y desinfección de piscinas entre ciclos y la corrección rápida del pH.</p>
+        <div class="chips"><span>Tipo A</span><span>Tipo B</span><span>Plus</span></div>
+      </article>
+      <article class="product">
+        <div class="sack"><img src="saco-zeolita.png" alt="Saco de zeolita"></div>
+        <div><div class="chem">Zeolita natural</div><h3>Zeolita</h3></div>
+        <p>Ayuda a capturar amonio y a mejorar la calidad del fondo y del agua en el cultivo.</p>
+        <div class="chips"><span>Malla 200</span><span>Malla 100</span></div>
+      </article>
+      <article class="product">
+        <div class="sack" style="background:var(--blue-soft)"><span style="font:700 46px var(--display);color:var(--blue)">CaSO₄</span></div>
+        <div><div class="chem">CaSO₄ · Yeso</div><h3>Sulfato de calcio</h3></div>
+        <p>Aporte de calcio y azufre para suelos y aguas que lo requieren, sin elevar el pH.</p>
+        <div class="chips"><span>Agro</span><span>Acuicultura</span></div>
+      </article>
+      <article class="product alt" style="grid-column:span 2">
+        <div class="icon">+</div>
+        <div><div class="chem">A la medida</div><h3>Mezclas para su finca</h3></div>
+        <p>Preparamos mezclas de cal, carbonato y yeso según el análisis de su agua o suelo, y le entregamos la ficha técnica de cada lote.</p>
+        <div><a class="btn btn-primary" href="#contacto">Pedir una mezcla</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="por-que">
+  <div class="inner">
+    <header>
+      <div class="eyebrow">Por qué Crilarsa</div>
+      <h2>Lo que nos diferencia</h2>
+    </header>
+    <div class="reasons">
+      <div class="reason"><h3>Más de 25 años</h3><p>Operamos desde el año 2000. Conocemos el sector camaronero y sus ciclos.</p></div>
+      <div class="reason"><h3>Producción propia</h3><p>Cantera, molienda y envasado en nuestra planta. Sin intermediarios y con stock disponible.</p></div>
+      <div class="reason"><h3>Calidad respaldada</h3><p>Productos con registro INP y ficha técnica, y control de granulometría en cada lote.</p></div>
+      <div class="reason"><h3>Entrega y asesoría</h3><p>Despacho directo a su finca o retiro en planta, con acompañamiento técnico en la dosificación.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="plant" id="planta">
+  <div class="inner">
+    <header>
+      <div class="eyebrow">Nuestra planta</div>
+      <h2>De la cantera al saco, en la Vía a la Costa</h2>
+    </header>
+    <div class="gallery">
+      <figure class="tall"><img src="crilarsa-DSC_7929.jpg" alt="Molino y ciclones de la planta"><figcaption>Molienda y clasificación</figcaption></figure>
+      <figure class="wide"><img src="camion-1.jpeg" alt="Volqueta descargando piedra caliza"><figcaption>Llegada de materia prima</figcaption></figure>
+      <figure><img src="crilarsa-DSC_7928.jpg" alt="Elevadores y silos de la planta"><figcaption>Elevadores y silos</figcaption></figure>
+      <figure><img src="camion-5.jpeg" alt="Volquetas en el patio de la planta"><figcaption>Logística</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="inner">
+    <div class="text">
+      <div class="eyebrow">Contacto</div>
+      <h2>Pida su cotización</h2>
+      <p class="intro">Cuéntenos qué producto necesita, la cantidad y dónde está su finca. Le respondemos con precio y fecha de entrega.</p>
+      <dl>
+        <div><dt>Correo</dt><dd>finanzas@crilarsa.com</dd></div>
+        <div><dt>Planta</dt><dd>Vía a la Costa km 22, Guayaquil, Ecuador</dd></div>
+        <div><dt>RUC</dt><dd>0992110945001</dd></div>
+      </dl>
+    </div>
+    <form id="f" action="https://formsubmit.co/finanzas@crilarsa.com" method="POST"><input type="hidden" name="_subject" value="Nuevo mensaje desde crilarsa.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label for="nombre">Nombre<input id="nombre" name="nombre" autocomplete="name" required></label>
+        <label for="empresa">Empresa o camaronera<input id="empresa" name="empresa" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label for="correo">Correo electrónico<input id="correo" name="email" type="email" autocomplete="email" required></label>
+        <label for="telefono">Teléfono / WhatsApp<input id="telefono" name="telefono" type="tel" autocomplete="tel"></label>
+      </div>
+      <label for="producto">Producto de interés
+        <select id="producto" name="producto">
+          <option>Carbonato de calcio</option>
+          <option>Cal Forte (hidróxido de calcio)</option>
+          <option>Zeolita</option>
+          <option>Sulfato de calcio</option>
+          <option>Mezcla a la medida</option>
+        </select>
+      </label>
+      <label for="mensaje">Mensaje <small>(cantidad y ubicación de la finca)</small><textarea id="mensaje" name="mensaje" required></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="inner top">
+    <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Minerales calcáreos para la acuicultura y el agro del Ecuador, desde el año 2000.</p></div>
+    <div><h4>Sitio</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#productos">Productos</a></li><li><a href="#planta">Planta</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li>finanzas@crilarsa.com</li><li>Vía a la Costa km 22, Guayaquil</li><li>RUC 0992110945001</li></ul></div>
+  </div>
+  <div class="inner bottom">© 2026 Crilarsa C.A. · Química Inteligente</div>
+</footer>
+
+<script>
+var btn=document.getElementById('menu-btn'),menu=document.getElementById('menu');
+btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+
+</script>
+
+</body>
+</html>
