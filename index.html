@@ -84,6 +84,7 @@ section{padding-block:clamp(56px,8vw,96px)}
 .product.alt p{color:#c9d2ea}
 .product.alt .chem{color:#9fb4ff}
 .product.alt .chips span{background:rgba(255,255,255,.12);color:var(--white)}
+.wide-card{grid-column:span 2}
 .product.alt .icon{font-family:var(--display);font-size:52px;font-weight:700;line-height:1;color:#9fb4ff}
 
 /* Por qué */
@@ -143,6 +144,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   .nav img{height:38px}
   .about .inner,.contact .inner{grid-template-columns:1fr}
   .grid-products{grid-template-columns:1fr}
+  .wide-card{grid-column:auto}
+  .product .sack{aspect-ratio:4/3}
   .reasons{grid-template-columns:1fr;gap:24px}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gallery .wide{grid-column:span 2}
@@ -239,7 +242,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <p>Aporte de calcio y azufre para suelos y aguas que lo requieren, sin elevar el pH.</p>
         <div class="chips"><span>Agro</span><span>Acuicultura</span></div>
       </article>
-      <article class="product alt" style="grid-column:span 2">
+      <article class="product alt wide-card">
         <div class="icon">+</div>
         <div><div class="chem">A la medida</div><h3>Mezclas para su finca</h3></div>
         <p>Preparamos mezclas de cal, carbonato y yeso según el análisis de su agua o suelo, y le entregamos la ficha técnica de cada lote.</p>
