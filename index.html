@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Crilarsa C.A.: carbonato de calcio, Cal Forte (hidróxido de calcio), zeolita y sulfato de calcio para camaroneras y el agro del Ecuador. Planta en Vía a la Costa km 22, Guayaquil, desde el año 2000.">
-<link rel="icon" type="image/png" href="logo-crilarsa-blanco.png"><title>Crilarsa · Minerales calcáreos para acuicultura y agro</title>
+<meta name="description" content="Crilarsa C.A.: carbonato de calcio, Cal Forte (hidróxido de calcio), zeolita y sulfato de calcio para la acuicultura y la agricultura del Ecuador. Planta en la Vía a la Costa, km 22, Guayaquil. Experiencia desde 1989.">
+<link rel="icon" type="image/png" href="logo-crilarsa-blanco.png"><title>Crilarsa · Minerales para la acuicultura y la agricultura</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
@@ -68,6 +68,20 @@ section{padding-block:clamp(56px,8vw,96px)}
 .about figure{margin:0}
 .about img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
 .about figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* Misión y visión */
+.mission{background:var(--navy);color:var(--white)}
+.mission header{display:grid;gap:14px;margin-bottom:36px}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mv article{border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:clamp(22px,3vw,32px);display:grid;gap:12px;align-content:start;min-width:0}
+.mv h3{font-size:22px;color:#9fb4ff}
+.mv p{color:#dfe5f5;font-size:18px}
+.values{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15)}
+.values li{background:var(--navy);padding:18px 20px;display:grid;gap:4px;min-width:0}
+.values strong{font-family:var(--display);font-size:17px}
+.values span{font-size:15px;color:#c9d2ea}
+@media (max-width:980px){.values{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.mv,.values{grid-template-columns:1fr}}
 
 /* Productos */
 .products{background:var(--stone)}
@@ -164,8 +178,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <a href="#inicio" aria-label="Crilarsa, inicio"><img src="logo-crilarsa-blanco.png" alt="Crilarsa C.A. Química Inteligente"></a>
     <ul id="menu">
       <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#mision">Misión y visión</a></li>
       <li><a href="#productos">Productos</a></li>
-      <li><a href="#por-que">Por qué Crilarsa</a></li>
       <li><a href="#planta">Planta</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -178,16 +192,16 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 
 <header class="hero" id="inicio">
   <div class="inner">
-    <div class="eyebrow" style="color:#9fb4ff">Química inteligente · Guayaquil, Ecuador</div>
-    <h1 style="margin-top:14px">Minerales calcáreos para camaroneras y el agro</h1>
-    <p>Desde el año 2000 extraemos, molemos y envasamos carbonato de calcio, cal, zeolita y sulfato de calcio en nuestra planta de la Vía a la Costa, con entrega directa a su finca.</p>
+    <div class="eyebrow" style="color:#9fb4ff">Química Inteligente · Guayaquil, Ecuador</div>
+    <h1 style="margin-top:14px">Minerales industriales para la acuicultura y la agricultura</h1>
+    <p>Con más de 35 años de experiencia en el sector, producimos carbonato de calcio, hidróxido de calcio, zeolita y sulfato de calcio en nuestra planta de la Vía a la Costa, con despacho directo a su finca.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
       <a class="btn btn-ghost" href="#productos">Ver productos</a>
     </div>
     <div class="facts">
-      <div><strong>Desde 2000</strong><span>más de 25 años en el sector</span></div>
-      <div><strong>Planta propia</strong><span>Vía a la Costa km 22</span></div>
+      <div><strong>Desde 1989</strong><span>más de 35 años de experiencia</span></div>
+      <div><strong>Planta propia</strong><span>Vía a la Costa, km 22</span></div>
       <div><strong>Registro INP</strong><span>Cal Forte, Neutrocal y Zeolita</span></div>
       <div><strong>Mallas 40 a 325</strong><span>granulometría controlada</span></div>
     </div>
@@ -198,9 +212,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   <div class="inner">
     <div class="text">
       <div class="eyebrow">Nosotros</div>
-      <h2>Una empresa ecuatoriana que produce lo que vende</h2>
-      <p>Crilarsa C.A. opera desde el año 2000 en la trituración y molienda de piedra caliza. Desde nuestra cantera y nuestras plantas en la Vía a la Costa abastecemos a camaroneras y productores agrícolas de todo el país.</p>
-      <p>Controlamos cada paso: la materia prima, la molienda, el envasado y el despacho. Eso nos permite ofrecer un producto de calidad constante, precios estables y asesoría técnica para mejorar el agua, el suelo y la productividad de cada ciclo.</p>
+      <h2>Trayectoria, producción propia y respaldo técnico</h2>
+      <p>Nuestra historia en la extracción y molienda de minerales calcáreos en Guayaquil comenzó en 1989. En el año 2000 se constituyó Crilarsa C.A., que hoy abastece a camaroneras, distribuidores y productores agrícolas de todo el país desde su cantera y sus plantas en la Vía a la Costa.</p>
+      <p>Controlamos todo el proceso: extracción de la materia prima, trituración, molienda, clasificación, envasado y despacho. Así garantizamos un producto de calidad constante, disponibilidad permanente y una asesoría técnica orientada a mejorar la calidad del agua, del suelo y la productividad de cada ciclo.</p>
       <div><a class="btn btn-primary" href="#contacto">Hablar con un asesor</a></div>
     </div>
     <figure>
@@ -210,43 +224,62 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   </div>
 </section>
 
+<section class="mission" id="mision">
+  <div class="inner">
+    <header>
+      <div class="eyebrow" style="color:#9fb4ff">Misión, visión y valores</div>
+      <h2>Lo que nos guía</h2>
+    </header>
+    <div class="mv">
+      <article><h3>Misión</h3><p>Proveer al sector acuícola y agrícola del Ecuador insumos minerales de alta calidad, con producción propia, entrega oportuna y asesoría técnica que contribuyan a la productividad y la sostenibilidad de nuestros clientes.</p></article>
+      <article><h3>Visión</h3><p>Ser la empresa ecuatoriana de referencia en minerales calcáreos para la acuicultura y la agricultura, reconocida por la calidad de sus productos, la confiabilidad de su servicio y su compromiso con el desarrollo del país.</p></article>
+    </div>
+    <ul class="values">
+      <li><strong>Calidad</strong><span>Control de pureza y granulometría en cada lote.</span></li>
+      <li><strong>Cumplimiento</strong><span>Entregas puntuales y compromisos claros.</span></li>
+      <li><strong>Responsabilidad</strong><span>Operación segura y respetuosa con el entorno.</span></li>
+      <li><strong>Servicio técnico</strong><span>Acompañamiento al cliente en cada aplicación.</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="products" id="productos">
   <div class="inner">
     <header>
       <div class="eyebrow">Productos</div>
       <h2>Insumos minerales para acuicultura y agricultura</h2>
-      <p class="intro">Saco de 25 kg, con ficha técnica para cada producto. Le ayudamos a elegir la malla y la dosis según su piscina o su cultivo.</p>
+      <p class="intro">Presentación en sacos de 25 kg, con ficha técnica para cada producto. Le asesoramos en la selección de la granulometría y la dosis adecuadas para su piscina o su cultivo.</p>
     </header>
     <div class="grid-products">
       <article class="product">
         <div class="sack"><img src="saco-neutrocal.png" alt="Saco Neutrocal, carbonato de calcio"></div>
         <div><div class="chem">CaCO₃ · Neutrocal</div><h3>Carbonato de calcio</h3></div>
-        <p>Corrige la alcalinidad y estabiliza el pH del agua y del fondo de las piscinas. Nuestro producto de mayor volumen.</p>
+        <p>Corrige la alcalinidad y estabiliza el pH del agua y del suelo de las piscinas. Es nuestro producto de mayor demanda.</p>
         <div class="chips"><span>Malla 200</span><span>Malla 100</span><span>Malla 40</span></div>
       </article>
       <article class="product">
         <div class="sack"><img src="saco-calforte.png" alt="Saco Cal Forte Plus, hidróxido de calcio"></div>
         <div><div class="chem">Ca(OH)₂ · Cal Forte</div><h3>Hidróxido de calcio</h3></div>
-        <p>Cal hidratada para la preparación y desinfección de piscinas entre ciclos y la corrección rápida del pH.</p>
+        <p>Cal hidratada para la preparación y desinfección de piscinas entre ciclos, y para la corrección rápida del pH.</p>
         <div class="chips"><span>Tipo A</span><span>Tipo B</span><span>Plus</span></div>
       </article>
       <article class="product">
         <div class="sack"><img src="saco-zeolita.png" alt="Saco de zeolita"></div>
         <div><div class="chem">Zeolita natural</div><h3>Zeolita</h3></div>
-        <p>Ayuda a capturar amonio y a mejorar la calidad del fondo y del agua en el cultivo.</p>
+        <p>Contribuye a la captura de amonio y mejora la calidad del suelo y del agua de cultivo.</p>
         <div class="chips"><span>Malla 200</span><span>Malla 100</span></div>
       </article>
       <article class="product">
         <div class="sack" style="background:var(--blue-soft)"><span style="font:700 46px var(--display);color:var(--blue)">CaSO₄</span></div>
         <div><div class="chem">CaSO₄ · Yeso</div><h3>Sulfato de calcio</h3></div>
-        <p>Aporte de calcio y azufre para suelos y aguas que lo requieren, sin elevar el pH.</p>
+        <p>Aporta calcio y azufre a los suelos y las aguas que lo requieren, sin elevar el pH.</p>
         <div class="chips"><span>Agro</span><span>Acuicultura</span></div>
       </article>
       <article class="product alt wide-card">
         <div class="icon">+</div>
         <div><div class="chem">A la medida</div><h3>Mezclas para su finca</h3></div>
-        <p>Preparamos mezclas de cal, carbonato y yeso según el análisis de su agua o suelo, y le entregamos la ficha técnica de cada lote.</p>
-        <div><a class="btn btn-primary" href="#contacto">Pedir una mezcla</a></div>
+        <p>Elaboramos mezclas de cal, carbonato de calcio y yeso según el análisis de su agua o suelo, con ficha técnica para cada lote.</p>
+        <div><a class="btn btn-primary" href="#contacto">Solicitar una mezcla</a></div>
       </article>
     </div>
   </div>
@@ -259,10 +292,10 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
       <h2>Lo que nos diferencia</h2>
     </header>
     <div class="reasons">
-      <div class="reason"><h3>Más de 25 años</h3><p>Operamos desde el año 2000. Conocemos el sector camaronero y sus ciclos.</p></div>
-      <div class="reason"><h3>Producción propia</h3><p>Cantera, molienda y envasado en nuestra planta. Sin intermediarios y con stock disponible.</p></div>
-      <div class="reason"><h3>Calidad respaldada</h3><p>Productos con registro INP y ficha técnica, y control de granulometría en cada lote.</p></div>
-      <div class="reason"><h3>Entrega y asesoría</h3><p>Despacho directo a su finca o retiro en planta, con acompañamiento técnico en la dosificación.</p></div>
+      <div class="reason"><h3>Más de 35 años</h3><p>Experiencia en el sector desde 1989. Conocemos a fondo la acuicultura ecuatoriana y sus ciclos productivos.</p></div>
+      <div class="reason"><h3>Producción propia</h3><p>Cantera, molienda y envasado en nuestras plantas, sin intermediarios y con inventario disponible.</p></div>
+      <div class="reason"><h3>Calidad respaldada</h3><p>Productos con registro INP, ficha técnica y control de granulometría en cada lote.</p></div>
+      <div class="reason"><h3>Logística y asesoría</h3><p>Despacho directo a su finca o retiro en planta, con acompañamiento técnico en la dosificación.</p></div>
     </div>
   </div>
 </section>
@@ -286,8 +319,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   <div class="inner">
     <div class="text">
       <div class="eyebrow">Contacto</div>
-      <h2>Pida su cotización</h2>
-      <p class="intro">Cuéntenos qué producto necesita, la cantidad y dónde está su finca. Le respondemos con precio y fecha de entrega.</p>
+      <h2>Solicite su cotización</h2>
+      <p class="intro">Indíquenos el producto, la cantidad y la ubicación de su finca, y le responderemos con el precio y la fecha de entrega.</p>
       <dl>
         <div><dt>Correo</dt><dd>finanzas@crilarsa.com</dd></div>
         <div><dt>Planta</dt><dd>Vía a la Costa km 22, Guayaquil, Ecuador</dd></div>
@@ -320,8 +353,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 
 <footer>
   <div class="inner top">
-    <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Minerales calcáreos para la acuicultura y el agro del Ecuador, desde el año 2000.</p></div>
-    <div><h4>Sitio</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#productos">Productos</a></li><li><a href="#planta">Planta</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+    <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Minerales calcáreos para la acuicultura y la agricultura del Ecuador. Experiencia desde 1989.</p></div>
+    <div><h4>Sitio</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#mision">Misión y visión</a></li><li><a href="#productos">Productos</a></li><li><a href="#planta">Planta</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
     <div><h4>Contacto</h4><ul><li>finanzas@crilarsa.com</li><li>Vía a la Costa km 22, Guayaquil</li><li>RUC 0992110945001</li></ul></div>
   </div>
   <div class="inner bottom">© 2026 Crilarsa C.A. · Química Inteligente</div>
