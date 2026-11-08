@@ -98,14 +98,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* Un solo proveedor */
 .onestop{background:var(--white);padding-block:clamp(56px,7vw,88px);border-top:1px solid var(--line)}
-.chain{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);counter-reset:c;position:relative}
+.chain{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:c;position:relative}
 .chain li{counter-increment:c;position:relative;padding:22px 18px 0 0;border-top:3px solid var(--blue);display:grid;gap:6px;min-width:0}
 .chain li::before{content:counter(c);position:absolute;top:-17px;left:0;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font:700 14px/30px var(--display);text-align:center}
-.chain li:nth-child(3){border-top-color:var(--navy)}
-.chain li:nth-child(3)::before{background:var(--navy)}
+.finep{margin-top:28px;font-size:13px;color:var(--muted)}
 .chain strong{font-family:var(--display);font-size:18px;margin-top:6px}
 .chain span{color:var(--muted);font-size:15.5px}
-@media (max-width:860px){.chain{grid-template-columns:1fr;gap:26px}.chain li{border-top:0;border-left:3px solid var(--blue);padding:0 0 0 22px}.chain li::before{top:0;left:-17px}.chain li:nth-child(3){border-left-color:var(--navy)}}
+@media (max-width:860px){.chain{grid-template-columns:1fr;gap:26px}.chain li{border-top:0;border-left:3px solid var(--blue);padding:0 0 0 22px}.chain li::before{top:0;left:-17px}}
 /* Productos: filas editoriales */
 .products{background:var(--stone)}
 .prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
@@ -361,15 +360,15 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <div class="head" style="margin-bottom:32px">
       <div class="eyebrow">Un solo proveedor</div>
       <h2>De la cantera al saco, todo en un mismo lugar</h2>
-      <p class="lead">Controlamos toda la cadena: la materia prima, el procesamiento, los sacos y la carga. Fabricamos nuestros propios sacos y contamos con una planta de sacos integrada a nuestras instalaciones. Usted trata con un solo proveedor, de principio a fin: calidad profesional, precios justos y un producto que cumple sus estándares.</p>
+      <p class="lead">Controlamos toda la cadena: la materia prima, el procesamiento, el ensacado y la carga. Usted trata con un solo proveedor, de principio a fin: calidad profesional, precios justos y un producto que cumple sus estándares.</p>
     </div>
     <ol class="chain">
       <li><strong>Materia prima</strong><span>Piedra caliza de cantera</span></li>
       <li><strong>Procesamiento</strong><span>Trituración, molienda y clasificación</span></li>
-      <li><strong>Sacos propios</strong><span>Fabricados en nuestra planta de sacos</span></li>
       <li><strong>Ensacado y estiba</strong><span>Producto identificado y paletizado</span></li>
       <li><strong>Carga y despacho</strong><span>Carga mecanizada en nuestros muelles</span></li>
     </ol>
+    <p class="finep">Próximamente: fabricación propia de sacos en nuestras instalaciones.</p>
   </div>
 </section>
 
