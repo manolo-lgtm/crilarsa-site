@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520" width="480" height="520">
+  <defs>
+    <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#fbfbf8"/>
+      <path d="M0 1.5h6M0 4.5h6" stroke="#e6e6e0" stroke-width="1"/>
+      <path d="M1.5 0v6M4.5 0v6" stroke="#efefea" stroke-width=".8"/>
+    </pattern>
+    <linearGradient id="shadeX" x1="0" x2="1">
+      <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+      <stop offset=".12" stop-color="#000" stop-opacity=".05"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".08"/>
+      <stop offset=".88" stop-color="#000" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="shadeY" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity=".12"/>
+      <stop offset=".1" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".9" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".18"/>
+    </linearGradient>
+    <clipPath id="bag"><path id="bagp" d="M70 34 Q240 18 410 34 L420 60 Q438 260 422 470 L412 494 Q240 508 68 494 L58 470 Q42 260 60 60 Z"/></clipPath>
+    <g id="mol">
+      <path d="M0 0L-13 -11M0 0L13 -11M0 0L-13 11M0 0L13 11M0 0V-16" stroke="#6cbd4f" stroke-width="3" stroke-linecap="round"/>
+      <circle r="7" fill="#6cbd4f"/>
+      <circle cx="-13" cy="-11" r="4.2" fill="#6cbd4f"/><circle cx="13" cy="-11" r="4.2" fill="#6cbd4f"/>
+      <circle cx="-13" cy="11" r="4.2" fill="#6cbd4f"/><circle cx="13" cy="11" r="4.2" fill="#6cbd4f"/>
+      <circle cy="-16" r="3.4" fill="#6cbd4f"/>
+    </g>
+    <filter id="drop" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity=".22"/></filter>
+  </defs>
+  <g filter="url(#drop)">
+    <use href="#bagp" fill="#fbfbf8"/>
+  </g>
+  <g clip-path="url(#bag)">
+    <rect width="480" height="520" fill="url(#weave)"/>
+    <!-- franja verde inferior -->
+    <path d="M40 392 Q240 384 440 392 V520 H40Z" fill="#6cbd4f"/>
+    <!-- logo superior -->
+    <g font-family="Montserrat, 'Arial Black', Arial, sans-serif" text-anchor="middle" fill="#1d1d1b">
+      <text x="240" y="92" font-size="34" font-weight="700" textLength="190" lengthAdjust="spacingAndGlyphs">BIOMARSA</text>
+      <text x="240" y="112" font-size="12.5" textLength="110" lengthAdjust="spacing">KRAVETS</text>
+    </g>
+    <circle cx="210" cy="80" r="12" fill="none" stroke="#1d1d1b" stroke-width="0"/>
+    <!-- moléculas -->
+    <g>
+      <use href="#mol" x="148" y="152"/><use href="#mol" x="194" y="152"/><use href="#mol" x="240" y="152"/><use href="#mol" x="286" y="152"/><use href="#mol" x="332" y="152"/>
+      <use href="#mol" x="148" y="196"/><use href="#mol" x="194" y="196"/><use href="#mol" x="240" y="196"/><use href="#mol" x="286" y="196"/><use href="#mol" x="332" y="196"/>
+      <use href="#mol" x="171" y="240"/><use href="#mol" x="217" y="240"/><use href="#mol" x="263" y="240"/><use href="#mol" x="309" y="240"/>
+    </g>
+    <!-- nombre del producto -->
+    <g font-family="Montserrat, 'Arial Black', Arial, sans-serif" text-anchor="middle" fill="#1d1d1b" font-weight="900">
+      <text x="240" y="296" font-size="25" textLength="290" lengthAdjust="spacingAndGlyphs">CARBONATO DE CALCIO</text>
+      <text x="240" y="322" font-size="20" textLength="250" lengthAdjust="spacingAndGlyphs">+ SULFATO DE CALCIO 3:1</text>
+    </g>
+    <g font-family="Arial, sans-serif" fill="#1d1d1b" text-anchor="middle">
+      <text x="168" y="346" font-size="11" font-weight="700" letter-spacing="1">ULTRAFINO</text>
+      <text x="168" y="362" font-size="12" font-weight="700">CaCO₃ + CaSO₄</text>
+      <text x="168" y="375" font-size="7.5" font-weight="700" textLength="110" lengthAdjust="spacingAndGlyphs">97% CARBONATO DE CALCIO</text>
+      <text x="168" y="386" font-size="8.5" font-weight="700">20% AZUFRE</text>
+      <text x="282" y="346" font-size="12" font-weight="700">45 KG</text>
+      <text x="334" y="346" font-size="12" font-weight="700">50 KG</text>
+    </g>
+    <rect x="268" y="352" width="28" height="26" fill="none" stroke="#1d1d1b" stroke-width="1.6"/>
+    <rect x="320" y="352" width="28" height="26" fill="none" stroke="#1d1d1b" stroke-width="1.6"/>
+    
+    <!-- logo en franja -->
+    <g font-family="Montserrat, 'Arial Black', Arial, sans-serif" text-anchor="middle" fill="#fff">
+      <text x="240" y="448" font-size="34" font-weight="700" textLength="190" lengthAdjust="spacingAndGlyphs">BIOMARSA</text>
+      <text x="240" y="468" font-size="12.5" textLength="110" lengthAdjust="spacing">KRAVETS</text>
+    </g>
+    <!-- sombreado y pliegues -->
+    <rect width="480" height="520" fill="url(#shadeX)"/>
+    <rect width="480" height="520" fill="url(#shadeY)"/>
+    <path d="M70 46 Q240 34 410 46" stroke="#000" stroke-opacity=".12" stroke-width="2" fill="none"/>
+    <path d="M68 482 Q240 494 412 482" stroke="#000" stroke-opacity=".15" stroke-width="2" fill="none"/>
+    <path d="M96 60 Q90 260 98 470" stroke="#000" stroke-opacity=".06" stroke-width="10" fill="none"/>
+    <path d="M384 60 Q392 260 382 470" stroke="#000" stroke-opacity=".06" stroke-width="10" fill="none"/>
+  </g>
+  <!-- costuras -->
+  <path d="M70 34 Q240 18 410 34" stroke="#d7d7d0" stroke-width="3" stroke-dasharray="5 4" fill="none"/>
+  <path d="M68 494 Q240 508 412 494" stroke="#4f9a37" stroke-width="3" stroke-dasharray="5 4" fill="none"/>
+</svg>

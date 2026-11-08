@@ -226,7 +226,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .vframe iframe{width:100%;height:100%;border:0;display:block}
 .vbox .x{position:absolute;top:-44px;right:0;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer}
 .vyt{display:inline-block;margin-top:10px;color:#cfd8e1;font-size:14px}
-@media (max-width:860px){.learn-row{grid-template-columns:1fr;gap:12px}.vid{display:grid;grid-template-columns:128px 1fr;column-gap:12px;align-items:start}.vid .vt{grid-row:1/3}.vid .vt i{width:34px;height:34px}.vid .vt i::after{left:13px;top:10px;border-left-width:11px;border-top-width:7px;border-bottom-width:7px}.vid strong{margin-top:0}}.tabs button.all{border-style:dashed}
+@media (max-width:860px){.learn-row{grid-template-columns:1fr;gap:12px}.vid{display:grid;grid-template-columns:128px 1fr;column-gap:12px;align-items:start}.vid .vt{grid-row:1/3}.vid .vt i{width:34px;height:34px}.vid .vt i::after{left:13px;top:10px;border-left-width:11px;border-top-width:7px;border-bottom-width:7px}.vid strong{margin-top:0}}.nav ul a{white-space:nowrap}
+@media (max-width:1240px){.nav .lang svg{display:none}}
+.nav .lang{display:inline-flex;align-items:center;gap:6px;color:#dfe5eb;border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:5px 8px;margin-right:4px}
+.nav .lang:hover{border-color:rgba(255,255,255,.6)}
+.nav .lang select{background:transparent;color:inherit;border:0;font:600 14px var(--display);cursor:pointer;padding:2px 2px;width:auto}
+.nav .lang select:focus{outline:none}
+.nav .lang option{color:#1e2833;background:#fff}
+@media (max-width:860px){.nav .lang{padding:5px 6px}.nav .lang svg{display:none}.nav .lang select{max-width:96px;font-size:13px}}
+.tabs button.all{border-style:dashed}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
 .tabs button[aria-selected="true"] .ti{background:var(--blue-soft);color:var(--blue)}
 .panel .pi{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e6ebf0;margin-bottom:16px}
@@ -437,6 +445,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="right">
+      <label class="lang" title="Idioma"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><select id="lang-sel" class="notranslate" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="zh">中文</option></select></label>
       <a class="btn btn-wa js-wa" data-msg="general" href="#contacto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Hablar con un asesor</a>
       <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
     </div>
@@ -476,7 +485,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <div class="head" style="margin-bottom:28px">
       <div class="eyebrow" style="color:#b9c5d1">Soluciones por sector</div>
       <h2>¿Qué minerales necesita su actividad?</h2>
-      <p class="lead">Elija su sector, indique cuántos sacos necesita de cada producto y agréguelos a su pedido. Al final envía el pedido completo por WhatsApp o por formulario. Atendemos desde pedidos puntuales hasta compras de miles de sacos. La selección final y la dosis dependen de las condiciones de su suelo, su agua o su proceso: nuestro equipo le orienta antes de la compra.</p>
+      <p class="lead">Elija su sector, indique cuántos sacos necesita de cada producto y agréguelos a su pedido. Al final, envíe el pedido completo por WhatsApp. Atendemos desde pedidos puntuales hasta compras de miles de sacos. La selección final y la dosis dependen de las condiciones de su suelo, su agua o su proceso: nuestro equipo le orienta antes de la compra.</p>
     </div>
     <div class="tabs" role="tablist" aria-label="Sectores">
       <button role="tab" id="t-banano" aria-controls="banano" aria-selected="true"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 14.5c3.5 4.5 11 4 14.5-2.5 1.2-2.3 1.2-5.2 0-7.5l-1.3.8c.1 3.3-1.8 6.5-5.2 7.8-2.8 1.1-5.6 1.2-8 1.4z"/><path d="M17.7 5.3l.8-2.3"/><path d="M8 15.8c3 .6 6.5-.6 8.4-3.6"/></svg>Bananero</button>
@@ -769,7 +778,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
     zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'',f:'CaSO₄',pres:'Presentación a confirmar'},
-    mezcla:{n:'Mezcla mineral 3:1',img:'',f:'3:1',pres:'Presentación a confirmar'}
+    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.svg',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}
@@ -778,7 +787,8 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function qtyBox(v){return '<span class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" step="1" value="'+v+'" inputmode="numeric" aria-label="Cantidad de sacos"><button type="button" data-d="1" aria-label="Más">+</button></span>'}
   function inc(v){return v<10?1:(v<100?10:50)}
   function step(box,d){var i=box.querySelector('input'),v=parseInt(i.value,10)||0;var n=d>0?v+inc(v):v-inc(v-1);i.value=Math.max(1,n)}
-  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl||pnl.id==='todos')return '';var t=document.getElementById('t-'+pnl.id);return t?t.textContent.trim():''}
+  [].forEach.call(document.querySelectorAll('.tabs [role=tab]'),function(t){t.dataset.name=t.textContent.trim()});
+  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl||pnl.id==='todos')return '';var t=document.getElementById('t-'+pnl.id);return t?(t.dataset.name||t.textContent.trim()):''}
   /* Controles en las listas por sector y en el catálogo */
   [].forEach.call(document.querySelectorAll('[data-p]'),function(el){
     var k=el.getAttribute('data-p'),p=P[k];if(!p)return;
@@ -884,6 +894,58 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     if(e.target.closest('[data-vclose]')) close();
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
+})();
+/* Idiomas: el sitio se escribe en español y se traduce en el navegador con los diccionarios i18n/xx.json */
+(function(){
+  var SUP=['es','en','pt','fr','ru','uk','zh'], KEY='crilarsa-lang', sel=document.getElementById('lang-sel');
+  var dict=null, cur='es', cache={}, T=new WeakMap(), A=new WeakMap(), busy=false, ATTR=['placeholder','aria-label','alt','title'];
+  function nrm(t){return t.replace(/\s+/g,' ').trim()}
+  function has(k){return Object.prototype.hasOwnProperty.call(dict,k)}
+  function tr(s){
+    if(!dict||!s) return null; var k=nrm(s); if(!k) return null; if(has(k)) return dict[k];
+    var m=k.match(/^([\d.,]+) sacos$/); if(m&&has('sacos')) return m[1]+' '+dict.sacos;
+    if(k.indexOf('Ver video: ')===0){var r=k.slice(11);return (dict['Ver video:']||'Ver video:')+' '+(has(r)?dict[r]:r)}
+    if(k.indexOf(' · ')>0){var p=k.split(' · '),o=[],ok=0,i=0;while(i<p.length){for(var j=p.length;j>i;j--){var c=p.slice(i,j).join(' · ');if(has(c)){o.push(dict[c]);ok=1;i=j;break}}if(j===i){o.push(p[i]);i++}}if(ok)return o.join(' · ')}
+    return null;
+  }
+  function skip(el){return !el||(el.closest&&el.closest('script,style,svg,.notranslate'))}
+  function textNode(t){
+    if(skip(t.parentElement)) return;
+    var o=T.get(t); if(!o||t.nodeValue!==o.out){o={src:t.nodeValue}}
+    var v=cur==='es'?null:tr(o.src);
+    o.out=v==null?o.src:o.src.replace(/^(\s*)[\s\S]*?(\s*)$/,function(_,a,b){return a+v+b});
+    T.set(t,o); if(t.nodeValue!==o.out) t.nodeValue=o.out;
+  }
+  function attrs(el){
+    if(skip(el)) return; var m=A.get(el)||{};
+    ATTR.forEach(function(a){ if(!el.hasAttribute(a)) return; var val=el.getAttribute(a),o=m[a]; if(!o||val!==o.out){o={src:val}}
+      var v=cur==='es'?null:tr(o.src); o.out=v==null?o.src:v; m[a]=o; if(val!==o.out) el.setAttribute(a,o.out) });
+    A.set(el,m);
+  }
+  function walk(root){
+    if(root.nodeType===3){textNode(root);return} if(root.nodeType!==1||skip(root)) return;
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),x; while((x=w.nextNode())) textNode(x);
+    attrs(root); [].forEach.call(root.querySelectorAll('[placeholder],[aria-label],[alt],[title]'),attrs);
+  }
+  var titleSrc=document.title, md=document.querySelector('meta[name=description]'), descSrc=md?md.content:'';
+  var obs=new MutationObserver(function(ms){ if(busy||cur==='es') return; busy=true;
+    ms.forEach(function(m){ if(m.type==='characterData') textNode(m.target); else if(m.type==='attributes') attrs(m.target); else [].forEach.call(m.addedNodes,walk) });
+    obs.takeRecords(); busy=false });
+  function apply(){ busy=true; walk(document.body);
+    document.title=(cur!=='es'&&tr(titleSrc))||titleSrc; if(md) md.content=(cur!=='es'&&tr(descSrc))||descSrc;
+    document.documentElement.lang=cur==='zh'?'zh-Hans':cur; obs.takeRecords(); busy=false }
+  obs.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:ATTR});
+  function set(l){
+    if(SUP.indexOf(l)<0) l='es'; try{localStorage.setItem(KEY,l)}catch(e){} if(sel) sel.value=l;
+    if(l==='es'){cur='es';dict=null;apply();return}
+    (cache[l]?Promise.resolve(cache[l]):fetch('i18n/'+l+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}))
+      .then(function(d){cache[l]=d;cur=l;dict=d;apply()}).catch(function(){if(sel)sel.value=cur});
+  }
+  if(sel) sel.addEventListener('change',function(){set(sel.value)});
+  var q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1], saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+  var nav=(navigator.language||'es').slice(0,2).toLowerCase();
+  var start=q||saved||(SUP.indexOf(nav)>=0?nav:'es');
+  if(start!=='es') set(start); else if(sel) sel.value='es';
 })();
 /* Pestañas de sectores */
 (function(){
