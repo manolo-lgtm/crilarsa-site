@@ -63,7 +63,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .menu-btn{display:none;background:none;border:1.5px solid rgba(255,255,255,.5);color:var(--white);border-radius:4px;padding:8px 12px;font:600 14px var(--display);cursor:pointer}
 
 /* Portada */
-.hero{position:relative;color:var(--white);background:var(--navy) url("portada-planta.jpg") center 35%/cover no-repeat;padding-block:clamp(76px,11vw,150px) 0;overflow:hidden}
+.hero{position:relative;color:var(--white);background:var(--navy) url("planta-bodega-general.jpg") center 45%/cover no-repeat;padding-block:clamp(76px,11vw,150px) 0;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,40,51,.88) 0%,rgba(30,40,51,.5) 70%,rgba(30,40,51,.35) 100%);pointer-events:none}
 .hero .inner{position:relative;z-index:1}
 .hero h1{font-size:clamp(36px,5.8vw,72px);font-weight:800;max-width:15ch}
@@ -143,11 +143,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .stage .tx p{color:var(--muted)}
 .stage.wide .tx{grid-template-columns:auto 1fr;gap:6px 32px;align-items:baseline;margin-top:20px}
 .stage.wide .tx p{grid-column:2}
+.plant-top{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,5vw,72px);align-items:center;margin-bottom:clamp(48px,7vw,88px)}
+.reel{position:relative;margin:0;aspect-ratio:9/16;max-height:640px;width:100%;max-width:360px;justify-self:end;border-radius:6px;overflow:hidden;background:var(--navy) url("materia-prima-caliza.jpg") center/cover;box-shadow:0 24px 48px rgba(30,40,51,.25)}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease}
+.reel video.on{opacity:1}
+.reel figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(20,26,33,.8));color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.reel .dot{width:8px;height:8px;border-radius:50%;background:#d95c4a;flex:none}
+.reel-legend{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:0}
+.reel-legend li{padding:10px 0 10px 16px;border-left:2px solid var(--line);color:var(--muted);font-size:15.5px;transition:border-color .4s,color .4s}
+.reel-legend li.on{border-left-color:var(--blue);color:var(--ink);font-weight:600}
+.gallery{display:grid;grid-template-columns:1fr 1.6fr 1fr;grid-template-rows:repeat(2,clamp(160px,18vw,250px));gap:12px;margin-top:clamp(40px,6vw,72px)}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:4px;min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .g-tall{grid-row:span 2}
+.gallery .g-wide{grid-row:span 2}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:14px;color:#fff;background:linear-gradient(transparent,rgba(20,26,33,.75))}
+@media (max-width:860px){.plant-top{grid-template-columns:1fr}.reel{justify-self:center;max-width:320px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:170px}.gallery .g-tall{grid-row:span 2}.gallery .g-wide{grid-column:span 2;grid-row:auto}}
 .gmp{margin-top:clamp(40px,6vw,64px);background:var(--stone);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,3vw,32px);display:grid;grid-template-columns:1fr 2fr;gap:24px}
 .gmp ul{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--muted)}
 
 /* Logística */
-.logistics{position:relative;color:var(--white);background:var(--navy) url("camion-5.jpeg") center/cover no-repeat}
+.logistics{position:relative;color:var(--white);background:var(--navy) url("carga-camion.jpg") center/cover no-repeat}
 .logistics::before{content:"";position:absolute;inset:0;background:rgba(24,32,41,.88)}
 .logistics .inner{position:relative}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);margin-top:8px}
@@ -311,8 +327,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 <section class="direct" id="directo">
   <div class="inner">
     <figure class="photo rv" style="margin:0">
-      <img src="camion-1.jpeg" alt="Llegada de piedra caliza a la planta de Crilarsa">
-      <span class="tag">Materia prima en planta</span>
+      <img src="carga-camion.jpg" alt="Camión cargado con sacos paletizados en la bodega de Crilarsa">
+      <span class="tag">Carga directa en planta</span>
     </figure>
     <div>
       <div class="eyebrow">Venta directa</div>
@@ -431,32 +447,55 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 
 <section class="plant" id="planta">
   <div class="inner">
-    <div class="head">
-      <div class="eyebrow">Capacidad industrial</div>
-      <h2>Nuestra planta en operación</h2>
-      <p class="lead">Una operación integrada en la Vía a la Costa: desde la recepción de la materia prima hasta la carga del producto terminado.</p>
+    <div class="plant-top">
+      <div class="head" style="margin:0">
+        <div class="eyebrow">Capacidad industrial</div>
+        <h2>Nuestra planta en operación</h2>
+        <p class="lead">Una operación integrada en la Vía a la Costa: desde la extracción y recepción de la materia prima hasta la estiba y la carga del producto terminado.</p>
+        <ul class="reel-legend" id="reel-legend">
+          <li data-i="0">Extracción en cantera</li>
+          <li data-i="1">Producto terminado en bodega</li>
+          <li data-i="2">Estiba sobre pallets</li>
+          <li data-i="3">Carga con montacargas</li>
+        </ul>
+      </div>
+      <figure class="reel" id="reel" aria-label="Video de la operación de Crilarsa">
+        <video muted playsinline preload="none" poster="materia-prima-caliza.jpg"></video>
+        <video muted playsinline preload="none"></video>
+        <figcaption><span class="dot"></span><span id="reel-cap">Extracción en cantera</span></figcaption>
+      </figure>
     </div>
     <div class="route">
       <div class="stage wide rv">
-        <div class="ph"><img src="camion-1.jpeg" alt="Volqueta descargando piedra caliza en el patio de materia prima"></div>
-        <div class="tx"><span class="num">ETAPA 01</span><h3>Recepción de materia prima</h3><p>La piedra caliza llega a la planta en volquetas y se almacena en el patio de materia prima, lista para su procesamiento.</p></div>
+        <div class="ph"><img src="camion-1.jpeg" alt="Volqueta descargando piedra caliza en el patio de materia prima" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 01</span><h3>Extracción y recepción de materia prima</h3><p>La piedra caliza se extrae en cantera con maquinaria pesada y llega a la planta en volquetas, donde se almacena en el patio de materia prima.</p></div>
       </div>
       <div class="stage rv">
-        <div class="ph"><img src="crilarsa-DSC_7929.jpg" alt="Molino, ciclones y filtros de la planta de molienda"></div>
-        <div class="tx"><span class="num">ETAPA 02</span><h3>Trituración y molienda</h3><p>El mineral se tritura y se muele en nuestras plantas de molienda, equipadas con molinos, ciclones y sistemas de captación de polvo.</p></div>
+        <div class="ph"><img src="materia-prima-tolva.jpg" alt="Piedra caliza en la tolva de alimentación" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 02</span><h3>Alimentación y trituración</h3><p>El mineral ingresa a la tolva de alimentación y se tritura antes de pasar a los molinos.</p></div>
       </div>
       <div class="stage flip rv">
-        <div class="ph"><img src="crilarsa-DSC_7928.jpg" alt="Elevadores de cangilones y silos de almacenamiento"></div>
-        <div class="tx"><span class="num">ETAPA 03</span><h3>Clasificación y almacenamiento</h3><p>El producto se clasifica por granulometría y se traslada mediante elevadores y transporte interno hacia los silos.</p></div>
+        <div class="ph"><img src="molino-elevador.jpg" alt="Molino pendular y elevador de cangilones de la planta" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 03</span><h3>Molienda</h3><p>Nuestros molinos reducen el mineral a la granulometría requerida, con ciclones y sistemas de captación de polvo.</p></div>
       </div>
       <div class="stage rv">
-        <div class="ph slot" data-foto="ensacado-estiba"><div class="msg"><strong>Foto próximamente</strong><span>Ensacado y estiba sobre pallets</span></div></div>
-        <div class="tx"><span class="num">ETAPA 04</span><h3>Ensacado y estiba</h3><p>El producto terminado se ensaca, se identifica y se estiba sobre pallets para su almacenamiento y despacho.</p></div>
+        <div class="ph"><img src="linea-produccion.jpg" alt="Línea de producción con elevadores, ciclones y tolvas" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 04</span><h3>Clasificación y transporte interno</h3><p>El producto se clasifica y se traslada mediante elevadores y transporte interno hacia las tolvas de ensacado.</p></div>
       </div>
       <div class="stage flip rv">
-        <div class="ph slot" data-foto="carga-montacargas"><div class="msg"><strong>Foto próximamente</strong><span>Carga mecanizada con montacargas</span></div></div>
-        <div class="tx"><span class="num">ETAPA 05</span><h3>Carga y salida</h3><p>La carga se realiza con equipos mecanizados, lo que agiliza la preparación de cada despacho.</p></div>
+        <div class="ph"><img src="ensacado-big-bag.jpg" alt="Ensacado de producto bajo el filtro y la tolva de despacho" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 05</span><h3>Ensacado</h3><p>El producto terminado se ensaca y se identifica con su contenido neto.</p></div>
       </div>
+      <div class="stage rv">
+        <div class="ph"><img src="estiba-pallets-montacargas.jpg" alt="Sacos estibados sobre pallets y montacargas en la bodega" loading="lazy"></div>
+        <div class="tx"><span class="num">ETAPA 06</span><h3>Estiba y carga</h3><p>Los sacos se estiban sobre pallets en bodega y se cargan con montacargas, lo que agiliza la preparación de cada despacho.</p></div>
+      </div>
+    </div>
+    <div class="gallery">
+      <figure class="g-tall"><img src="materia-prima-caliza.jpg" alt="Piedra caliza, materia prima de nuestros productos" loading="lazy"><figcaption>Materia prima: piedra caliza</figcaption></figure>
+      <figure class="g-wide"><img src="crilarsa-DSC_7929.jpg" alt="Planta de molienda con molino, ciclones y filtros" loading="lazy"><figcaption>Planta de molienda</figcaption></figure>
+      <figure><img src="crilarsa-DSC_7928.jpg" alt="Elevadores y silos de la planta" loading="lazy"><figcaption>Elevadores y silos</figcaption></figure>
+      <figure><img src="camion-5.jpeg" alt="Volquetas en el patio de la planta" loading="lazy"><figcaption>Patio de materia prima</figcaption></figure>
     </div>
     <div class="gmp">
       <div><div class="eyebrow">Control operativo</div><h3 style="margin-top:10px">Cómo cuidamos cada lote</h3></div>
@@ -590,6 +629,28 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('lift');io.unobserve(e.target);}});},{threshold:.12});
   els.forEach(function(el){io.observe(el);});
 }
+/* Video de la planta: tramos cortos con fundido suave entre clips (sin sonido) */
+(function(){
+  var reel=document.getElementById('reel'); if(!reel) return;
+  var V=[].slice.call(reel.querySelectorAll('video')), cap=document.getElementById('reel-cap'), leg=[].slice.call(document.querySelectorAll('#reel-legend li'));
+  var CL=[
+    /* r = velocidad: menos de 1 = cámara lenta en los momentos de impacto; más de 1 = recorridos acelerados */
+    {src:'cantera-martillo-2.mp4',t:9,d:5,r:0.8,c:'Extracción en cantera',l:0},
+    {src:'cantera-martillo-1.mp4',t:24,d:4.5,r:0.85,c:'Extracción en cantera',l:0},
+    {src:'bodega-recorrido.mp4',t:1,d:5,r:1.8,c:'Producto terminado en bodega',l:1},
+    {src:'bodega-montacargas.mp4',t:2,d:5,r:1.7,c:'Estiba sobre pallets',l:2},
+    {src:'bodega-montacargas.mp4',t:22,d:5,r:1.5,c:'Carga con montacargas',l:3}
+  ];
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, i=0, cur=0, timer=null, started=false;
+  function mark(k){cap.textContent=CL[k].c;leg.forEach(function(li){li.classList.toggle('on',+li.dataset.i===CL[k].l)})}
+  function load(v,k,cb){var c=CL[k];var go=function(){try{v.currentTime=c.t}catch(e){} v.playbackRate=c.r||1; v.defaultPlaybackRate=c.r||1; v.play().catch(function(){});cb&&cb()};
+    if(v.getAttribute('src')!==c.src){v.setAttribute('src',c.src);v.preload='auto';v.addEventListener('loadedmetadata',function h(){v.removeEventListener('loadedmetadata',h);go()})}else{go()}}
+  function next(){var k=(i+1)%CL.length, nv=V[1-cur];
+    load(nv,k,function(){setTimeout(function(){nv.classList.add('on');V[cur].classList.remove('on');var old=V[cur];setTimeout(function(){old.pause()},1200);cur=1-cur;i=k;mark(k);timer=setTimeout(next,CL[k].d*1000)},250)})}
+  function start(){if(started) return; started=true; mark(0); load(V[0],0,function(){V[0].classList.add('on');timer=setTimeout(next,CL[0].d*1000)})}
+  if(reduce){mark(0);return}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){start();o.disconnect()}})},{rootMargin:'200px'}).observe(reel)}else{start()}
+})();
 
 </script>
 
