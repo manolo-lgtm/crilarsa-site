@@ -197,6 +197,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .vid strong{display:block;font:600 14px/1.35 var(--display);margin-top:8px;color:#e6ebf0}
 .vid small{display:block;font-size:12.5px;color:#9fb0c1;margin-top:2px}
 .learn-note{font-size:12px;color:#8494a5;margin:12px 0 0}
+.vbtn{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:6px 12px 6px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05);color:#dfe5eb;font:600 13px/1.3 var(--display);cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
+.vbtn i{flex:none;width:22px;height:22px;border-radius:50%;background:#c4302b;position:relative}
+.vbtn i::after{content:"";position:absolute;left:8px;top:6px;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.vbtn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45)}
+.vrow .vbtn{color:var(--navy);border-color:#cfd6dd;background:#f3f5f7}
+.vmeta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:10px;color:#e6ebf0}.vmeta strong{font:600 15px var(--display)}.vmeta small{color:#9fb0c1}.vmeta .vyt{margin:0 0 0 auto}
+.vnote{font-size:12px;color:#8494a5;margin:8px 0 0}
+.panel .side .vpeek{grid-column:1/-1}
+@media (max-width:1100px){.panel .side .vpeek{max-width:560px}}
+.vpeek{position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#141c24;border:1px solid rgba(255,255,255,.18);margin-bottom:6px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.vp-frame{position:absolute;inset:0;background:center/cover}
+.vp-frame iframe{position:absolute;top:50%;left:50%;width:140%;height:140%;transform:translate(-50%,-50%);border:0;pointer-events:none}
+.vbtn.vp-cap{position:absolute;inset:0;margin:0;padding:12px;border:0;border-radius:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:4px;background:linear-gradient(180deg,rgba(14,20,26,0) 35%,rgba(14,20,26,.88));color:#fff;text-align:left}
+.vbtn.vp-cap:hover{background:linear-gradient(180deg,rgba(14,20,26,.1) 20%,rgba(14,20,26,.92))}
+.vp-cap .vp-live{position:absolute;top:10px;left:10px;font:700 10.5px var(--mono,monospace);letter-spacing:.08em;text-transform:uppercase;background:rgba(14,20,26,.7);padding:4px 8px;border-radius:999px}
+.vp-cap .vp-live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#e04a3f;margin-right:6px;vertical-align:1px;animation:vpblink 1.6s infinite}
+@keyframes vpblink{50%{opacity:.25}}
+.vp-cap b{font:600 14.5px/1.3 var(--display)}
+.vp-cap em{display:inline-flex;align-items:center;gap:8px;font-style:normal;font-size:12.5px;color:#dfe5eb;background:rgba(255,255,255,.14);padding:4px 10px 4px 4px;border-radius:999px}
+.vp-cap em i{width:20px;height:20px;border-radius:50%;background:#c4302b;position:relative}
+.vp-cap em i::after{content:"";position:absolute;left:7px;top:5px;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
 .vmodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px}
 .vmodal.open{display:flex}
 .vshade{position:absolute;inset:0;background:rgba(10,14,18,.82)}
@@ -664,36 +685,72 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
   [].forEach.call(document.querySelectorAll('.js-open-cart'),function(b){b.addEventListener('click',function(e){e.preventDefault();open()})});
   render();
-})();/* Videos informativos por sector (YouTube, de terceros) */
+})();/* Video informativo opcional por producto (YouTube, de terceros). Clave: sector|producto; "todos" sirve para el catálogo. */
 (function(){
   var V={
-    banano:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']],
-    camaron:[['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],['LJCUNelT8zY','Encalado del estanque antes de la siembra','Antonio Vargas'],['81CRie3kd_w','Cómo medir la calidad del agua en estanques de camarón','Mundo Acuícola']],
-    agricola:[['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['4DFJXtqfvxg','Cómo calcular la dosis de cal para corregir la acidez','Campo y Agricultura']],
-    pecuario:[['sMslnp0DrtU','Limpieza y desinfección: pilares de la bioseguridad avícola','Gestión Pecuaria'],['DDzK9mbH_qY','Desinfección efectiva de galpones','La Finca de Hoy · Caracol TV']],
-    azucar:[['YxAeHAQrc4c','La cal en la industria azucarera','Horcalsa'],['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora']],
-    agua:[['_gye0uJcsuc','Hidróxido de calcio en el tratamiento de aguas residuales','Horcalsa'],['RyLaNMJhIRo','Qué es la zeolita y cómo se usa en el tratamiento de agua','Hidroled']],
-    construccion:[['6DxC9uea4Cc','Estabilización de suelos','Víctor Yepes'],['iv7zuaoIWBM','Estabilización de subrasante con cal','Fernando Gómez'],['FliInSdRSO8','Cal para estabilizar suelos arcillosos','Horcalsa']],
-    todos:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']]
+    'banano|neutrocal':['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],
+    'banano|sulfato':['43vELVhVG-M','Deficiencia de calcio en banano y su corrección con yeso','Tips y Videoclips'],
+    'banano|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
+    'banano|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
+    'camaron|neutrocal':['X9PfWejmI80','¿Por qué usar cal en los estanques?','ABC Rural'],
+    'camaron|calforte':['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],
+    'camaron|zeolita':['EbB1vsA6WOc','Qué es la zeolita y cómo mejora el agua','Zeomedia Filter'],
+    'agricola|neutrocal':['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],
+    'agricola|sulfato':['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],
+    'agricola|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
+    'agricola|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
+    'pecuario|calforte':['_LuztE76N3I','Desinfección del piso del galpón con cal','Finca Casarejo'],
+    'pecuario|zeolita':['KmJvkx7YIGs','Zeolita natural en dietas de pollos de engorde','Revista MVZ Córdoba'],
+    'pecuario|neutrocal':['ZUGcNcNA3NY','Correcto suministro de calcio en gallinas ponedoras','La Finca de Hoy · Caracol TV'],
+    'azucar|calforte':['YxAeHAQrc4c','La cal en la industria azucarera','Horcalsa'],
+    'azucar|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
+    'azucar|neutrocal':['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],
+    'agua|calforte':['_gye0uJcsuc','Hidróxido de calcio en el tratamiento de aguas residuales','Horcalsa'],
+    'agua|zeolita':['RyLaNMJhIRo','Qué es la zeolita y cómo se usa en el tratamiento de agua','Hidroled'],
+    'construccion|neutrocal':['f_BhKpiClIs','Cómo se elaboran las mezclas asfálticas','Canal Siete'],
+    'construccion|calforte':['FliInSdRSO8','Cal para estabilizar suelos arcillosos','Horcalsa'],
+    'todos|neutrocal':['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],
+    'todos|calforte':['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],
+    'todos|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
+    'todos|sulfato':['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],
+    'todos|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay']
   };
   var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
-  Object.keys(V).forEach(function(k){
-    var pnl=document.getElementById(k); if(!pnl) return;
-    var host=pnl.querySelector('.plist'); if(!host) return;
-    var d=document.createElement('div'); d.className='learn';
-    d.innerHTML='<div class="learn-h">Aprenda más <span>Videos informativos</span></div><div class="learn-row">'+V[k].map(function(v){
-      return '<a class="vid" href="https://www.youtube.com/watch?v='+v[0]+'" target="_blank" rel="noopener" data-id="'+v[0]+'"><span class="vt" style="background-image:url(https://i.ytimg.com/vi/'+v[0]+'/mqdefault.jpg)"><i aria-hidden="true"></i></span><strong>'+esc(v[1])+'</strong><small>'+esc(v[2])+'</small></a>'}).join('')+'</div><p class="learn-note">Videos educativos de terceros publicados en YouTube. Crilarsa no es autor de su contenido; la dosis para su caso la define nuestro equipo técnico.</p>';
-    host.parentNode.insertBefore(d,host.nextSibling);
+  [].forEach.call(document.querySelectorAll('[data-p]'),function(el){
+    var pnl=el.closest('.panel'), sec=pnl?pnl.id:'todos', v=V[sec+'|'+el.getAttribute('data-p')]; if(!v) return;
+    var b='<button type="button" class="vbtn" data-id="'+v[0]+'" data-t="'+esc(v[1])+'" data-c="'+esc(v[2])+'"><i aria-hidden="true"></i>Ver video: '+esc(v[1])+'</button>';
+    if(el.tagName==='LI'){ var sp=el.querySelector('span:not(.thumb):not(.pres):not(.qty):not(.qty-label)'); if(sp) sp.insertAdjacentHTML('beforeend',b) }
+    else { var o=el.querySelector('.order')||el.querySelector('.links'); if(o) o.insertAdjacentHTML('beforebegin','<div class="vrow">'+b+'</div>') }
   });
-  var m=document.createElement('div'); m.className='vmodal'; m.innerHTML='<div class="vshade" data-vclose></div><div class="vbox"><button class="x" data-vclose aria-label="Cerrar">×</button><div class="vframe"></div><a class="vyt" target="_blank" rel="noopener">Ver en YouTube</a></div>'; document.body.appendChild(m);
-  var fr=m.querySelector('.vframe'), yt=m.querySelector('.vyt');
+  /* Video destacado por sector: corre en silencio cuando el sector está a la vista; al tocarlo se abre con sonido */
+  var F={banano:'banano|neutrocal',camaron:'camaron|calforte',agricola:'agricola|neutrocal',pecuario:'pecuario|calforte',azucar:'azucar|calforte',agua:'agua|calforte',construccion:'construccion|calforte',todos:'todos|neutrocal'};
+  var peeks=[];
+  Object.keys(F).forEach(function(k){
+    var pnl=document.getElementById(k), v=V[F[k]]; if(!pnl||!v) return;
+    var side=pnl.querySelector('.side'); if(!side) return;
+    var d=document.createElement('div'); d.className='vpeek';
+    d.innerHTML='<div class="vp-frame" style="background-image:url(https://i.ytimg.com/vi/'+v[0]+'/mqdefault.jpg)"></div><button type="button" class="vbtn vp-cap" data-id="'+v[0]+'" data-t="'+esc(v[1])+'" data-c="'+esc(v[2])+'"><span class="vp-live">Video informativo</span><b>'+esc(v[1])+'</b><em><i aria-hidden="true"></i>Toque para ver con sonido</em></button>';
+    side.insertBefore(d,side.firstChild);
+    peeks.push({pnl:pnl,fr:d.querySelector('.vp-frame'),id:v[0]});
+  });
+  var inView=false, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function sync(){peeks.forEach(function(p){var on=inView&&!p.pnl.hidden&&!reduce;var has=!!p.fr.firstChild;
+    if(on&&!has){p.fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+p.id+'?autoplay=1&mute=1&controls=0&loop=1&playlist='+p.id+'&playsinline=1&rel=0&modestbranding=1" title="Video informativo" allow="autoplay; encrypted-media" tabindex="-1" aria-hidden="true"></iframe>'}
+    else if(!on&&has){p.fr.innerHTML=''}})}
+  var sec=document.getElementById('sectores');
+  if(sec&&'IntersectionObserver' in window){new IntersectionObserver(function(es){inView=es[0].isIntersecting;sync()},{threshold:.15}).observe(sec)}
+  document.addEventListener('click',function(e){if(e.target.closest('.tabs [role=tab]'))setTimeout(sync,60)});
+  window.addEventListener('hashchange',function(){setTimeout(sync,60)});
+  var m=document.createElement('div'); m.className='vmodal'; m.innerHTML='<div class="vshade" data-vclose></div><div class="vbox"><button class="x" data-vclose aria-label="Cerrar">×</button><div class="vframe"></div><div class="vmeta"><strong></strong><small></small><a class="vyt" target="_blank" rel="noopener">Ver en YouTube</a></div><p class="vnote">Video educativo de terceros publicado en YouTube. Crilarsa no es autor de su contenido; la dosis para su caso la define nuestro equipo técnico.</p></div>'; document.body.appendChild(m);
+  var fr=m.querySelector('.vframe');
   function close(){m.classList.remove('open');fr.innerHTML='';document.body.style.overflow=''}
   document.addEventListener('click',function(e){
-    var a=e.target.closest('.vid'); if(a){e.preventDefault();var id=a.dataset.id;fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';yt.href=a.href;m.classList.add('open');document.body.style.overflow='hidden';return}
+    var a=e.target.closest('.vbtn'); if(a){e.preventDefault();var id=a.dataset.id;fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="'+a.dataset.t+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';m.querySelector('.vmeta strong').textContent=a.dataset.t;m.querySelector('.vmeta small').textContent=a.dataset.c;m.querySelector('.vyt').href='https://www.youtube.com/watch?v='+id;m.classList.add('open');document.body.style.overflow='hidden';return}
     if(e.target.closest('[data-vclose]')) close();
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
-})();/* Pestañas de sectores */
+})();
+/* Pestañas de sectores */
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
   function show(id,focus){tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus();})}
