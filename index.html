@@ -833,22 +833,16 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     'banano|sulfato':['43vELVhVG-M','Deficiencia de calcio en banano y su corrección con yeso','Tips y Videoclips'],
     'banano|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
     'banano|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'camaron|neutrocal':['X9PfWejmI80','¿Por qué usar cal en los estanques?','ABC Rural'],
     'camaron|calforte':['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],
-    'camaron|zeolita':['EbB1vsA6WOc','Qué es la zeolita y cómo mejora el agua','Zeomedia Filter'],
     'agricola|neutrocal':['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],
     'agricola|sulfato':['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],
     'agricola|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
     'agricola|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'pecuario|calforte':['_LuztE76N3I','Desinfección del piso del galpón con cal','Finca Casarejo'],
     'pecuario|zeolita':['KmJvkx7YIGs','Zeolita natural en dietas de pollos de engorde','Revista MVZ Córdoba'],
     'pecuario|neutrocal':['ZUGcNcNA3NY','Correcto suministro de calcio en gallinas ponedoras','La Finca de Hoy · Caracol TV'],
     'azucar|calforte':['YxAeHAQrc4c','La cal en la industria azucarera','Horcalsa'],
-    'azucar|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'azucar|neutrocal':['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],
     'agua|calforte':['_gye0uJcsuc','Hidróxido de calcio en el tratamiento de aguas residuales','Horcalsa'],
     'agua|zeolita':['RyLaNMJhIRo','Qué es la zeolita y cómo se usa en el tratamiento de agua','Hidroled'],
-    'construccion|neutrocal':['f_BhKpiClIs','Cómo se elaboran las mezclas asfálticas','Canal Siete'],
     'construccion|calforte':['FliInSdRSO8','Cal para estabilizar suelos arcillosos','Horcalsa'],
     'todos|neutrocal':['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],
     'todos|calforte':['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],
@@ -864,7 +858,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     else { var o=el.querySelector('.order')||el.querySelector('.links'); if(o) o.insertAdjacentHTML('beforebegin','<div class="vrow">'+b+'</div>') }
   });
   /* Video destacado por sector: corre en silencio cuando el sector está a la vista; al tocarlo se abre con sonido */
-  var F={banano:'banano|neutrocal',camaron:'camaron|calforte',agricola:'agricola|neutrocal',pecuario:'pecuario|calforte',azucar:'azucar|calforte',agua:'agua|calforte',construccion:'construccion|calforte',todos:'todos|neutrocal'};
+  var F={banano:'banano|neutrocal',camaron:'camaron|calforte',agricola:'agricola|neutrocal',pecuario:'pecuario|neutrocal',azucar:'azucar|calforte',agua:'agua|calforte',construccion:'construccion|calforte',todos:'todos|neutrocal'};
   var peeks=[];
   Object.keys(F).forEach(function(k){
     var pnl=document.getElementById(k), v=V[F[k]]; if(!pnl||!v) return;
