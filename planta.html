@@ -136,6 +136,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .plist .thumb{width:64px;height:64px;border-radius:4px;background:#e9e7e1;display:grid;place-items:center;overflow:hidden}
 .plist .thumb img{width:86%;height:86%;object-fit:contain}
 .plist .thumb b{font:800 15px var(--display);color:var(--blue)}
+.plist .uso{display:block;margin-top:6px;font-style:normal;font-size:14.5px;color:#a9b6c3}.plist .uso b{color:#dfe5eb;font-weight:600}
 .plist .pres{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9fb0c1;margin-top:4px}
 .order{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .qty{display:inline-flex;align-items:center;border:1px solid rgba(127,140,155,.6);border-radius:4px;overflow:hidden;background:var(--white)}
@@ -184,6 +185,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 /* Íconos de sectores */
 .tabs button{display:flex;align-items:center;gap:12px}
 .tabs .ti{width:32px;height:32px;flex:none;padding:5px;border-radius:8px;background:rgba(255,255,255,.08)}
+.learn{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.learn-h{font:700 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:#dfe5eb;margin-bottom:12px}
+.learn-h span{font-weight:500;text-transform:none;letter-spacing:0;color:#9fb0c1;margin-left:8px}
+.learn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vid{display:block;color:inherit;text-decoration:none;min-width:0}
+.vid .vt{display:block;position:relative;aspect-ratio:16/9;border-radius:8px;background:#2a3542 center/cover;overflow:hidden;border:1px solid rgba(255,255,255,.14)}
+.vid .vt i{position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;background:rgba(20,28,36,.78);transition:transform .25s,background .25s}
+.vid .vt i::after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vid:hover .vt i{transform:scale(1.1);background:var(--green)}
+.vid strong{display:block;font:600 14px/1.35 var(--display);margin-top:8px;color:#e6ebf0}
+.vid small{display:block;font-size:12.5px;color:#9fb0c1;margin-top:2px}
+.learn-note{font-size:12px;color:#8494a5;margin:12px 0 0}
+.vmodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px}
+.vmodal.open{display:flex}
+.vshade{position:absolute;inset:0;background:rgba(10,14,18,.82)}
+.vbox{position:relative;width:min(960px,100%,calc((100vh - 130px) * 16 / 9))}
+.vframe{aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+.vframe iframe{width:100%;height:100%;border:0;display:block}
+.vbox .x{position:absolute;top:-44px;right:0;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer}
+.vyt{display:inline-block;margin-top:10px;color:#cfd8e1;font-size:14px}
+@media (max-width:860px){.learn-row{grid-template-columns:1fr;gap:12px}.vid{display:grid;grid-template-columns:128px 1fr;column-gap:12px;align-items:start}.vid .vt{grid-row:1/3}.vid .vt i{width:34px;height:34px}.vid .vt i::after{left:13px;top:10px;border-left-width:11px;border-top-width:7px;border-bottom-width:7px}.vid strong{margin-top:0}}.tabs button.all{border-style:dashed}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
 .tabs button[aria-selected="true"] .ti{background:var(--blue-soft);color:var(--blue)}
 .panel .pi{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e6ebf0;margin-bottom:16px}
 .panel .pic{width:38px;height:38px}
@@ -494,17 +517,17 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 <section class="contact" id="contacto">
   <div class="inner">
     <div class="text">
-      <div class="eyebrow">Contacto comercial</div>
-      <h2>Solicite su cotización</h2>
-      <p class="lead">Complete el formulario o escríbanos por WhatsApp. Le responderemos con el precio de fábrica y la disponibilidad del producto.</p>
-      <div><a class="btn btn-wa js-wa" data-msg="general" href="#contacto">Escribir por WhatsApp</a></div>
+      <div class="eyebrow">Contacto</div>
+      <h2>¿Tiene una consulta?</h2>
+      <p class="lead">Escríbanos para preguntas, asesoría técnica o información general. Para comprar no necesita este formulario: elija productos y cantidades en la sección de pedidos y envíe su pedido directamente por WhatsApp.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="index.html#todos">Hacer un pedido</a><a class="btn btn-wa js-wa" data-msg="general" href="#contacto">Escribir por WhatsApp</a></div>
       <dl>
         <div><dt>WhatsApp comercial</dt><dd>+593 98 521 1202</dd></div><div><dt>Correo</dt><dd>finanzas@crilarsa.com</dd></div>
         <div><dt>Planta</dt><dd>Vía a la Costa, km 22, Guayaquil, Ecuador</dd></div>
         <div><dt>RUC</dt><dd>0992110945001</dd></div>
       </dl>
     </div>
-    <form id="f" action="https://formsubmit.co/finanzas@crilarsa.com" method="POST"><input type="hidden" name="_subject" value="Nueva solicitud de cotización desde crilarsa.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <form id="f" action="https://formsubmit.co/finanzas@crilarsa.com" method="POST"><input type="hidden" name="_subject" value="Nueva consulta desde crilarsa.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="row">
         <label for="nombre">Nombre<input id="nombre" name="nombre" autocomplete="name" required></label>
         <label for="empresa">Empresa o finca<input id="empresa" name="empresa" autocomplete="organization"></label>
@@ -513,22 +536,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <label for="ciudad">Ciudad o ubicación<input id="ciudad" name="ciudad" autocomplete="address-level2" required></label>
         <label for="telefono">Teléfono o WhatsApp<input id="telefono" name="telefono" type="tel" autocomplete="tel" required></label>
       </div>
-      <div class="row">
-        <label for="producto">Producto de interés
-          <select id="producto" name="producto">
-            <option>Carbonato de calcio</option>
-            <option>Sulfato de calcio</option>
-            <option>Mezcla mineral 3:1</option>
-            <option>Zeolita</option>
-            <option>Hidróxido de calcio (Cal Forte)</option>
-            <option>Necesito asesoría para elegir</option>
-          </select>
-        </label>
-        <label for="cantidad">Cantidad aproximada<input id="cantidad" name="cantidad" placeholder="Ej.: 200 sacos"></label>
-      </div>
       <label for="correo">Correo electrónico <small>(opcional)</small><input id="correo" name="email" type="email" autocomplete="email"></label>
-      <label for="mensaje">Comentarios o requerimientos<textarea id="mensaje" name="mensaje" placeholder="Cultivo, hectáreas, fecha en que necesita el producto…"></textarea></label>
-      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+      <label for="mensaje">Su consulta<textarea id="mensaje" name="mensaje" required placeholder="Escriba su pregunta: producto, cultivo o actividad, dudas técnicas…"></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar consulta</button>
     </form>
   </div>
 </section>
@@ -551,7 +561,6 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <footer>
       <div class="total"><span>Total</span><span id="cart-total">0 sacos</span></div>
       <a class="btn btn-wa" id="send-wa" href="#contacto">Enviar pedido por WhatsApp</a>
-      <a class="btn btn-line" id="send-form" href="#contacto">Enviar por formulario</a>
       <p class="fine">Sin pago en línea. Le confirmamos precio de fábrica, disponibilidad y fecha de carga.</p>
     </footer>
   </div>
@@ -607,7 +616,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function qtyBox(v){return '<span class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" step="1" value="'+v+'" inputmode="numeric" aria-label="Cantidad de sacos"><button type="button" data-d="1" aria-label="Más">+</button></span>'}
   function inc(v){return v<10?1:(v<100?10:50)}
   function step(box,d){var i=box.querySelector('input'),v=parseInt(i.value,10)||0;var n=d>0?v+inc(v):v-inc(v-1);i.value=Math.max(1,n)}
-  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl)return '';var t=document.getElementById('t-'+pnl.id);return t?t.textContent.trim():''}
+  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl||pnl.id==='todos')return '';var t=document.getElementById('t-'+pnl.id);return t?t.textContent.trim():''}
   /* Controles en las listas por sector y en el catálogo */
   [].forEach.call(document.querySelectorAll('[data-p]'),function(el){
     var k=el.getAttribute('data-p'),p=P[k];if(!p)return;
@@ -639,7 +648,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function render(){
     var n=total();document.getElementById('cart-n').textContent=cart.length;btn.classList.toggle('show',cart.length>0);
     document.getElementById('cart-total').textContent=n.toLocaleString('es-EC')+' sacos';
-    if(!cart.length){list.innerHTML='<p class="empty">Su pedido está vacío. Agregue productos desde "Soluciones por sector" o el catálogo.</p>';return}
+    if(!cart.length){list.innerHTML='<p class="empty">Su pedido está vacío. Agregue productos desde su sector o desde «Todos los productos».</p>';return}
     list.innerHTML=cart.map(function(x,i){var p=P[x.k];return '<div class="it" data-i="'+i+'">'+thumb(p)+'<div><strong>'+p.n+'</strong><small>'+p.pres+(x.s?' · '+x.s:'')+'</small><div>'+qtyBox(x.q)+'</div></div><button class="rm" type="button">Quitar</button></div>'}).join('');
     var wa=document.getElementById('send-wa');
     if(typeof WHATSAPP!=='undefined'&&WHATSAPP){wa.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text());wa.target='_blank';wa.rel='noopener'}
@@ -653,13 +662,37 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   btn.addEventListener('click',open);
   [].forEach.call(dr.querySelectorAll('[data-close]'),function(x){x.addEventListener('click',close)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
-  document.getElementById('send-form').addEventListener('click',function(){
-    var m=document.getElementById('mensaje'),pr=document.getElementById('producto'),c=document.getElementById('cantidad');
-    if(m){m.value=text()} if(c){c.value=total().toLocaleString('es-EC')+' sacos'}
-    if(pr){var o=[].filter.call(pr.options,function(op){return /varios/i.test(op.text)})[0];if(!o){o=new Option('Varios productos (ver pedido)');pr.add(o,0)}pr.value=o.value}
-    close();
-  });
+  [].forEach.call(document.querySelectorAll('.js-open-cart'),function(b){b.addEventListener('click',function(e){e.preventDefault();open()})});
   render();
+})();/* Videos informativos por sector (YouTube, de terceros) */
+(function(){
+  var V={
+    banano:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']],
+    camaron:[['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],['LJCUNelT8zY','Encalado del estanque antes de la siembra','Antonio Vargas'],['81CRie3kd_w','Cómo medir la calidad del agua en estanques de camarón','Mundo Acuícola']],
+    agricola:[['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['4DFJXtqfvxg','Cómo calcular la dosis de cal para corregir la acidez','Campo y Agricultura']],
+    pecuario:[['sMslnp0DrtU','Limpieza y desinfección: pilares de la bioseguridad avícola','Gestión Pecuaria'],['DDzK9mbH_qY','Desinfección efectiva de galpones','La Finca de Hoy · Caracol TV']],
+    azucar:[['YxAeHAQrc4c','La cal en la industria azucarera','Horcalsa'],['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora']],
+    agua:[['_gye0uJcsuc','Hidróxido de calcio en el tratamiento de aguas residuales','Horcalsa'],['RyLaNMJhIRo','Qué es la zeolita y cómo se usa en el tratamiento de agua','Hidroled']],
+    construccion:[['6DxC9uea4Cc','Estabilización de suelos','Víctor Yepes'],['iv7zuaoIWBM','Estabilización de subrasante con cal','Fernando Gómez'],['FliInSdRSO8','Cal para estabilizar suelos arcillosos','Horcalsa']],
+    todos:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']]
+  };
+  var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+  Object.keys(V).forEach(function(k){
+    var pnl=document.getElementById(k); if(!pnl) return;
+    var host=pnl.querySelector('.plist'); if(!host) return;
+    var d=document.createElement('div'); d.className='learn';
+    d.innerHTML='<div class="learn-h">Aprenda más <span>Videos informativos</span></div><div class="learn-row">'+V[k].map(function(v){
+      return '<a class="vid" href="https://www.youtube.com/watch?v='+v[0]+'" target="_blank" rel="noopener" data-id="'+v[0]+'"><span class="vt" style="background-image:url(https://i.ytimg.com/vi/'+v[0]+'/mqdefault.jpg)"><i aria-hidden="true"></i></span><strong>'+esc(v[1])+'</strong><small>'+esc(v[2])+'</small></a>'}).join('')+'</div><p class="learn-note">Videos educativos de terceros publicados en YouTube. Crilarsa no es autor de su contenido; la dosis para su caso la define nuestro equipo técnico.</p>';
+    host.parentNode.insertBefore(d,host.nextSibling);
+  });
+  var m=document.createElement('div'); m.className='vmodal'; m.innerHTML='<div class="vshade" data-vclose></div><div class="vbox"><button class="x" data-vclose aria-label="Cerrar">×</button><div class="vframe"></div><a class="vyt" target="_blank" rel="noopener">Ver en YouTube</a></div>'; document.body.appendChild(m);
+  var fr=m.querySelector('.vframe'), yt=m.querySelector('.vyt');
+  function close(){m.classList.remove('open');fr.innerHTML='';document.body.style.overflow=''}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('.vid'); if(a){e.preventDefault();var id=a.dataset.id;fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';yt.href=a.href;m.classList.add('open');document.body.style.overflow='hidden';return}
+    if(e.target.closest('[data-vclose]')) close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
 })();/* Pestañas de sectores */
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));

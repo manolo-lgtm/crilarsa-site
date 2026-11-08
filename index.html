@@ -136,6 +136,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .plist .thumb{width:64px;height:64px;border-radius:4px;background:#e9e7e1;display:grid;place-items:center;overflow:hidden}
 .plist .thumb img{width:86%;height:86%;object-fit:contain}
 .plist .thumb b{font:800 15px var(--display);color:var(--blue)}
+.plist .uso{display:block;margin-top:6px;font-style:normal;font-size:14.5px;color:#a9b6c3}.plist .uso b{color:#dfe5eb;font-weight:600}
 .plist .pres{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9fb0c1;margin-top:4px}
 .order{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .qty{display:inline-flex;align-items:center;border:1px solid rgba(127,140,155,.6);border-radius:4px;overflow:hidden;background:var(--white)}
@@ -184,6 +185,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 /* Íconos de sectores */
 .tabs button{display:flex;align-items:center;gap:12px}
 .tabs .ti{width:32px;height:32px;flex:none;padding:5px;border-radius:8px;background:rgba(255,255,255,.08)}
+.learn{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.learn-h{font:700 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:#dfe5eb;margin-bottom:12px}
+.learn-h span{font-weight:500;text-transform:none;letter-spacing:0;color:#9fb0c1;margin-left:8px}
+.learn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vid{display:block;color:inherit;text-decoration:none;min-width:0}
+.vid .vt{display:block;position:relative;aspect-ratio:16/9;border-radius:8px;background:#2a3542 center/cover;overflow:hidden;border:1px solid rgba(255,255,255,.14)}
+.vid .vt i{position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;background:rgba(20,28,36,.78);transition:transform .25s,background .25s}
+.vid .vt i::after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vid:hover .vt i{transform:scale(1.1);background:var(--green)}
+.vid strong{display:block;font:600 14px/1.35 var(--display);margin-top:8px;color:#e6ebf0}
+.vid small{display:block;font-size:12.5px;color:#9fb0c1;margin-top:2px}
+.learn-note{font-size:12px;color:#8494a5;margin:12px 0 0}
+.vmodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px}
+.vmodal.open{display:flex}
+.vshade{position:absolute;inset:0;background:rgba(10,14,18,.82)}
+.vbox{position:relative;width:min(960px,100%,calc((100vh - 130px) * 16 / 9))}
+.vframe{aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+.vframe iframe{width:100%;height:100%;border:0;display:block}
+.vbox .x{position:absolute;top:-44px;right:0;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer}
+.vyt{display:inline-block;margin-top:10px;color:#cfd8e1;font-size:14px}
+@media (max-width:860px){.learn-row{grid-template-columns:1fr;gap:12px}.vid{display:grid;grid-template-columns:128px 1fr;column-gap:12px;align-items:start}.vid .vt{grid-row:1/3}.vid .vt i{width:34px;height:34px}.vid .vt i::after{left:13px;top:10px;border-left-width:11px;border-top-width:7px;border-bottom-width:7px}.vid strong{margin-top:0}}.tabs button.all{border-style:dashed}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
 .tabs button[aria-selected="true"] .ti{background:var(--blue-soft);color:var(--blue)}
 .panel .pi{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e6ebf0;margin-bottom:16px}
 .panel .pic{width:38px;height:38px}
@@ -442,7 +465,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
       <button role="tab" id="t-azucar" aria-controls="azucar" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 21V3.5M14.5 21V5.5"/><path d="M7.3 8.5h2.4M7.3 14.5h2.4M13.3 10.5h2.4M13.3 16.5h2.4"/><path d="M8.5 6c2.8-.6 4.6-2.3 5.6-4.5M14.5 9c2.2-1.2 4.3-1.3 6.2-.3"/></svg>Ingenios azucareros</button>
       <button role="tab" id="t-agua" aria-controls="agua" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 01-12 0c0-4.2 6-11 6-11z"/><path d="M9.3 14.8a2.7 2.7 0 002.7 2.7"/></svg>Tratamiento de agua</button>
       <button role="tab" id="t-construccion" aria-controls="construccion" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 16v-3a6.5 6.5 0 0113 0v3"/><path d="M12 6.5v4"/><path d="M3 16h18v2.5H3z"/></svg>Construcción y vías</button>
-      <button role="tab" id="t-distribuidores" aria-controls="distribuidores" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11.5v9.5H2.5z"/><path d="M14 9.5h4.3l3.2 3.4V16H14"/><circle cx="6.5" cy="17.5" r="1.7"/><circle cx="17.5" cy="17.5" r="1.7"/></svg>Distribuidores y volumen</button>
+      <button role="tab" id="t-todos" class="all" aria-controls="todos" aria-selected="false"><svg class="ti" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg> Ver todos los productos</button>
     </div>
 
     <div class="panel" role="tabpanel" id="banano" aria-labelledby="t-banano">
@@ -450,15 +473,15 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 14.5c3.5 4.5 11 4 14.5-2.5 1.2-2.3 1.2-5.2 0-7.5l-1.3.8c.1 3.3-1.8 6.5-5.2 7.8-2.8 1.1-5.6 1.2-8 1.4z"/><path d="M17.7 5.3l.8-2.3"/><path d="M8 15.8c3 .6 6.5-.6 8.4-3.6"/></svg></div><h3>Soluciones minerales para el sector bananero</h3>
         <p>Los suelos bananeros requieren calcio para la firmeza del fruto y una buena estructura para el drenaje y las raíces. Estos son los productos que más se utilizan en el cultivo:</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Corrige la acidez del suelo y aporta calcio.</span></li>
-          <li data-p="sulfato"><strong>Sulfato de calcio (yeso agrícola)</strong><span>Aporta calcio y azufre sin elevar el pH y ayuda a mejorar la estructura de suelos compactados o con exceso de sodio.</span></li>
-          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Carbonato y sulfato de calcio en un solo producto.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Mejorador de suelo que ayuda a retener nutrientes y humedad.</span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>El banano extrae mucho calcio, y en suelos ácidos el fósforo y el potasio quedan bloqueados. El carbonato corrige la acidez de forma gradual y aporta el calcio que da firmeza al fruto y fortalece la raíz.<em class="uso"><b>Uso:</b> al voleo en la zona de raíces, antes o junto al plan de fertilización, según el análisis de suelo.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfato de calcio (yeso agrícola)</strong><span>Aporta calcio y azufre sin subir el pH. Desplaza el sodio y afloja suelos compactados, lo que mejora el drenaje y el desarrollo de raíces.<em class="uso"><b>Uso:</b> en superficie sobre la zona de raíces; ideal cuando el pH ya es adecuado pero falta calcio o hay problemas de sodio.</em></span></li>
+          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Une la corrección de acidez del carbonato con el calcio y azufre del sulfato. Una sola aplicación en lugar de dos, con ahorro de mano de obra.<em class="uso"><b>Uso:</b> encalado de mantenimiento en una sola pasada.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Su estructura porosa retiene amonio, potasio y humedad cerca de la raíz y reduce las pérdidas de fertilizante por lavado en épocas de lluvia.<em class="uso"><b>Uso:</b> mezclada con el fertilizante o aplicada junto a él en la zona de raíces.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="banano" href="#contacto">Soy productor bananero — Solicitar asesoría</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
         <span class="note">Recomendamos basar la dosis en un análisis de suelo reciente.</span>
       </div>
     </div>
@@ -468,14 +491,14 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7.5c-1.5-2-5-2.8-8.2-1.6C7 7.3 5 10.6 5.6 14c.4 2.4 2.4 4.2 4.8 4.2"/><path d="M19 7.5c.6 1.2-.1 2.6-1.6 3.1l-3.2 1c-1.6.5-2.6 2-2.4 3.6"/><path d="M12.6 6.2c.6 1.6.4 3.3-.6 4.6M9.3 8c.9 1.4 1 3 .3 4.4M7 11.3c1 .9 1.5 2.2 1.4 3.6"/><path d="M10.4 18.2l-1.6 2.6M10.4 18.2l1.8 2.3M10.4 18.2l-3.2 1"/><path d="M19 7.5c1.5-.6 2.6-2 3-3.5M18.6 6.8c.8-1.6.9-3.2.4-4.6"/><path d="M15.5 11.2l.6 2M13.6 12l.4 2"/><circle cx="17.3" cy="7.2" r=".7" fill="currentColor" stroke="none"/></svg></div><h3>Soluciones para camaroneras</h3>
         <p>En la preparación de piscinas y durante el ciclo, el encalado mantiene la alcalinidad y el pH estables, base de un buen ambiente para el camarón.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio (Neutrocal)</strong><span>Encalado seguro para subir y estabilizar la alcalinidad y el pH del agua y del suelo. Nuestro producto de mayor demanda.</span></li>
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Acción rápida para la preparación y desinfección del fondo entre ciclos.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Apoyo en el manejo del fondo y del amonio, especialmente en sistemas de mayor densidad.</span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio (Neutrocal)</strong><span>Sube y estabiliza la alcalinidad y el pH, que amortiguan los cambios bruscos entre el día y la noche. Aporta calcio para la muda y favorece la productividad natural de la piscina. Nuestro producto de mayor demanda.<em class="uso"><b>Uso:</b> sobre el fondo en la preparación de la piscina y al voleo en el agua durante el ciclo, según la alcalinidad medida.</em></span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>El hidróxido de calcio eleva el pH con rapidez y elimina patógenos y vectores del fondo entre ciclos.<em class="uso"><b>Uso:</b> sobre el fondo después de la cosecha y antes del llenado. Por su acción fuerte no se aplica con camarón en la piscina.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Atrapa amonio y ayuda a mantener el fondo más limpio, con mejor ambiente para el camarón.<em class="uso"><b>Uso:</b> al voleo en el agua, sobre todo en zonas de alimentación y en sistemas de mayor densidad.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="camaron" href="#contacto">Soy camaronero — Solicitar asesoría</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
         <span class="note">Despachos por volumen con carga paletizada.</span>
       </div>
     </div>
@@ -485,15 +508,15 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-8"/><path d="M12 12C12 8 9 5.6 4.5 5.6c0 4 3 6.4 7.5 6.4z"/><path d="M12 10c0-3.3 2.8-5.6 6.5-5.6 0 3.3-2.8 5.6-6.5 5.6z"/><path d="M5.5 20h13"/></svg></div><h3>Cacao, arroz, palma, maíz y otros cultivos</h3>
         <p>Gran parte de los suelos agrícolas del Litoral son ácidos o pobres en calcio. El encalado y las enmiendas minerales ayudan a que el cultivo aproveche mejor el fertilizante.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Encalado para corregir la acidez y aportar calcio.</span></li>
-          <li data-p="sulfato"><strong>Sulfato de calcio</strong><span>Calcio y azufre sin modificar el pH; útil en suelos con problemas de estructura o sodio.</span></li>
-          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Encalado y aporte de azufre en una sola aplicación.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Se mezcla con el fertilizante para reducir pérdidas de nutrientes.</span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>En suelos ácidos, el aluminio y la acidez frenan las raíces y bloquean nutrientes. El encalado los corrige y hace que el fertilizante rinda más.<em class="uso"><b>Uso:</b> al voleo o incorporado antes de la siembra o al inicio del ciclo, según el análisis de suelo.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfato de calcio</strong><span>Calcio y azufre sin cambiar el pH. Mejora suelos pesados o con sodio, y el azufre es necesario para que el cultivo forme proteínas.<em class="uso"><b>Uso:</b> en superficie, solo o junto al plan de fertilización.</em></span></li>
+          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Corrige la acidez y aporta azufre en una sola aplicación.<em class="uso"><b>Uso:</b> encalado de mantenimiento antes de la siembra.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Retiene amonio y potasio, y reduce las pérdidas de nitrógeno por lavado y volatilización.<em class="uso"><b>Uso:</b> mezclada con la urea u otro fertilizante antes de aplicarlo.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="agricola" href="#contacto">Soy agricultor — Solicitar asesoría</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
       </div>
     </div>
 
@@ -502,14 +525,14 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8.5L3.5 6.5v4l3.5 1"/><path d="M17 8.5l3.5-2v4l-3.5 1"/><path d="M7 7.5h10v6.5a5 5 0 01-10 0z"/><circle cx="10" cy="16.2" r=".8" fill="currentColor" stroke="none"/><circle cx="14" cy="16.2" r=".8" fill="currentColor" stroke="none"/><path d="M10 10.5h.01M14 10.5h.01"/></svg></div><h3>Granjas avícolas, porcinas y ganaderas</h3>
         <p>La bioseguridad y el manejo de la humedad son clave en la producción animal.</p>
         <ul class="plist">
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Desinfección de galpones, corrales, pisos y accesos.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Control de humedad y olores en camas, y uso como aditivo en alimento balanceado según la formulación del nutricionista.</span></li>
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Fuente de calcio para sanidad animal, según su ficha técnica.</span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Su pH alto elimina bacterias, virus y hongos en las superficies, base de la bioseguridad de la granja.<em class="uso"><b>Uso:</b> espolvoreada o en lechada en pisos, paredes, corrales, pediluvios y accesos, entre lote y lote.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Absorbe humedad y amoníaco en las camas, lo que mejora el ambiente del galpón y reduce olores.<em class="uso"><b>Uso:</b> mezclada con la cama; como aditivo en el alimento, según la formulación del nutricionista.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Fuente de calcio para la formación de hueso y de la cáscara del huevo.<em class="uso"><b>Uso:</b> en la formulación del balanceado, según su ficha técnica y el nutricionista.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="pecuario" href="#contacto">Tengo una granja — Solicitar información</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
       </div>
     </div>
 
@@ -518,14 +541,14 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 21V3.5M14.5 21V5.5"/><path d="M7.3 8.5h2.4M7.3 14.5h2.4M13.3 10.5h2.4M13.3 16.5h2.4"/><path d="M8.5 6c2.8-.6 4.6-2.3 5.6-4.5M14.5 9c2.2-1.2 4.3-1.3 6.2-.3"/></svg></div><h3>Ingenios azucareros</h3>
         <p>La industria azucarera utiliza grandes volúmenes de cal en su proceso, y la caña requiere suelos bien encalados.</p>
         <ul class="plist">
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Cal para el proceso de clarificación del jugo de caña.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Aplicaciones en la industria azucarera, según su ficha técnica.</span></li>
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Encalado de los suelos de cultivo de caña.</span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>La cal neutraliza la acidez del jugo de caña y ayuda a precipitar impurezas, lo que evita pérdidas de sacarosa.<em class="uso"><b>Uso:</b> como lechada de cal dosificada al jugo en la etapa de clarificación.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>En el campo retiene nutrientes y humedad en el suelo del cañaveral.<em class="uso"><b>Uso:</b> junto al fertilizante en la siembra o la soca.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>La caña rinde más en suelos con la acidez corregida y bien provistos de calcio.<em class="uso"><b>Uso:</b> encalado antes de la siembra o después del corte, según el análisis de suelo.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi industria</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
       </div>
     </div>
 
@@ -534,13 +557,13 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 01-12 0c0-4.2 6-11 6-11z"/><path d="M9.3 14.8a2.7 2.7 0 002.7 2.7"/></svg></div><h3>Tratamiento de agua</h3>
         <p>Para plantas de tratamiento, municipios e industrias que necesitan ajustar el pH o mejorar la calidad del agua.</p>
         <ul class="plist">
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Ajuste de pH y tratamiento de aguas.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Medio natural para la purificación de agua.</span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Sube el pH de aguas ácidas y ayuda a la coagulación y a precipitar metales.<em class="uso"><b>Uso:</b> dosificada como lechada de cal en la planta de tratamiento.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Retiene amonio y algunos metales por intercambio iónico y atrapa sólidos finos.<em class="uso"><b>Uso:</b> como lecho filtrante o dosificada en el proceso de tratamiento.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi industria</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
       </div>
     </div>
 
@@ -549,33 +572,31 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 16v-3a6.5 6.5 0 0113 0v3"/><path d="M12 6.5v4"/><path d="M3 16h18v2.5H3z"/></svg></div><h3>Construcción y vías</h3>
         <p>Materiales calcáreos para obra civil y construcción de carreteras.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Uso en construcción de carreteras.</span></li>
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Uso en construcción y estabilización de suelos.</span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Carbonato fino que se usa como relleno mineral (filler) en mezclas asfálticas y morteros.<em class="uso"><b>Uso:</b> según la especificación de la obra.</em></span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>La cal reacciona con las arcillas, reduce su plasticidad y aumenta la capacidad de soporte de la subrasante.<em class="uso"><b>Uso:</b> mezclada con el suelo para estabilizar subrasantes, y en morteros y enlucidos.</em></span></li>
         </ul>
       </div>
       <div class="side">
         <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi obra</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
       </div>
     </div>
-
-    <div class="panel" role="tabpanel" id="distribuidores" aria-labelledby="t-distribuidores" hidden>
+    <div class="panel" role="tabpanel" id="todos" aria-labelledby="t-todos" hidden>
       <div>
-        <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11.5v9.5H2.5z"/><path d="M14 9.5h4.3l3.2 3.4V16H14"/><circle cx="6.5" cy="17.5" r="1.7"/><circle cx="17.5" cy="17.5" r="1.7"/></svg></div><h3>Distribuidores y compradores de gran volumen</h3>
-        <p>Abastecemos a distribuidores, almacenes agrícolas, camaroneras, haciendas e industrias que compran por miles de sacos, con precio de fábrica, volumen constante y despacho ágil.</p>
+        <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></div><h3>Todos nuestros productos</h3>
+        <p>Todo el catálogo en un solo lugar. Elija la cantidad de sacos de cada producto, agréguelos a su pedido y envíelo por WhatsApp.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio (Neutrocal)</strong><span>Producto de mayor demanda.</span></li>
-          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Cal hidratada.</span></li>
-          <li data-p="zeolita"><strong>Zeolita</strong><span>Clinoptilolita natural.</span></li>
-          <li data-p="sulfato"><strong>Sulfato de calcio</strong><span>Yeso agrícola.</span></li>
-          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Carbonato y sulfato de calcio.</span></li>
-          <li><strong>Pedidos de miles de sacos</strong><span>Producción propia para pedidos grandes y recurrentes, con programación de entregas.</span></li>
-          <li><strong>Carga rápida</strong><span>Estiba paletizada y carga mecanizada, con coordinación 24/7.</span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio (Neutrocal)</strong><span>Carbonato de calcio molido fino que corrige la acidez del suelo y del agua y aporta calcio.<em class="uso"><b>Uso:</b> bananeras, cacao, arroz, palma y caña; encalado de piscinas camaroneras; relleno mineral en construcción.</em></span></li>
+          <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>Cal hidratada de acción rápida que eleva el pH y desinfecta.<em class="uso"><b>Uso:</b> preparación de fondos entre ciclos, bioseguridad en granjas, ajuste de pH en agua e industria, estabilización de suelos.</em></span></li>
+          <li data-p="zeolita"><strong>Zeolita</strong><span>Mineral natural (clinoptilolita) que retiene amonio, potasio y humedad.<em class="uso"><b>Uso:</b> junto al fertilizante en cultivos, manejo del fondo en piscinas, camas de galpones y filtración de agua.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfato de calcio (yeso agrícola)</strong><span>Aporta calcio y azufre sin subir el pH y mejora la estructura del suelo.<em class="uso"><b>Uso:</b> banano y cultivos en suelos compactados o con sodio.</em></span></li>
+          <li data-p="mezcla"><strong>Mezcla mineral 3:1</strong><span>Carbonato y sulfato de calcio en un solo saco.<em class="uso"><b>Uso:</b> encalado con aporte de azufre en una sola aplicación.</em></span></li>
         </ul>
       </div>
       <div class="side">
-        <a class="btn btn-wa js-wa" data-msg="distribuidor" href="#contacto">Cotizar un pedido por volumen</a>
-        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-ghost js-open-cart" href="#">Ver mi pedido</a>
+        <a class="btn btn-wa js-wa" data-msg="general" href="#contacto">¿Dudas? Escríbanos por WhatsApp</a>
+        <span class="note">Sin pago en línea: le confirmamos precio de fábrica, disponibilidad y fecha de carga.</span>
       </div>
     </div>
   </div>
@@ -637,17 +658,17 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 <section class="contact" id="contacto">
   <div class="inner">
     <div class="text">
-      <div class="eyebrow">Contacto comercial</div>
-      <h2>Solicite su cotización</h2>
-      <p class="lead">Complete el formulario o escríbanos por WhatsApp. Le responderemos con el precio de fábrica y la disponibilidad del producto.</p>
-      <div><a class="btn btn-wa js-wa" data-msg="general" href="#contacto">Escribir por WhatsApp</a></div>
+      <div class="eyebrow">Contacto</div>
+      <h2>¿Tiene una consulta?</h2>
+      <p class="lead">Escríbanos para preguntas, asesoría técnica o información general. Para comprar no necesita este formulario: elija productos y cantidades en la sección de pedidos y envíe su pedido directamente por WhatsApp.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="index.html#todos">Hacer un pedido</a><a class="btn btn-wa js-wa" data-msg="general" href="#contacto">Escribir por WhatsApp</a></div>
       <dl>
         <div><dt>WhatsApp comercial</dt><dd>+593 98 521 1202</dd></div><div><dt>Correo</dt><dd>finanzas@crilarsa.com</dd></div>
         <div><dt>Planta</dt><dd>Vía a la Costa, km 22, Guayaquil, Ecuador</dd></div>
         <div><dt>RUC</dt><dd>0992110945001</dd></div>
       </dl>
     </div>
-    <form id="f" action="https://formsubmit.co/finanzas@crilarsa.com" method="POST"><input type="hidden" name="_subject" value="Nueva solicitud de cotización desde crilarsa.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <form id="f" action="https://formsubmit.co/finanzas@crilarsa.com" method="POST"><input type="hidden" name="_subject" value="Nueva consulta desde crilarsa.com"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="row">
         <label for="nombre">Nombre<input id="nombre" name="nombre" autocomplete="name" required></label>
         <label for="empresa">Empresa o finca<input id="empresa" name="empresa" autocomplete="organization"></label>
@@ -656,22 +677,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
         <label for="ciudad">Ciudad o ubicación<input id="ciudad" name="ciudad" autocomplete="address-level2" required></label>
         <label for="telefono">Teléfono o WhatsApp<input id="telefono" name="telefono" type="tel" autocomplete="tel" required></label>
       </div>
-      <div class="row">
-        <label for="producto">Producto de interés
-          <select id="producto" name="producto">
-            <option>Carbonato de calcio</option>
-            <option>Sulfato de calcio</option>
-            <option>Mezcla mineral 3:1</option>
-            <option>Zeolita</option>
-            <option>Hidróxido de calcio (Cal Forte)</option>
-            <option>Necesito asesoría para elegir</option>
-          </select>
-        </label>
-        <label for="cantidad">Cantidad aproximada<input id="cantidad" name="cantidad" placeholder="Ej.: 200 sacos"></label>
-      </div>
       <label for="correo">Correo electrónico <small>(opcional)</small><input id="correo" name="email" type="email" autocomplete="email"></label>
-      <label for="mensaje">Comentarios o requerimientos<textarea id="mensaje" name="mensaje" placeholder="Cultivo, hectáreas, fecha en que necesita el producto…"></textarea></label>
-      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+      <label for="mensaje">Su consulta<textarea id="mensaje" name="mensaje" required placeholder="Escriba su pregunta: producto, cultivo o actividad, dudas técnicas…"></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar consulta</button>
     </form>
   </div>
 </section>
@@ -694,7 +702,6 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <footer>
       <div class="total"><span>Total</span><span id="cart-total">0 sacos</span></div>
       <a class="btn btn-wa" id="send-wa" href="#contacto">Enviar pedido por WhatsApp</a>
-      <a class="btn btn-line" id="send-form" href="#contacto">Enviar por formulario</a>
       <p class="fine">Sin pago en línea. Le confirmamos precio de fábrica, disponibilidad y fecha de carga.</p>
     </footer>
   </div>
@@ -750,7 +757,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function qtyBox(v){return '<span class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" step="1" value="'+v+'" inputmode="numeric" aria-label="Cantidad de sacos"><button type="button" data-d="1" aria-label="Más">+</button></span>'}
   function inc(v){return v<10?1:(v<100?10:50)}
   function step(box,d){var i=box.querySelector('input'),v=parseInt(i.value,10)||0;var n=d>0?v+inc(v):v-inc(v-1);i.value=Math.max(1,n)}
-  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl)return '';var t=document.getElementById('t-'+pnl.id);return t?t.textContent.trim():''}
+  function sectorOf(el){var pnl=el.closest('.panel');if(!pnl||pnl.id==='todos')return '';var t=document.getElementById('t-'+pnl.id);return t?t.textContent.trim():''}
   /* Controles en las listas por sector y en el catálogo */
   [].forEach.call(document.querySelectorAll('[data-p]'),function(el){
     var k=el.getAttribute('data-p'),p=P[k];if(!p)return;
@@ -782,7 +789,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function render(){
     var n=total();document.getElementById('cart-n').textContent=cart.length;btn.classList.toggle('show',cart.length>0);
     document.getElementById('cart-total').textContent=n.toLocaleString('es-EC')+' sacos';
-    if(!cart.length){list.innerHTML='<p class="empty">Su pedido está vacío. Agregue productos desde "Soluciones por sector" o el catálogo.</p>';return}
+    if(!cart.length){list.innerHTML='<p class="empty">Su pedido está vacío. Agregue productos desde su sector o desde «Todos los productos».</p>';return}
     list.innerHTML=cart.map(function(x,i){var p=P[x.k];return '<div class="it" data-i="'+i+'">'+thumb(p)+'<div><strong>'+p.n+'</strong><small>'+p.pres+(x.s?' · '+x.s:'')+'</small><div>'+qtyBox(x.q)+'</div></div><button class="rm" type="button">Quitar</button></div>'}).join('');
     var wa=document.getElementById('send-wa');
     if(typeof WHATSAPP!=='undefined'&&WHATSAPP){wa.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text());wa.target='_blank';wa.rel='noopener'}
@@ -796,13 +803,37 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   btn.addEventListener('click',open);
   [].forEach.call(dr.querySelectorAll('[data-close]'),function(x){x.addEventListener('click',close)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
-  document.getElementById('send-form').addEventListener('click',function(){
-    var m=document.getElementById('mensaje'),pr=document.getElementById('producto'),c=document.getElementById('cantidad');
-    if(m){m.value=text()} if(c){c.value=total().toLocaleString('es-EC')+' sacos'}
-    if(pr){var o=[].filter.call(pr.options,function(op){return /varios/i.test(op.text)})[0];if(!o){o=new Option('Varios productos (ver pedido)');pr.add(o,0)}pr.value=o.value}
-    close();
-  });
+  [].forEach.call(document.querySelectorAll('.js-open-cart'),function(b){b.addEventListener('click',function(e){e.preventDefault();open()})});
   render();
+})();/* Videos informativos por sector (YouTube, de terceros) */
+(function(){
+  var V={
+    banano:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']],
+    camaron:[['mSY48ALXmug','La cal en la camaronicultura y la bioseguridad','Horcalsa'],['LJCUNelT8zY','Encalado del estanque antes de la siembra','Antonio Vargas'],['81CRie3kd_w','Cómo medir la calidad del agua en estanques de camarón','Mundo Acuícola']],
+    agricola:[['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['4DFJXtqfvxg','Cómo calcular la dosis de cal para corregir la acidez','Campo y Agricultura']],
+    pecuario:[['sMslnp0DrtU','Limpieza y desinfección: pilares de la bioseguridad avícola','Gestión Pecuaria'],['DDzK9mbH_qY','Desinfección efectiva de galpones','La Finca de Hoy · Caracol TV']],
+    azucar:[['YxAeHAQrc4c','La cal en la industria azucarera','Horcalsa'],['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora']],
+    agua:[['_gye0uJcsuc','Hidróxido de calcio en el tratamiento de aguas residuales','Horcalsa'],['RyLaNMJhIRo','Qué es la zeolita y cómo se usa en el tratamiento de agua','Hidroled']],
+    construccion:[['6DxC9uea4Cc','Estabilización de suelos','Víctor Yepes'],['iv7zuaoIWBM','Estabilización de subrasante con cal','Fernando Gómez'],['FliInSdRSO8','Cal para estabilizar suelos arcillosos','Horcalsa']],
+    todos:[['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],['SvI3dhjSLqk','Funciones de la cal agrícola y el yeso en el suelo','ABC TV Paraguay'],['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo']]
+  };
+  var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+  Object.keys(V).forEach(function(k){
+    var pnl=document.getElementById(k); if(!pnl) return;
+    var host=pnl.querySelector('.plist'); if(!host) return;
+    var d=document.createElement('div'); d.className='learn';
+    d.innerHTML='<div class="learn-h">Aprenda más <span>Videos informativos</span></div><div class="learn-row">'+V[k].map(function(v){
+      return '<a class="vid" href="https://www.youtube.com/watch?v='+v[0]+'" target="_blank" rel="noopener" data-id="'+v[0]+'"><span class="vt" style="background-image:url(https://i.ytimg.com/vi/'+v[0]+'/mqdefault.jpg)"><i aria-hidden="true"></i></span><strong>'+esc(v[1])+'</strong><small>'+esc(v[2])+'</small></a>'}).join('')+'</div><p class="learn-note">Videos educativos de terceros publicados en YouTube. Crilarsa no es autor de su contenido; la dosis para su caso la define nuestro equipo técnico.</p>';
+    host.parentNode.insertBefore(d,host.nextSibling);
+  });
+  var m=document.createElement('div'); m.className='vmodal'; m.innerHTML='<div class="vshade" data-vclose></div><div class="vbox"><button class="x" data-vclose aria-label="Cerrar">×</button><div class="vframe"></div><a class="vyt" target="_blank" rel="noopener">Ver en YouTube</a></div>'; document.body.appendChild(m);
+  var fr=m.querySelector('.vframe'), yt=m.querySelector('.vyt');
+  function close(){m.classList.remove('open');fr.innerHTML='';document.body.style.overflow=''}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('.vid'); if(a){e.preventDefault();var id=a.dataset.id;fr.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';yt.href=a.href;m.classList.add('open');document.body.style.overflow='hidden';return}
+    if(e.target.closest('[data-vclose]')) close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
 })();/* Pestañas de sectores */
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
