@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Crilarsa C.A.: minerales de calidad, producción propia y venta directa al productor. Carbonato de calcio, sulfato de calcio, mezcla 3:1, zeolita y Cal Forte para el sector bananero, la agricultura y la acuicultura. Planta en la Vía a la Costa, km 22, Guayaquil. Desde 1989.">
+<meta name="description" content="Crilarsa C.A.: minerales de calidad, producción propia y venta directa al productor. Carbonato de calcio, sulfato de calcio, mezcla 3:1, zeolita y Cal Forte para los sectores bananero, camaronero, agrícola, avícola, azucarero, tratamiento de agua y construcción. Dos plantas en la Vía a la Costa, km 22, Guayaquil. Desde 1989.">
 <link rel="icon" type="image/png" href="logo-crilarsa-blanco.png"><title>Crilarsa · Minerales de calidad, directamente al productor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -86,6 +86,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .banana .cta{display:grid;gap:12px;justify-items:start}
 .banana .note{font-size:14px;color:#b9c5d1}
 
+/* Soluciones por sector */
+.sectors{background:var(--navy-2);color:var(--white);padding-block:clamp(56px,7vw,88px)}
+.sectors .lead{color:#c3ccd5}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:28px;scrollbar-width:thin}
+.tabs button{flex:none;font:600 14.5px var(--display);color:#c3ccd5;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 16px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--white);color:var(--navy);border-color:var(--white)}
+.tabs button:hover{border-color:rgba(255,255,255,.6)}
+.panel{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(28px,5vw,64px);align-items:start;border-top:1px solid rgba(255,255,255,.15);padding-top:28px}
+.panel[hidden]{display:none}
+.panel h3{font-size:clamp(24px,2.6vw,32px);font-weight:700}
+.panel > div > p{color:#d4dbe2;margin-top:12px;max-width:62ch}
+.plist{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:0}
+.plist li{display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:6px 20px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12)}
+.plist strong{font-family:var(--display);font-size:16.5px}
+.plist span{color:#c3ccd5;font-size:15.5px}
+.panel .side{display:grid;gap:12px;justify-items:stretch;align-content:start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:22px}
+.panel .side .btn{white-space:normal;text-align:center}
+.panel .note{font-size:14px;color:#aeb8c3}
+@media (max-width:860px){.panel{grid-template-columns:1fr}.plist li{grid-template-columns:1fr}}
 /* Venta directa */
 .direct .inner{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,80px);align-items:start}
 .direct .photo{position:relative;min-height:100%}
@@ -283,7 +302,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <a class="logo" href="#inicio" aria-label="Crilarsa, inicio"><img src="logo-crilarsa-blanco.png" alt="Crilarsa C.A. Química Inteligente"></a>
     <ul id="menu">
       <li><a href="#productos">Productos</a></li>
-      <li><a href="#banano">Sector bananero</a></li>
+      <li><a href="#sectores">Sectores</a></li>
       <li><a href="#asesoria">Asesoría</a></li>
       <li><a href="#planta">Nuestra planta</a></li>
       <li><a href="#logistica">Logística</a></li>
@@ -315,20 +334,152 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   </div>
 </header>
 
-<section class="banana" id="banano">
+<section class="sectors" id="sectores">
   <div class="inner">
-    <div>
-      <div class="eyebrow" style="color:#b9c5d1">Sector bananero</div>
-      <h2 style="margin-top:12px">Soluciones minerales para el sector bananero</h2>
-      <p>Ponemos a disposición del productor bananero carbonato de calcio, sulfato de calcio, zeolita y nuestra mezcla 3:1. La elección del mineral y su dosis dependen de las condiciones del suelo y de las necesidades del cultivo; por eso le recomendamos consultar con nuestro equipo antes de cada aplicación.</p>
-      <ul>
-        <li>Carbonato de calcio</li><li>Sulfato de calcio</li><li>Mezcla 3:1</li><li>Zeolita</li>
-      </ul>
+    <div class="head" style="margin-bottom:28px">
+      <div class="eyebrow" style="color:#b9c5d1">Soluciones por sector</div>
+      <h2>¿Qué minerales necesita su actividad?</h2>
+      <p class="lead">Elija su sector y vea qué productos de Crilarsa se utilizan habitualmente en él. Atendemos desde pedidos puntuales hasta compras de miles de sacos. La selección final y la dosis dependen de las condiciones de su suelo, su agua o su proceso: nuestro equipo le orienta antes de la compra.</p>
     </div>
-    <div class="cta">
-      <a class="btn btn-wa js-wa" data-msg="banano" href="#contacto" style="font-size:16px;padding:16px 22px"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Soy productor bananero — Solicitar asesoría</a>
-      <a class="btn btn-ghost" href="#contacto">Solicitar cotización por formulario</a>
-      <span class="note">Le respondemos con información de productos, presentaciones y precios de fábrica.</span>
+    <div class="tabs" role="tablist" aria-label="Sectores">
+      <button role="tab" id="t-banano" aria-controls="banano" aria-selected="true">Bananero</button>
+      <button role="tab" id="t-camaron" aria-controls="camaron" aria-selected="false">Camaronero</button>
+      <button role="tab" id="t-agricola" aria-controls="agricola" aria-selected="false">Cacao, arroz, palma y otros cultivos</button>
+      <button role="tab" id="t-pecuario" aria-controls="pecuario" aria-selected="false">Avícola y ganadero</button>
+      <button role="tab" id="t-azucar" aria-controls="azucar" aria-selected="false">Ingenios azucareros</button>
+      <button role="tab" id="t-agua" aria-controls="agua" aria-selected="false">Tratamiento de agua</button>
+      <button role="tab" id="t-construccion" aria-controls="construccion" aria-selected="false">Construcción y vías</button>
+      <button role="tab" id="t-distribuidores" aria-controls="distribuidores" aria-selected="false">Distribuidores y grandes volúmenes</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="banano" aria-labelledby="t-banano">
+      <div>
+        <h3>Soluciones minerales para el sector bananero</h3>
+        <p>Los suelos bananeros requieren calcio para la firmeza del fruto y una buena estructura para el drenaje y las raíces. Estos son los productos que más se utilizan en el cultivo:</p>
+        <ul class="plist">
+          <li><strong>Carbonato de calcio</strong><span>Corrige la acidez del suelo y aporta calcio.</span></li>
+          <li><strong>Sulfato de calcio (yeso agrícola)</strong><span>Aporta calcio y azufre sin elevar el pH y ayuda a mejorar la estructura de suelos compactados o con exceso de sodio.</span></li>
+          <li><strong>Mezcla mineral 3:1</strong><span>Carbonato y sulfato de calcio en un solo producto.</span></li>
+          <li><strong>Zeolita</strong><span>Mejorador de suelo que ayuda a retener nutrientes y humedad.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="banano" href="#contacto">Soy productor bananero — Solicitar asesoría</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <span class="note">Recomendamos basar la dosis en un análisis de suelo reciente.</span>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="camaron" aria-labelledby="t-camaron" hidden>
+      <div>
+        <h3>Soluciones para camaroneras</h3>
+        <p>En la preparación de piscinas y durante el ciclo, el encalado mantiene la alcalinidad y el pH estables, base de un buen ambiente para el camarón.</p>
+        <ul class="plist">
+          <li><strong>Carbonato de calcio (Neutrocal)</strong><span>Encalado seguro para subir y estabilizar la alcalinidad y el pH del agua y del suelo. Nuestro producto de mayor demanda.</span></li>
+          <li><strong>Hidróxido de calcio (Cal Forte)</strong><span>Acción rápida para la preparación y desinfección del fondo entre ciclos.</span></li>
+          <li><strong>Zeolita</strong><span>Apoyo en el manejo del fondo y del amonio, especialmente en sistemas de mayor densidad.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="camaron" href="#contacto">Soy camaronero — Solicitar asesoría</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+        <span class="note">Despachos por volumen con carga paletizada.</span>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="agricola" aria-labelledby="t-agricola" hidden>
+      <div>
+        <h3>Cacao, arroz, palma, maíz y otros cultivos</h3>
+        <p>Gran parte de los suelos agrícolas del Litoral son ácidos o pobres en calcio. El encalado y las enmiendas minerales ayudan a que el cultivo aproveche mejor el fertilizante.</p>
+        <ul class="plist">
+          <li><strong>Carbonato de calcio</strong><span>Encalado para corregir la acidez y aportar calcio.</span></li>
+          <li><strong>Sulfato de calcio</strong><span>Calcio y azufre sin modificar el pH; útil en suelos con problemas de estructura o sodio.</span></li>
+          <li><strong>Mezcla mineral 3:1</strong><span>Encalado y aporte de azufre en una sola aplicación.</span></li>
+          <li><strong>Zeolita</strong><span>Se mezcla con el fertilizante para reducir pérdidas de nutrientes.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="agricola" href="#contacto">Soy agricultor — Solicitar asesoría</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="pecuario" aria-labelledby="t-pecuario" hidden>
+      <div>
+        <h3>Granjas avícolas, porcinas y ganaderas</h3>
+        <p>La bioseguridad y el manejo de la humedad son clave en la producción animal.</p>
+        <ul class="plist">
+          <li><strong>Hidróxido de calcio (Cal Forte)</strong><span>Desinfección de galpones, corrales, pisos y accesos.</span></li>
+          <li><strong>Zeolita</strong><span>Control de humedad y olores en camas, y uso como aditivo en alimento balanceado según la formulación del nutricionista.</span></li>
+          <li><strong>Carbonato de calcio</strong><span>Fuente de calcio para sanidad animal, según su ficha técnica.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="pecuario" href="#contacto">Tengo una granja — Solicitar información</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="azucar" aria-labelledby="t-azucar" hidden>
+      <div>
+        <h3>Ingenios azucareros</h3>
+        <p>La industria azucarera utiliza grandes volúmenes de cal en su proceso, y la caña requiere suelos bien encalados.</p>
+        <ul class="plist">
+          <li><strong>Hidróxido de calcio (Cal Forte)</strong><span>Cal para el proceso de clarificación del jugo de caña.</span></li>
+          <li><strong>Zeolita</strong><span>Aplicaciones en la industria azucarera, según su ficha técnica.</span></li>
+          <li><strong>Carbonato de calcio</strong><span>Encalado de los suelos de cultivo de caña.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi industria</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="agua" aria-labelledby="t-agua" hidden>
+      <div>
+        <h3>Tratamiento de agua</h3>
+        <p>Para plantas de tratamiento, municipios e industrias que necesitan ajustar el pH o mejorar la calidad del agua.</p>
+        <ul class="plist">
+          <li><strong>Hidróxido de calcio (Cal Forte)</strong><span>Ajuste de pH y tratamiento de aguas.</span></li>
+          <li><strong>Zeolita</strong><span>Medio natural para la purificación de agua.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi industria</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="construccion" aria-labelledby="t-construccion" hidden>
+      <div>
+        <h3>Construcción y vías</h3>
+        <p>Materiales calcáreos para obra civil y construcción de carreteras.</p>
+        <ul class="plist">
+          <li><strong>Carbonato de calcio</strong><span>Uso en construcción de carreteras.</span></li>
+          <li><strong>Hidróxido de calcio (Cal Forte)</strong><span>Uso en construcción y estabilización de suelos.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="industria" href="#contacto">Solicitar información para mi obra</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="distribuidores" aria-labelledby="t-distribuidores" hidden>
+      <div>
+        <h3>Distribuidores y compradores de gran volumen</h3>
+        <p>Abastecemos a distribuidores, almacenes agrícolas, camaroneras, haciendas e industrias que compran por miles de sacos, con precio de fábrica, volumen constante y despacho ágil.</p>
+        <ul class="plist">
+          <li><strong>Todo el catálogo</strong><span>Carbonato de calcio, sulfato de calcio, mezcla 3:1, zeolita y Cal Forte.</span></li>
+          <li><strong>Pedidos de miles de sacos</strong><span>Producción propia para pedidos grandes y recurrentes, con programación de entregas.</span></li>
+          <li><strong>Carga rápida</strong><span>Estiba paletizada y carga mecanizada, con coordinación 24/7.</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn btn-wa js-wa" data-msg="distribuidor" href="#contacto">Cotizar un pedido por volumen</a>
+        <a class="btn btn-ghost" href="#contacto">Solicitar cotización</a>
+      </div>
     </div>
   </div>
 </section>
@@ -619,7 +770,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 <footer>
   <div class="inner top">
     <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Minerales de calidad. Producción propia. Directamente al productor. Experiencia desde 1989.</p></div>
-    <div><h4>Sitio</h4><ul><li><a href="#productos">Productos</a></li><li><a href="#banano">Sector bananero</a></li><li><a href="#asesoria">Asesoría técnica</a></li><li><a href="#planta">Nuestra planta</a></li><li><a href="#logistica">Logística</a></li><li><a href="#mision">Misión y visión</a></li></ul></div>
+    <div><h4>Sitio</h4><ul><li><a href="#productos">Productos</a></li><li><a href="#sectores">Sectores</a></li><li><a href="#asesoria">Asesoría técnica</a></li><li><a href="#planta">Nuestra planta</a></li><li><a href="#logistica">Logística</a></li><li><a href="#mision">Misión y visión</a></li></ul></div>
     <div><h4>Contacto</h4><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>Vía a la Costa, km 22, Guayaquil</li><li>RUC 0992110945001</li></ul></div>
   </div>
   <div class="inner bottom">© 2026 Crilarsa C.A. · Química Inteligente</div>
@@ -637,7 +788,12 @@ var WHATSAPP = "593985211202";
 var MSG = {
   general: "Buenos días. Quisiera recibir información sobre los minerales de CRILARSA, sus presentaciones y precios.",
   banano: "Buenos días. Soy productor bananero y quisiera recibir información sobre los minerales de CRILARSA, sus presentaciones, precios y asesoría técnica.",
-  cultivo: "Buenos días. Quisiera consultar por una solución mineral para mi cultivo."
+  cultivo: "Buenos días. Quisiera consultar por una solución mineral para mi cultivo.",
+  camaron: "Buenos días. Soy camaronero y quisiera recibir información sobre los minerales de CRILARSA para mis piscinas, sus presentaciones, precios y asesoría técnica.",
+  agricola: "Buenos días. Soy agricultor y quisiera recibir información sobre los minerales de CRILARSA para mi cultivo, sus presentaciones, precios y asesoría técnica.",
+  pecuario: "Buenos días. Tengo una granja y quisiera recibir información sobre Cal Forte, zeolita y carbonato de calcio de CRILARSA, sus presentaciones y precios.",
+  industria: "Buenos días. Quisiera recibir información sobre los minerales de CRILARSA para uso industrial, sus presentaciones, volúmenes y precios.",
+  distribuidor: "Buenos días. Me interesa comprar productos de CRILARSA en gran volumen (miles de sacos). Quisiera información sobre precios de fábrica, disponibilidad y despacho."
 };
 if (WHATSAPP) {
   document.querySelectorAll('.js-wa').forEach(function(a){
@@ -655,7 +811,14 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('lift');io.unobserve(e.target);}});},{threshold:.12});
   els.forEach(function(el){io.observe(el);});
 }
-/* Video de la planta: tramos cortos con fundido suave entre clips (sin sonido) */
+/* Pestañas de sectores */
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
+  function show(id,focus){tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus();if(on)t.scrollIntoView({block:'nearest',inline:'nearest'})})}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(t.getAttribute('aria-controls'))});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();show(tabs[(i+k+tabs.length)%tabs.length].getAttribute('aria-controls'),true)}})});
+  function fromHash(){var id=location.hash.slice(1);if(tabs.some(function(t){return t.getAttribute('aria-controls')===id})){show(id);document.getElementById('sectores').scrollIntoView()}}
+  window.addEventListener('hashchange',fromHash);fromHash();
+})();/* Video de la planta: tramos cortos con fundido suave entre clips (sin sonido) */
 (function(){
   var reel=document.getElementById('reel'); if(!reel) return;
   var V=[].slice.call(reel.querySelectorAll('video')), cap=document.getElementById('reel-cap'), leg=[].slice.call(document.querySelectorAll('#reel-legend li'));
