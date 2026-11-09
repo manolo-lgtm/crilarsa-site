@@ -53,6 +53,43 @@ jobs:
           path: playwright-report
           retention-days: 14
 
+  visual:
+    # Regresión visual: informa diferencias, no bloquea la publicación. Las referencias nuevas se guardan en el repositorio.
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar herramientas
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Comparar con las referencias visuales
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then npx playwright test -c playwright.visual.config.js --update-snapshots; else npx playwright test -c playwright.visual.config.js; fi
+      - name: Informe visual
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: informe-visual
+          path: |
+            informe-visual
+            test-results
+          retention-days: 14
+      - name: Guardar referencias nuevas
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/visual/referencias || true
+          if ! git diff --cached --quiet; then git commit -m "Referencias visuales" && (git pull --rebase && git push) || true; fi
+
   deploy:
     needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
