@@ -156,7 +156,7 @@ test('Teclado: la guía y el pedido funcionan sin ratón', async ({ page }) => {
 });
 
 test('Accesibilidad: sin problemas graves (axe) en portada y fichas de producto', async ({ page }) => {
-  for (const p of ['/index.html', '/hidroxido-de-calcio.html', '/yeso-agricola.html', '/en.html']) {
+  for (const p of ['/index.html', '/productos.html', '/hidroxido-de-calcio.html', '/yeso-agricola.html', '/planta.html', '/ficha-zeolita.html', '/en.html']) {
     await page.goto(p);
     const r = await new AxeBuilder({ page }).analyze();
     const bad = r.violations.filter((v) => ['serious', 'critical'].includes(v.impact));
