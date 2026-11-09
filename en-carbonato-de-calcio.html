@@ -278,6 +278,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .skip{position:absolute;left:var(--s-3);top:-60px;z-index:100;background:#fff;color:var(--navy);padding:var(--s-2) var(--s-4);border-radius:var(--r-sm);font:600 15px var(--display);text-decoration:none}.skip:focus{top:var(--s-3)}
 figure img,.photo img,.gallery img{background-color:#e6e3dc}.compare .cl{display:none}@media (max-width:700px){.cmpwrap{overflow:visible;border:0}.compare{min-width:0;font-size:15px}.compare thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.compare,.compare tbody,.compare tr,.compare th,.compare td{display:block;width:100%}.compare caption{display:block}.compare tr{border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:var(--s-3);background:#fff;overflow:hidden}.compare tbody th{background:var(--navy);padding:var(--s-3)}.compare tbody th a{color:#fff}.compare td{border-bottom:1px solid var(--line);padding:var(--s-2) var(--s-3)}.compare td:last-child{border-bottom:0}.compare .cl{display:block;font:600 12px var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}}
 @media (max-width:860px){.cart-btn,.cart-btn.show{display:none!important}.direct .photo img{height:auto!important;aspect-ratio:4/3;max-height:260px;object-fit:cover}}.mq-n{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;padding:0 6px;border-radius:11px;background:#fff;color:var(--navy);font:700 13px var(--display)}.mq-n[hidden]{display:none}@media (max-width:700px){.compare td{display:grid;grid-template-columns:118px minmax(0,1fr);gap:var(--s-3);align-items:baseline;padding:10px var(--s-3)}.compare td .cl{margin:0}.compare tr{margin-bottom:var(--s-4)}.compare td a{font-weight:600;display:inline-block;padding:8px 2px;min-height:40px}}
+.pl-more{display:inline-block;margin-top:6px;font:600 14px var(--display);color:inherit;text-decoration:underline;text-underline-offset:3px;padding:4px 0}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -570,6 +571,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
           <tr><th scope="row">Formula</th><td>CaCO₃</td></tr>
           <tr><th scope="row">Active ingredient (label)</th><td>93–97 % CaCO₃</td></tr>
           <tr><th scope="row">Particle size (label)</th><td>200 mesh</td></tr>
+          <tr><th scope="row">Other particle sizes</th><td>On request</td></tr>
           <tr><th scope="row">Presentation</th><td>45 kg bag</td></tr>
       </tbody>
     </table>
@@ -739,6 +741,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     if(el.tagName==='LI'){
       el.insertAdjacentHTML('afterbegin',thumb(p));
       var st=el.querySelector('strong');st.insertAdjacentHTML('beforeend','<span class="pres">'+p.pres+'</span>');
+      var PGS={neutrocal:'carbonato-de-calcio',calforte:'hidroxido-de-calcio',zeolita:'zeolita',sulfato:'yeso-agricola',mezcla:'mezcla-3-1'},lg=(document.documentElement.lang||'es').slice(0,2),sp=el.querySelector('strong + span');if(sp&&PGS[k]){var ml=document.createElement('a');ml.className='pl-more';ml.href=(lg==='es'?'':lg+'-')+PGS[k]+'.html#especificaciones';ml.textContent='Especificaciones y ficha técnica →';sp.appendChild(ml)}
       el.appendChild(o);
     }else{
       var links=el.querySelector('.links');links.parentNode.insertBefore(o,links);
