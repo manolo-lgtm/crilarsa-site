@@ -266,6 +266,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
 .prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
 .guide{padding:72px 0;background:var(--stone)}.guide .inner{max-width:var(--max);margin:0 auto;padding:0 24px}.guide h2{margin:10px 0 8px}.gform{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:22px 0 10px}.gform label{display:flex;flex-direction:column;gap:6px;flex:1 1 260px;font:600 14px var(--display);color:var(--navy)}.gform select{font:16px var(--body);padding:12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);min-height:48px}.gform .btn{min-height:48px}#g-out{margin-top:14px}.gres{font:600 16px var(--display);color:var(--navy);margin:8px 0}.gmsg{margin:8px 0;color:var(--ink)}.glist{list-style:none;padding:0;margin:0 0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.glist li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.glist strong{font:700 16px var(--display);color:var(--navy)}.glist p{margin:6px 0 8px;font-size:15px;line-height:1.5;color:var(--muted)}#g-out .btn{margin:0 10px 10px 0}.gdisc{font-size:13px;color:var(--muted);margin-top:14px;max-width:80ch}
+.langbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 8px 24px rgba(0,0,0,.2);font:600 15px var(--display);max-width:calc(100% - 32px)}.langbar a{color:var(--navy);text-decoration:none;white-space:nowrap}.langbar a:hover{text-decoration:underline}.langbar button{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;width:40px;height:40px;border-radius:50%;cursor:pointer}.langbar button:hover{background:var(--stone)}@media (max-width:860px){.langbar{bottom:calc(140px + env(safe-area-inset-bottom,0px))}}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -807,26 +808,37 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function base(){var f=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''); var m=f.match(/^(en|pt|fr|ru|uk|zh)(?:-(.+))?$/); if(m) f=m[2]||'index'; return PAGES.indexOf(f)>=0?f:'index'}
   function url(l){var b=base(); return (l==='es'?b:(b==='index'?l:l+'-'+b))+'.html'+location.hash}
   function go(l){ if(STATIC){ if(l!==PL) location.href=url(l) } else load(l) }
-  /* Idioma automático: 1) idiomas preferidos del navegador; 2) si ninguno está disponible, la zona horaria del equipo (sin pedir ubicación); 3) inglés para el resto del mundo */
+  /* Idioma sugerido: 1) idioma nacional del país del visitante, deducido de la zona horaria del equipo (sin pedir ubicación ni usar servicios externos);
+     2) si el país no se reconoce, el primer idioma del navegador que tengamos; 3) si no, inglés. Nunca cambia de página solo: muestra una barra discreta. */
   function guess(){
+    var tz=''; try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+    var t=tzLang(tz); if(t) return t;
     var ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);
     for(var i=0;i<ls.length;i++){var c=String(ls[i]).slice(0,2).toLowerCase(); if(SUP.indexOf(c)>=0) return c}
-    var tz=''; try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+    return 'en';
+  }
+  function tzLang(tz){
     if(/^America\/(Sao_Paulo|Fortaleza|Recife|Bahia|Belem|Manaus|Cuiaba|Campo_Grande|Porto_Velho|Boa_Vista|Rio_Branco|Araguaina|Maceio|Santarem|Noronha|Eirunepe)/.test(tz)||/^(Europe\/Lisbon|Atlantic\/(Azores|Madeira)|Africa\/(Luanda|Maputo))/.test(tz)) return 'pt';
     if(/^(Europe\/(Kiev|Kyiv|Uzhgorod|Zaporozhye|Simferopol))/.test(tz)) return 'uk';
     if(/^(Europe\/(Moscow|Minsk|Kaliningrad|Samara|Volgograd|Kirov|Astrakhan|Saratov|Ulyanovsk)|Asia\/(Yekaterinburg|Omsk|Novosibirsk|Barnaul|Tomsk|Novokuznetsk|Krasnoyarsk|Irkutsk|Chita|Yakutsk|Khandyga|Vladivostok|Ust-Nera|Magadan|Sakhalin|Srednekolymsk|Kamchatka|Anadyr|Almaty|Bishkek))/.test(tz)) return 'ru';
     if(/^Asia\/(Shanghai|Chongqing|Harbin|Urumqi|Hong_Kong|Macau|Taipei|Singapore)/.test(tz)) return 'zh';
     if(/^(Europe\/(Paris|Brussels|Luxembourg|Monaco)|Africa\/(Dakar|Abidjan|Casablanca|Algiers|Tunis|Douala|Kinshasa|Libreville))/.test(tz)) return 'fr';
     if(/^(Europe\/Madrid|Atlantic\/Canary|America\/(Guayaquil|Bogota|Lima|Caracas|La_Paz|Santiago|Buenos_Aires|Argentina|Montevideo|Asuncion|Mexico_City|Monterrey|Merida|Cancun|Chihuahua|Hermosillo|Mazatlan|Tijuana|Guatemala|El_Salvador|Tegucigalpa|Managua|Costa_Rica|Panama|Havana|Santo_Domingo|Puerto_Rico)|Pacific\/Galapagos)/.test(tz)) return 'es';
-    return 'en';
+    return null;
   }
+  var BAR={en:['View this page in English','Close'],pt:['Ver esta página em português','Fechar'],fr:['Voir cette page en français','Fermer'],ru:['Открыть эту страницу на русском','Закрыть'],uk:['Відкрити цю сторінку українською','Закрити'],zh:['查看本页中文版','关闭']};
+  function bar(l){var B=BAR[l];if(!B)return;var d=document.createElement('div');d.className='langbar notranslate';d.setAttribute('role','region');d.setAttribute('aria-label','Language');
+    var a=document.createElement('a');a.href=url(l);a.lang=l;a.textContent=B[0]+' →';a.addEventListener('click',function(){try{localStorage.setItem(KEY,l)}catch(e){}});
+    var x=document.createElement('button');x.type='button';x.setAttribute('aria-label',B[1]);x.textContent='×';x.addEventListener('click',function(){d.remove();try{localStorage.setItem(KEY,'es')}catch(e){}});
+    d.appendChild(a);d.appendChild(x);document.body.appendChild(d)}
   if(sel){ sel.value=STATIC?PL:'es'; sel.addEventListener('change',function(){ try{localStorage.setItem(KEY,sel.value)}catch(e){} go(sel.value) }) }
   var q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1], saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
   if(STATIC){
     if(PL!=='es') load(PL);
     if(!BOT){
-      var want=q||saved||(PL==='es'?guess():PL);
+      var want=q||saved;
       if(SUP.indexOf(want)>=0&&want!==PL) location.replace(url(want));
+      else if(!want&&PL==='es'){var g=guess();if(g!=='es')bar(g)}
     }
   }else{
     var start=q||saved||guess(); if(start!=='es'){ if(sel) sel.value=start; load(start) }
