@@ -53,6 +53,23 @@ jobs:
           path: playwright-report
           retention-days: 14
 
+  mutantes:
+    # Prueba de las pruebas: introduce defectos a propósito en una copia temporal y verifica que las pruebas los detecten.
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar herramientas
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Mutantes (cada defecto debe ser detectado)
+        run: node tests/mutantes.js
+
   visual:
     # Regresión visual: informa diferencias, no bloquea la publicación. Las referencias nuevas se guardan en el repositorio.
     needs: test
