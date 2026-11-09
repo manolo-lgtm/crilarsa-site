@@ -3,6 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 const base = { baseURL: 'http://127.0.0.1:4173', locale: 'es-EC', timezoneId: 'America/Guayaquil', screenshot: 'only-on-failure', trace: 'retain-on-failure' };
 module.exports = defineConfig({
   testDir: './tests',
+  testIgnore: '**/visual/**',
   timeout: 60000,
   retries: 1,
   reporter: [['list'], ['html', { open: 'never' }]],

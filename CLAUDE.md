@@ -14,16 +14,20 @@ Sitio estático y público de Crilarsa C.A. (minerales industriales, Guayaquil).
 
 ## Compilación (Windows PowerShell 5.1; los scripts se guardan en UTF-8 con BOM)
 ```
-_build/make-fichas.ps1           # fichas HTML (los PDF se generan con Chrome headless --print-to-pdf)
+_build/make-fichas.ps1           # fichas HTML; PDF: Chrome headless --print-to-pdf --export-tagged-pdf --generate-pdf-document-outline
 _build/build-site.ps1 -Mode deploy
 _build/build-i18n.ps1 -Out deploy
 _build/build-seo.ps1             # páginas por idioma, canonical/hreflang, JSON-LD, sitemap
+_build/post-security.ps1         # SIEMPRE al final: CSP y política de referencia en todas las páginas
 ```
 
 ## Pruebas
 - `npm install && npx playwright install chromium && npx playwright test`
 - Escenarios: A bananero, B comprador industrial, C camaronera, D móvil y E entradas incorrectas. También cubren teclado, axe (problemas graves), sitemap, enlaces, imágenes, canónicas y JSON-LD.
+- También: diseño a 390/768/1440 px, tabla comparativa, PDF etiquetados, CSP y agregar desde la guía.
+- Regresión visual (no bloquea): `npx playwright test -c playwright.visual.config.js`; referencias en `tests/visual/referencias`. Para aceptar un cambio visual intencional: ejecutar el flujo manualmente (workflow_dispatch).
 - Las pruebas nunca envían mensajes: solo revisan los enlaces de WhatsApp y de correo.
+- Lista de auditoría persistente: `_build/AUDITORIA.md` (no repetir lo ya verificado).
 
 ## Publicación
 - GitHub Actions (`.github/workflows/site.yml`) corre las pruebas en cada push a `main`. Solo publica si todas pasan; si una falla, el sitio publicado no cambia.
@@ -31,6 +35,7 @@ _build/build-seo.ps1             # páginas por idioma, canonical/hreflang, JSON
 
 ## Marca
 - Colores: azul marino `#1e2833` y azul `#3d5a78`, sobre fondo claro.
+- Tokens CSS en `:root`: espaciado `--s-1..6`, radios `--r-sm/md/lg`, foco `--focus`. Usarlos en componentes nuevos.
 - Logo: `logo-crilarsa-blanco.png`.
 - Íconos de sector en tonos suaves.
 - Tono sobrio, técnico y directo de fábrica.
