@@ -81,6 +81,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* Portada */
 .hero{position:relative;color:var(--white);background:var(--navy) url("planta-bodega-general.jpg") center 45%/cover no-repeat;padding-block:clamp(76px,11vw,150px) 0;overflow:hidden}
+@media (max-width:860px){.hero{background-image:url("planta-bodega-general-m.jpg")}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,40,51,.88) 0%,rgba(30,40,51,.5) 70%,rgba(30,40,51,.35) 100%);pointer-events:none}
 .hero .inner{position:relative;z-index:1}
 .hero h1{font-size:clamp(30px,3.6vw,50px);font-weight:800;max-width:22ch;line-height:1.08}
@@ -264,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
 .prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
+.guide{padding:72px 0;background:var(--stone)}.guide .inner{max-width:var(--max);margin:0 auto;padding:0 24px}.guide h2{margin:10px 0 8px}.gform{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:22px 0 10px}.gform label{display:flex;flex-direction:column;gap:6px;flex:1 1 260px;font:600 14px var(--display);color:var(--navy)}.gform select{font:16px var(--body);padding:12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);min-height:48px}.gform .btn{min-height:48px}#g-out{margin-top:14px}.gres{font:600 16px var(--display);color:var(--navy);margin:8px 0}.gmsg{margin:8px 0;color:var(--ink)}.glist{list-style:none;padding:0;margin:0 0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.glist li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.glist strong{font:700 16px var(--display);color:var(--navy)}.glist p{margin:6px 0 8px;font-size:15px;line-height:1.5;color:var(--muted)}#g-out .btn{margin:0 10px 10px 0}.gdisc{font-size:13px;color:var(--muted);margin-top:14px;max-width:80ch}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -432,7 +434,7 @@ form .btn{border:0;justify-self:start}
 footer{background:var(--navy);color:#bcc6d0;font-size:15px}
 footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-block:52px}
 footer img{height:50px;width:auto;margin-bottom:12px}
-footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:0 0 12px;font-weight:500}
+footer h2.fh,footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:0 0 12px;font-weight:500}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 footer a{text-decoration:none}
 footer a:hover{color:var(--white)}
@@ -514,6 +516,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   </div>
 </nav>
 
+<main id="contenido">
 <header class="page-hero" style="background-image:url('planta-bodega-general.jpg')">
   <div class="inner">
     <div class="crumbs"><a href="zh.html">首页</a> / 关于我们</div>
@@ -582,12 +585,13 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     </form>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="inner top">
     <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>优质矿物。自主生产。直达生产者。始于 1989 年的经验。</p></div>
-    <div><h4>网站</h4><ul><li><a href="zh.html">首页</a></li><li><a href="zh.html#sectores">按行业的解决方案</a></li><li><a href="zh-productos.html">产品</a></li><li><a href="zh-productos.html#asesoria">技术咨询</a></li><li><a href="zh-planta.html">我们的工厂</a></li><li><a href="zh-planta.html#logistica">物流</a></li><li><a href="zh-nosotros.html">关于我们</a></li></ul></div>
-    <div><h4>联系我们</h4><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>瓜亚基尔 Vía a la Costa 公路 22 公里</li><li>RUC 0992110945001</li></ul></div>
+    <div><h2 class="fh">网站</h2><ul><li><a href="zh.html">首页</a></li><li><a href="zh.html#sectores">按行业的解决方案</a></li><li><a href="zh-productos.html">产品</a></li><li><a href="zh-productos.html#asesoria">技术咨询</a></li><li><a href="zh-planta.html">我们的工厂</a></li><li><a href="zh-planta.html#logistica">物流</a></li><li><a href="zh-nosotros.html">关于我们</a></li></ul></div>
+    <div><h2 class="fh">联系我们</h2><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>瓜亚基尔 Vía a la Costa 公路 22 公里</li><li>RUC 0992110945001</li></ul></div>
   </div>
   <div class="inner bottom">© 2026 Crilarsa C.A. · Química Inteligente</div>
 </footer>

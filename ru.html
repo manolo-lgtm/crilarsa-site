@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","alternateName":"Crilarsa","url":"https://crilarsa.com/","logo":"https://crilarsa.com/logo-crilarsa-blanco.png","image":"https://crilarsa.com/planta-bodega-general.jpg","description":"Производитель в Гуаякиле (Эквадор): карбонат кальция, гашёная известь (Cal Forte), цеолит, сельскохозяйственный гипс и смесь 3:1 для сельского хозяйства, аквакультуры и промышленности. Прямые продажи с завода и крупные партии. С 1989 года.","foundingDate":"2000","telephone":"+593985211202","email":"finanzas@crilarsa.com","taxID":"0992110945001","address":{"@type":"PostalAddress","streetAddress":"Vía a la Costa, km 22","addressLocality":"Guayaquil","addressRegion":"Guayas","addressCountry":"EC"},"areaServed":["Ecuador","South America"],"inLanguage":"ru","sameAs":["https://wa.me/593985211202"],"knowsAbout":["calcium carbonate","agricultural lime","hydrated lime","calcium hydroxide","zeolite","clinoptilolite","agricultural gypsum","calcium sulfate","limestone","aquaculture","banana farming"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Neutrocal — carbonato de calcio malla 200 (CaCO3)","brand":"Crilarsa","image":"https://crilarsa.com/saco-neutrocal.png"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Cal Forte — hidróxido de calcio (Ca(OH)2)","brand":"Crilarsa","image":"https://crilarsa.com/saco-calforte.png"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Zeolita clinoptilolita malla 200","brand":"Crilarsa","image":"https://crilarsa.com/saco-zeolita.png"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Sulfato de calcio — yeso agrícola (CaSO4)","brand":"Crilarsa","image":"https://crilarsa.com/saco-sulfato.png"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Mezcla mineral 3:1 — carbonato + sulfato de calcio","image":"https://crilarsa.com/saco-mezcla.png"}}]}</script>
-<link rel="icon" type="image/png" href="logo-crilarsa-blanco.png">
+<link rel="icon" type="image/png" href="logo-crilarsa-blanco.png"><link rel="preload" as="image" href="planta-bodega-general-m.jpg" media="(max-width: 860px)" fetchpriority="high"><link rel="preload" as="image" href="planta-bodega-general.jpg" media="(min-width: 861px)" fetchpriority="high">
 <style>
 /* Layout: sitio industrial de una página; bandas a todo el ancho, filas editoriales asimétricas, recorrido de planta numerado; azul Crilarsa sobre azul marino */
 :root{
@@ -81,6 +81,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* Portada */
 .hero{position:relative;color:var(--white);background:var(--navy) url("planta-bodega-general.jpg") center 45%/cover no-repeat;padding-block:clamp(76px,11vw,150px) 0;overflow:hidden}
+@media (max-width:860px){.hero{background-image:url("planta-bodega-general-m.jpg")}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,40,51,.88) 0%,rgba(30,40,51,.5) 70%,rgba(30,40,51,.35) 100%);pointer-events:none}
 .hero .inner{position:relative;z-index:1}
 .hero h1{font-size:clamp(30px,3.6vw,50px);font-weight:800;max-width:22ch;line-height:1.08}
@@ -264,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
 .prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
+.guide{padding:72px 0;background:var(--stone)}.guide .inner{max-width:var(--max);margin:0 auto;padding:0 24px}.guide h2{margin:10px 0 8px}.gform{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin:22px 0 10px}.gform label{display:flex;flex-direction:column;gap:6px;flex:1 1 260px;font:600 14px var(--display);color:var(--navy)}.gform select{font:16px var(--body);padding:12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);min-height:48px}.gform .btn{min-height:48px}#g-out{margin-top:14px}.gres{font:600 16px var(--display);color:var(--navy);margin:8px 0}.gmsg{margin:8px 0;color:var(--ink)}.glist{list-style:none;padding:0;margin:0 0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.glist li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.glist strong{font:700 16px var(--display);color:var(--navy)}.glist p{margin:6px 0 8px;font-size:15px;line-height:1.5;color:var(--muted)}#g-out .btn{margin:0 10px 10px 0}.gdisc{font-size:13px;color:var(--muted);margin-top:14px;max-width:80ch}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -432,7 +434,7 @@ form .btn{border:0;justify-self:start}
 footer{background:var(--navy);color:#bcc6d0;font-size:15px}
 footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-block:52px}
 footer img{height:50px;width:auto;margin-bottom:12px}
-footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:0 0 12px;font-weight:500}
+footer h2.fh,footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin:0 0 12px;font-weight:500}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 footer a{text-decoration:none}
 footer a:hover{color:var(--white)}
@@ -514,6 +516,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   </div>
 </nav>
 
+<main id="contenido">
 <header class="hero" id="inicio">
   <div class="inner">
     <div class="hero-grid">
@@ -541,6 +544,41 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     </div>
   </div>
 </header>
+
+<section class="guide" id="guia">
+  <div class="inner">
+    <div class="eyebrow">Подбор продукта</div>
+    <h2>Какой минерал нужен для вашей деятельности?</h2>
+    <p class="lead">Ответьте на два вопроса, и мы покажем продукты, которые обычно применяются в вашем случае, с пояснением к каждому.</p>
+    <form class="gform" id="gform" novalidate>
+      <label><span>Ваша деятельность</span><select id="g-act" required><option value="">Выберите вариант</option><option value="banano">Бананы</option><option value="camaron">Аквакультура и креветки</option><option value="agricola">Сельское хозяйство: какао, рис, масличная пальма</option><option value="pecuario">Птицеводство и животноводство</option><option value="azucar">Сахарные заводы</option><option value="agua">Водоподготовка</option><option value="construccion">Строительство и дороги</option></select></label>
+      <label><span>Что вам нужно</span><select id="g-need" required><option value="">Выберите вариант</option><option value="n1">Постепенно снизить кислотность или повысить щёлочность</option><option value="n2">Быстрое действие: повысить pH, биобезопасность или промышленный процесс</option><option value="n3">Внести кальций и серу без повышения pH</option><option value="n4">Удерживать аммоний, питательные вещества или влагу</option><option value="n5">Минеральный наполнитель или стабилизация грунта</option><option value="n6">Не уверен</option></select></label>
+      <button type="submit" class="btn btn-primary">Показать рекомендацию</button>
+    </form>
+    <div id="g-out" aria-live="polite"></div>
+    <div id="g-txt" hidden><span data-k="res">Продукты, которые обычно применяются в вашем случае:</span><span data-k="need2">Выберите вашу деятельность и потребность.</span><span data-k="wa">Запросить информацию</span><span data-k="see">Подробнее о продукте</span><span data-k="none">Для этой комбинации мы предпочитаем проконсультировать вас напрямую. Напишите нам, и мы подберём подходящий продукт.</span><span data-k="add">Выбрать количество и добавить в заказ</span></div>
+    <p class="gdisc">Общая ориентировка на основе обычного применения каждого продукта. Не заменяет анализ почвы или воды и рекомендацию вашего специалиста; доза зависит от конкретного случая.</p>
+  </div>
+<script data-guia>
+(function(){var N={n1:['neutrocal','mezcla'],n2:['calforte'],n3:['sulfato','mezcla'],n4:['zeolita'],n5:['neutrocal','calforte'],n6:null};
+var PG={neutrocal:'carbonato-de-calcio',calforte:'hidroxido-de-calcio',zeolita:'zeolita',sulfato:'yeso-agricola',mezcla:'mezcla-3-1'};
+var f=document.getElementById('gform'),o=document.getElementById('g-out');if(!f)return;
+function T(k){var e=document.querySelector('#g-txt [data-k='+k+']');return e?e.textContent:''}function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector('#g-act').value,n=f.querySelector('#g-need').value;o.innerHTML='';
+ if(!a||!n){o.appendChild(el('p','gmsg',T('need2')));return}
+ var lang=document.documentElement.lang||'es',pre=lang.slice(0,2)==='es'?'':lang.slice(0,2)+'-';
+ var lis=[].slice.call(document.querySelectorAll('#'+a+' .plist li[data-p]')).filter(function(li){return !N[n]||N[n].indexOf(li.dataset.p)>-1});
+ if(window.dataLayer)dataLayer.push({event:'crilarsa_click',accion:'guia',sector:a,necesidad:n,resultados:lis.length});
+ if(!lis.length){o.appendChild(el('p','gmsg',T('none')))}else{o.appendChild(el('p','gres',T('res')));var ul=el('ul','glist');
+  lis.forEach(function(li){var it=el('li'),st=li.querySelector('strong'),sp=li.querySelector('strong + span');it.appendChild(el('strong','',st&&st.firstChild?st.firstChild.textContent:''));
+   if(sp&&sp.firstChild&&sp.firstChild.nodeType===3)it.appendChild(el('p','',sp.firstChild.textContent));
+   var lk=el('a','more',T('see'));lk.href=pre+PG[li.dataset.p]+'.html';it.appendChild(lk);ul.appendChild(it)});o.appendChild(ul);
+  var b=el('a','btn btn-primary',T('add'));b.href='#sectores';b.addEventListener('click',function(){var t=document.getElementById('t-'+a);if(t)t.click()});o.appendChild(b)}
+ var w=el('a','btn btn-wa',T('wa'));w.target='_blank';w.rel='noopener';
+ w.href='https://wa.me/593985211202?text='+encodeURIComponent('Hola CRILARSA. Usé la guía de selección del sitio. Mi actividad: '+f.querySelector('#g-act').selectedOptions[0].text+'. Necesito: '+f.querySelector('#g-need').selectedOptions[0].text+'. Quisiera recibir información.');
+ o.appendChild(w)});})();
+</script>
+</section>
 
 <section class="sectors" id="sectores">
   <div class="inner">
@@ -775,12 +813,13 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     </form>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="inner top">
     <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Качественные минералы. Собственное производство. Напрямую производителю. Опыт с 1989 года.</p></div>
-    <div><h4>Сайт</h4><ul><li><a href="ru.html">Главная</a></li><li><a href="ru.html#sectores">Решения по отраслям</a></li><li><a href="ru-productos.html">Продукция</a></li><li><a href="ru-productos.html#asesoria">Техническая консультация</a></li><li><a href="ru-planta.html">Наш завод</a></li><li><a href="ru-planta.html#logistica">Логистика</a></li><li><a href="ru-nosotros.html">О компании</a></li></ul></div>
-    <div><h4>Контакты</h4><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>Vía a la Costa, км 22, Гуаякиль</li><li>RUC 0992110945001</li></ul></div>
+    <div><h2 class="fh">Сайт</h2><ul><li><a href="ru.html">Главная</a></li><li><a href="ru.html#sectores">Решения по отраслям</a></li><li><a href="ru-productos.html">Продукция</a></li><li><a href="ru-productos.html#asesoria">Техническая консультация</a></li><li><a href="ru-planta.html">Наш завод</a></li><li><a href="ru-planta.html#logistica">Логистика</a></li><li><a href="ru-nosotros.html">О компании</a></li></ul></div>
+    <div><h2 class="fh">Контакты</h2><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>Vía a la Costa, км 22, Гуаякиль</li><li>RUC 0992110945001</li></ul></div>
   </div>
   <div class="inner bottom">© 2026 Crilarsa C.A. · Química Inteligente</div>
 </footer>
