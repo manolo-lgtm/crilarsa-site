@@ -28,11 +28,11 @@ test('A — productor bananero: guía, cantidad y cotización por WhatsApp', asy
   await expect(res).toContainText('Carbonato de calcio');
   await expect(res).toContainText('Mezcla mineral 3:1');
   await expect(page.locator('#g-out .glist a').first()).toHaveAttribute('href', /carbonato-de-calcio\.html|mezcla-3-1\.html/);
-  // pasa a elegir cantidades en su sector
-  await page.locator('#g-out a[href="#sectores"]').click();
-  const li = page.locator('#banano li[data-p="neutrocal"]');
-  await li.locator('.qty input').fill('300');
-  await li.locator('.add').click();
+  // agrega al pedido directamente desde la recomendación
+  const card = page.locator('#g-out .glist li').filter({ hasText: 'Carbonato de calcio' });
+  await card.locator('.gadd input').fill('300');
+  await card.locator('.gadd button').click();
+  await expect(card.locator('.gadd button')).toHaveText(/Agregado/);
   const msg = await waText(page, '#drawer a[href*="wa.me"]');
   expect(msg).toContain('300 sacos de Carbonato de calcio (Neutrocal)');
   expect(msg).toContain('≈ 13,5 t');
@@ -186,4 +186,62 @@ test('Rastreo: sitemap, enlaces internos, imágenes, canónicas y datos estructu
   }
   for (const a of assets) { const r = await request.head('/' + a); if (r.status() !== 200) problems.push(`roto ${a} ${r.status()}`); }
   expect(problems).toEqual([]);
+});
+
+test('Ruta por sector: el selector de sectores sigue funcionando', async ({ page }) => {
+  await page.goto('/index.html');
+  await page.locator('#t-agricola').click();
+  const li = page.locator('#agricola li[data-p="zeolita"]');
+  await li.locator('.qty input').fill('20');
+  await li.locator('.add').click();
+  const msg = await waText(page, '#drawer a[href*="wa.me"]');
+  expect(msg).toContain('20 sacos de Zeolita');
+  expect(msg).toContain('Sector: Agricultura: cacao, arroz, palma');
+});
+
+test('Guía: agregar desde la recomendación rechaza cantidades no válidas', async ({ page }) => {
+  await page.goto('/index.html');
+  await page.evaluate(() => localStorage.removeItem('crilarsa-pedido'));
+  await page.reload();
+  await page.locator('.gchip[data-s="agua"]').click();
+  await page.locator('.gsteps .grow').nth(1).locator('.gchip').first().click();
+  const card = page.locator('#g-out .glist li').first();
+  for (const v of ['0', '-4', '1.5', '200000']) {
+    await card.locator('.gadd input').fill(v);
+    await card.locator('.gadd button').click();
+    await expect(card.locator('.qerr')).toBeVisible();
+  }
+  expect(await page.evaluate(() => localStorage.getItem('crilarsa-pedido'))).toBeNull();
+});
+
+test('Catálogo: tabla comparativa de los 5 productos con fichas HTML y PDF', async ({ page, request }) => {
+  await page.goto('/productos.html');
+  const rows = page.locator('table.compare tbody tr');
+  await expect(rows).toHaveCount(5);
+  for (const f of ['neutrocal', 'cal-forte', 'zeolita', 'yeso-agricola', 'mezcla-3-1']) {
+    expect((await request.get(`/ficha-${f}.html`)).status()).toBe(200);
+    const pdf = await request.get(`/ficha-${f}.pdf`);
+    expect(pdf.status()).toBe(200);
+    expect((await pdf.body()).toString('latin1')).toContain('/StructTreeRoot'); // PDF etiquetado (accesible)
+  }
+});
+
+test('Seguridad: CSP, política de referencia, sin scripts externos ni enlaces inseguros', async ({ page }) => {
+  for (const p of ['/index.html', '/zeolita.html', '/en.html', '/ficha-zeolita.html']) {
+    await page.goto(p);
+    await expect(page.locator('meta[http-equiv="Content-Security-Policy"]')).toHaveCount(1);
+    await expect(page.locator('meta[name="referrer"]')).toHaveCount(1);
+    expect(await page.locator('script[src]').count()).toBe(0);
+    expect(await page.locator('a[target="_blank"]:not([rel*="noopener"])').count()).toBe(0);
+    expect(await page.locator('[src^="http:"], a[href^="http:"]').count()).toBe(0);
+  }
+});
+
+test('Fichas: los botones de ficha y PDF son legibles en la página de producto', async ({ page }) => {
+  await page.goto('/hidroxido-de-calcio.html');
+  const a = page.locator('.speclinks a').first();
+  await expect(a).toBeVisible();
+  const c = await a.evaluate((e) => [getComputedStyle(e).color, getComputedStyle(e).backgroundColor]);
+  expect(c[0]).not.toBe(c[1]);
+  expect(c[0]).not.toBe('rgb(255, 255, 255)');
 });
