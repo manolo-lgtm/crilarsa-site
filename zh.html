@@ -269,6 +269,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .langbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 8px 24px rgba(0,0,0,.2);font:600 15px var(--display);max-width:calc(100% - 32px)}.langbar a{color:var(--navy);text-decoration:none;white-space:nowrap}.langbar a:hover{text-decoration:underline}.langbar button{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;width:40px;height:40px;border-radius:50%;cursor:pointer}.langbar button:hover{background:var(--stone)}@media (max-width:860px){.langbar{bottom:calc(140px + env(safe-area-inset-bottom,0px))}}
 .gform[hidden]{display:none!important}.gsteps{display:grid;gap:14px;margin:20px 0 6px}.grow[hidden]{display:none!important}.grow{display:grid;gap:8px;animation:gin .3s ease both}@keyframes gin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}.glab{display:flex;align-items:center;gap:8px;font:600 14px var(--display);color:var(--navy)}.glab b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px}.gchips{display:flex;flex-wrap:wrap;gap:8px}.gchip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 8px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font:500 15px var(--body);cursor:pointer;text-align:left;transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.gchip:hover{border-color:var(--blue);transform:translateY(-1px);box-shadow:0 4px 12px rgba(30,40,51,.08)}.gchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}.gchip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}.gchip svg{flex:none;width:26px;height:26px;padding:4px;border-radius:50%;background:#1e2833;color:#c3cfdb}.gchip:not(:has(svg)){padding-left:14px}.gchip[data-s=banano] svg{color:#e3c35a}.gchip[data-s=camaron] svg{color:#e8a0ab}.gchip[data-s=agricola] svg{color:#86b56f}.gchip[data-s=agricola] svg path:last-child{stroke:#b08a62}.gchip[data-s=pecuario] svg{background:#f3f1ec;color:#1e2833}.gchip[data-s=pecuario] svg circle{fill:#1e2833}.gchip[data-s=azucar] svg{color:#fff}.gchip[data-s=agua] svg{color:#7fb2e0}.gchip[data-s=construccion] svg{color:#e2a65c}@media (max-width:600px){.grow:first-child .gchips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:2px 24px 6px;scroll-snap-type:x proximity}.grow:first-child .gchips::-webkit-scrollbar{display:none}.grow:first-child .gchip{flex:none;scroll-snap-align:start;white-space:nowrap}.gchip{font-size:14px}}
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px;max-width:720px}.path{display:grid;gap:2px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy);text-decoration:none;transition:border-color .15s,box-shadow .15s}.path b{font:700 15px var(--display)}.path span{font-size:14px;color:var(--muted)}.path:hover{border-color:var(--blue);box-shadow:0 4px 12px rgba(30,40,51,.08)}.path.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}@media (max-width:600px){.paths{gap:8px}.path{padding:10px 12px}.path b{font-size:14px}.path span{font-size:13px}}
+.qerr{color:#b3261e;font-size:14px;margin:6px 0 0;flex-basis:100%}.calc{margin:0 0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;max-width:520px}.calc summary{cursor:pointer;padding:10px 14px;font:600 15px var(--display);color:var(--blue)}.calc .cin{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;padding:0 14px 10px}.calc label{display:grid;gap:4px;font-size:14px;color:var(--muted)}.calc input{font:16px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:140px;min-height:44px}.calc button{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);font:600 15px var(--display);cursor:pointer}.calc .cuse{background:var(--navy);color:#fff;margin-top:6px}.calc .cout{padding:0 14px 12px}.cres{margin:4px 0;font-size:16px;color:var(--ink)}.cex{margin:2px 0;font-size:14px;color:var(--muted)}.spec{width:100%;max-width:820px;border-collapse:collapse;font-size:16px;background:#fff}.spec caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding-top:8px}.spec th,.spec td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}.spec thead th{background:var(--navy);color:#fff;font:600 14px var(--display)}.spec tbody th{width:38%;color:var(--blue);font-weight:600}.specnotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:22px;max-width:1000px}.specnotes div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}.specnotes h3{font:700 15px var(--display);margin:0 0 6px;color:var(--navy)}.specnotes p{margin:0;font-size:15px;line-height:1.5;color:var(--ink)}.speclinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}@media (max-width:600px){.spec{font-size:15px}.spec th,.spec td{padding:8px}}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -618,10 +619,10 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 14.5c3.5 4.5 11 4 14.5-2.5 1.2-2.3 1.2-5.2 0-7.5l-1.3.8c.1 3.3-1.8 6.5-5.2 7.8-2.8 1.1-5.6 1.2-8 1.4z"/><path d="M17.7 5.3l.8-2.3"/><path d="M8 15.8c3 .6 6.5-.6 8.4-3.6"/></svg></div><h3>香蕉行业矿物解决方案</h3>
         <p>香蕉土壤需要钙来保证果实坚实，并需要良好的结构以利排水和根系生长。以下是该作物最常用的产品：</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>碳酸钙</strong><span>香蕉需钙量大，而在酸性土壤中磷和钾会被固定。碳酸钙逐步中和酸性，并补充使果实坚实、根系强壮的钙。<em class="uso"><b>用法：</b> 在施肥计划之前或同时撒施于根区，依据土壤分析结果。</em></span></li>
-          <li data-p="sulfato"><strong>硫酸钙（农用石膏）</strong><span>补充钙和硫而不提高 pH。可置换钠并疏松板结土壤，改善排水和根系发育。<em class="uso"><b>用法：</b> 表面施于根区；适用于 pH 已适宜但缺钙或存在钠问题的情况。</em></span></li>
+          <li data-p="neutrocal"><strong>碳酸钙</strong><span>香蕉吸收大量钙，酸性土壤中磷和钾会被固定。碳酸钙逐步中和酸性并补充钙，钙对果实品质和根系发育很重要。<em class="uso"><b>用法：</b> 在施肥计划之前或同时撒施于根区，依据土壤分析结果。</em></span></li>
+          <li data-p="sulfato"><strong>硫酸钙（农用石膏）</strong><span>补充钙和硫而不提高 pH。在含钠或板结的土壤中，视土壤类型可帮助改善结构和排水。<em class="uso"><b>用法：</b> 表面施于根区；适用于 pH 已适宜但缺钙或存在钠问题的情况。</em></span></li>
           <li data-p="mezcla"><strong>3:1 矿物混合料</strong><span>将碳酸钙的降酸作用与硫酸钙的钙和硫结合。一次施用代替两次，节省人工。<em class="uso"><b>用法：</b> 一次完成的维持性施石灰。</em></span></li>
-          <li data-p="zeolita"><strong>沸石</strong><span>其多孔结构可在根部附近保持铵、钾和水分，减少雨季肥料的淋失。<em class="uso"><b>用法：</b> 与肥料混合，或在根区与肥料一同施用。</em></span></li>
+          <li data-p="zeolita"><strong>沸石</strong><span>其多孔结构可在根部附近保持铵、钾和水分，并可减少雨季淋溶造成的肥料损失。<em class="uso"><b>用法：</b> 与肥料混合，或在根区与肥料一同施用。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -638,7 +639,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <ul class="plist">
           <li data-p="neutrocal"><strong>碳酸钙（Neutrocal）</strong><span>提高并稳定碱度和 pH，缓冲昼夜间的剧烈波动。为蜕壳补充钙，促进池塘的天然生产力。我们最畅销的产品。<em class="uso"><b>用法：</b> 池塘准备时施于池底，养殖期间根据测得的碱度撒施于水面。</em></span></li>
           <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>氢氧化钙可迅速提高池底 pH；在养殖周期之间准备池底时使用，作为生物安全计划的一部分。<em class="uso"><b>用法：</b> 收获后、注水前施于池底。因作用强烈，池中有虾时不可施用。</em></span></li>
-          <li data-p="zeolita"><strong>沸石</strong><span>吸附铵并帮助保持池底更清洁，为对虾创造更好的环境。<em class="uso"><b>用法：</b> 撒施于水面，尤其是投喂区和高密度养殖系统。</em></span></li>
+          <li data-p="zeolita"><strong>沸石</strong><span>通过离子交换保持铵，可帮助改善池底状况。<em class="uso"><b>用法：</b> 撒施于水面，尤其是投喂区和高密度养殖系统。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -653,10 +654,10 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-8"/><path d="M12 12C12 8 9 5.6 4.5 5.6c0 4 3 6.4 7.5 6.4z"/><path d="M12 10c0-3.3 2.8-5.6 6.5-5.6 0 3.3-2.8 5.6-6.5 5.6z"/><path d="M5.5 20h13"/></svg></div><h3>农业：可可、水稻、油棕、玉米及其他作物</h3>
         <p>厄瓜多尔沿海地区的大部分农田呈酸性或缺钙。施石灰和矿物改良剂有助于作物更好地利用肥料。</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>碳酸钙</strong><span>在酸性土壤中，铝和酸性会抑制根系并固定养分。施石灰可加以矫正，让肥料发挥更大效用。<em class="uso"><b>用法：</b> 在播种前或周期开始时撒施或翻入土中，依据土壤分析结果。</em></span></li>
-          <li data-p="sulfato"><strong>硫酸钙</strong><span>补充钙和硫而不改变 pH。改良黏重或含钠土壤，硫是作物合成蛋白质所必需的。<em class="uso"><b>用法：</b> 表面施用，单独或配合施肥计划。</em></span></li>
+          <li data-p="neutrocal"><strong>碳酸钙</strong><span>在酸性土壤中，铝和酸性会抑制根系并固定养分。施用石灰可中和酸性，帮助作物更好地利用肥料。<em class="uso"><b>用法：</b> 在播种前或周期开始时撒施或翻入土中，依据土壤分析结果。</em></span></li>
+          <li data-p="sulfato"><strong>硫酸钙</strong><span>补充钙和硫而不改变 pH。可改善黏重或含钠土壤，硫是作物合成蛋白质所必需的。<em class="uso"><b>用法：</b> 表面施用，单独或配合施肥计划。</em></span></li>
           <li data-p="mezcla"><strong>3:1 矿物混合料</strong><span>一次施用即可中和酸性并补充硫。<em class="uso"><b>用法：</b> 种植前的维持性施石灰。</em></span></li>
-          <li data-p="zeolita"><strong>沸石</strong><span>保持铵和钾，减少氮素因淋溶和挥发造成的损失。<em class="uso"><b>用法：</b> 施用前与尿素或其他肥料混合。</em></span></li>
+          <li data-p="zeolita"><strong>沸石</strong><span>保持铵和钾，可减少氮的淋溶和挥发损失。<em class="uso"><b>用法：</b> 施用前与尿素或其他肥料混合。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -671,7 +672,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <p>生物安全和湿度管理是动物生产的关键。</p>
         <ul class="plist">
           <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>其高 pH 使其可按照技术指导用于养殖场的清洁和生物安全计划。<em class="uso"><b>用法：</b> 撒粉或以石灰乳形式施于地面、墙壁、圈舍、消毒池和出入口，在批次之间进行。</em></span></li>
-          <li data-p="zeolita"><strong>沸石</strong><span>吸收垫料中的水分和氨气，改善禽舍环境并减少异味。<em class="uso"><b>用法：</b> 在批次之间混入禽舍垫料。</em></span></li>
+          <li data-p="zeolita"><strong>沸石</strong><span>吸收垫料中的水分和氨气，可改善舍内环境并减少异味。<em class="uso"><b>用法：</b> 在批次之间混入禽舍垫料。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -685,9 +686,9 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 21V3.5M14.5 21V5.5"/><path d="M7.3 8.5h2.4M7.3 14.5h2.4M13.3 10.5h2.4M13.3 16.5h2.4"/><path d="M8.5 6c2.8-.6 4.6-2.3 5.6-4.5M14.5 9c2.2-1.2 4.3-1.3 6.2-.3"/></svg></div><h3>制糖厂</h3>
         <p>制糖业在生产过程中使用大量石灰，而甘蔗需要充分施石灰的土壤。</p>
         <ul class="plist">
-          <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>石灰可中和蔗汁酸性并帮助沉淀杂质，避免蔗糖损失。<em class="uso"><b>用法：</b> 以石灰乳形式在澄清工段加入蔗汁。</em></span></li>
+          <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>石灰中和甘蔗汁的酸性并帮助沉淀杂质，有助于减少蔗糖损失。<em class="uso"><b>用法：</b> 以石灰乳形式在澄清工段加入蔗汁。</em></span></li>
           <li data-p="zeolita"><strong>沸石</strong><span>在田间可保持蔗田土壤中的养分和水分。<em class="uso"><b>用法：</b> 在种植时或宿根蔗上配合肥料使用。</em></span></li>
-          <li data-p="neutrocal"><strong>碳酸钙</strong><span>在酸性得到矫正、钙供应充足的土壤上，甘蔗产量更高。<em class="uso"><b>用法：</b> 种植前或收割后施石灰，依据土壤分析结果。</em></span></li>
+          <li data-p="neutrocal"><strong>碳酸钙</strong><span>甘蔗在酸性已中和且钙充足的土壤中生长更好。<em class="uso"><b>用法：</b> 种植前或收割后施石灰，依据土壤分析结果。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -717,7 +718,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <p>用于土木工程和道路建设的钙质材料。</p>
         <ul class="plist">
           <li data-p="neutrocal"><strong>碳酸钙</strong><span>细粒碳酸钙，用作沥青混合料和砂浆中的矿物填料。<em class="uso"><b>用法：</b> 依据工程规范。</em></span></li>
-          <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>石灰与黏土发生反应，降低其塑性并提高路基承载力。<em class="uso"><b>用法：</b> 与土壤混合以稳定路基，也用于砂浆和抹灰。</em></span></li>
+          <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>石灰与黏土反应，降低其塑性，并可视配合比设计提高路基承载力。<em class="uso"><b>用法：</b> 与土壤混合以稳定路基，也用于砂浆和抹灰。</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -733,7 +734,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
           <li data-p="neutrocal"><strong>碳酸钙（Neutrocal）</strong><span>细磨碳酸钙，可中和土壤和水体酸性并补充钙。<em class="uso"><b>用法：</b> 香蕉园、可可、水稻、油棕和甘蔗；对虾池塘撒石灰；建筑用矿物填料。</em></span></li>
           <li data-p="calforte"><strong>氢氧化钙（Cal Forte）</strong><span>速效熟石灰，可提高 pH。<em class="uso"><b>用法：</b> 养殖周期之间的池底准备、养殖场生物安全、水体和工业 pH 调节、土壤稳定。</em></span></li>
           <li data-p="zeolita"><strong>沸石</strong><span>天然矿物（斜发沸石），可保持铵、钾和水分。<em class="uso"><b>用法：</b> 在种植中配合肥料使用，也用于池底管理、禽舍垫料和水过滤。</em></span></li>
-          <li data-p="sulfato"><strong>硫酸钙（农用石膏）</strong><span>补充钙和硫而不提高 pH，并改善土壤结构。<em class="uso"><b>用法：</b> 香蕉以及板结或含钠土壤上的作物。</em></span></li>
+          <li data-p="sulfato"><strong>硫酸钙（农用石膏）</strong><span>补充钙和硫而不提高 pH，并可改善土壤结构。<em class="uso"><b>用法：</b> 香蕉以及板结或含钠土壤上的作物。</em></span></li>
           <li data-p="mezcla"><strong>3:1 矿物混合料</strong><span>碳酸钙和硫酸钙装于同一袋中。<em class="uso"><b>用法：</b> 一次施用，在施石灰的同时补充硫。</em></span></li>
         </ul>
       </div>
@@ -795,6 +796,22 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
       <a class="card" href="zh-productos.html" style="background-image:url('estiba-pallets-montacargas.jpg')"><div><strong>产品</strong><span>完整产品目录、用途和包装规格，并提供技术咨询。</span><em>查看产品 →</em></div></a>
       <a class="card" href="zh-planta.html" style="background-image:url('molino-elevador.jpg')"><div><strong>我们的工厂与物流</strong><span>运营一览、视频和装载能力。</span><em>参观工厂 →</em></div></a>
       <a class="card" href="zh-nosotros.html" style="background-image:url('materia-prima-caliza.jpg')"><div><strong>关于我们</strong><span>自 1989 年以来的历程、使命、愿景与价值观。</span><em>了解更多 →</em></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="asesoria" id="compras">
+  <div class="inner">
+    <div class="head"><div class="eyebrow">采购须知</div><h2>购买前须知</h2></div>
+    <div class="faq">
+      <details><summary>如何询价？</summary><p>选择袋数，加入订单，然后通过 WhatsApp 或邮件发送询价。我们将确认出厂价格、库存和装车日期。</p></details>
+      <details><summary>可以按袋或按吨购买吗？</summary><p>我们按袋报价。如果您知道所需吨数，可使用 Neutrocal、Cal Forte 或沸石页面上的计算器：它会将吨数换算为整袋数并显示多出的量。</p></details>
+      <details><summary>有哪些包装？</summary><p>Neutrocal 为 45 公斤袋装；Cal Forte 和沸石为 25 公斤袋装；3:1 混合料为 45 或 50 公斤袋装。农用石膏的包装请咨询。</p></details>
+      <details><summary>可以到工厂提货吗？</summary><p>可以。在瓜亚基尔 Vía a la Costa 公路 22 公里处的工厂提货，请与您的顾问约定日期和时间。</p></details>
+      <details><summary>可以协调送货吗？</summary><p>请在询价中注明城市或目的地，您的顾问将确认发货方式。</p></details>
+      <details><summary>规格如何确认？</summary><p>公布的数据来自各产品标签，并非经认证的实验室结果。如需其他参数，请在购买前向顾问索取。</p></details>
+      <details><summary>如何获取技术数据表？</summary><p>每个产品页面都列出规格，并提供可打印或下载 PDF 的技术数据表。也可通过 WhatsApp 或邮件索取。</p></details>
+      <details><summary>我会通过什么方式收到回复？</summary><p>我们会通过您联系我们的同一渠道回复：WhatsApp 或邮件。</p></details>
     </div>
   </div>
 </section>
@@ -898,9 +915,9 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 /* Pedido: cantidades por producto, carrito y envío por WhatsApp o formulario */
 (function(){
   var P={
-    neutrocal:{n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
-    calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
-    zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
+    neutrocal:{w:45,n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
+    calforte:{w:25,n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
+    zeolita:{w:25,n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
     mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
@@ -925,10 +942,23 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     }else{
       var links=el.querySelector('.links');links.parentNode.insertBefore(o,links);
     }
-    var box=o.querySelector('.qty');
+    var box=o.querySelector('.qty'),err=document.createElement('p');err.className='qerr';err.setAttribute('role','alert');err.hidden=true;o.appendChild(err);
+    if(p.w&&el.tagName!=='LI'){var c=document.createElement('details');c.className='calc';
+      c.innerHTML='<summary>Calcular sacos por toneladas</summary><div class="cin"><label><span>Toneladas requeridas</span><input type="number" min="0" step="0.1" inputmode="decimal"></label><button type="button" class="cgo">Calcular</button></div><div class="cout" aria-live="polite"></div>';
+      o.parentNode.insertBefore(c,o.nextSibling);
+      var ci=c.querySelector('input'),co=c.querySelector('.cout');
+      var calc=function(){var t=parseFloat(String(ci.value).replace(',','.'));co.innerHTML='';
+        if(!(t>0)||t>5000){var m=document.createElement('p');m.className='qerr';m.textContent=t>5000?'Para más de 5.000 t, escríbanos directamente.':'Ingrese una cantidad mayor que cero.';co.appendChild(m);return}
+        var kgReq=Math.round(t*1000),n=Math.ceil(kgReq/p.w),kg=n*p.w,ex=kg-kgReq,fmt=function(v,d){return v.toLocaleString('es-EC',{maximumFractionDigits:d})};
+        var r=document.createElement('p');r.className='cres';var b=document.createElement('b');b.textContent=fmt(n,0)+' sacos';r.appendChild(b);r.appendChild(document.createTextNode(' × '+p.w+' kg = '+fmt(kg/1000,3)+' t'));co.appendChild(r);
+        if(ex>0){var e2=document.createElement('p');e2.className='cex';var sp=document.createElement('span');sp.textContent='Excedente sobre lo solicitado:';e2.appendChild(sp);e2.appendChild(document.createTextNode(' '+fmt(ex,0)+' kg'));co.appendChild(e2)}
+        var u=document.createElement('button');u.type='button';u.className='cuse';u.textContent='Usar esta cantidad';u.addEventListener('click',function(){box.querySelector('input').value=n;err.hidden=true;box.querySelector('input').focus()});co.appendChild(u)};
+      c.querySelector('.cgo').addEventListener('click',calc);ci.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calc()}})}
     box.addEventListener('click',function(e){var b=e.target.closest('button');if(b)step(box,+b.dataset.d)});
     o.querySelector('.add').addEventListener('click',function(){
-      var q=Math.max(1,parseInt(box.querySelector('input').value,10)||0),sec=sectorOf(el);
+      var raw=box.querySelector('input').value,q=parseInt(raw,10),sec=sectorOf(el);
+      if(!(q>=1)||String(raw).indexOf('.')>-1||q>100000){err.textContent=q>100000?'Para más de 100.000 sacos, escríbanos directamente.':'Ingrese una cantidad válida de sacos (número entero mayor que cero).';err.hidden=false;box.querySelector('input').setAttribute('aria-invalid','true');return}
+      err.hidden=true;box.querySelector('input').removeAttribute('aria-invalid');
       var it=cart.filter(function(x){return x.k===k&&x.s===sec})[0];
       if(it){it.q+=q}else{cart.push({k:k,q:q,s:sec})}
       save();render();var a=this;a.textContent='Agregado ✓';a.classList.add('done');setTimeout(function(){a.textContent='Agregar al pedido';a.classList.remove('done')},1600);
@@ -938,7 +968,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function total(){return cart.reduce(function(a,x){return a+x.q},0)}
   function text(){
     var secs=cart.map(function(x){return x.s}).filter(function(v,i,a){return v&&a.indexOf(v)===i});
-    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'});
+    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'+(P[x.k].w?' ≈ '+(x.q*P[x.k].w/1000).toLocaleString('es-EC',{maximumFractionDigits:3})+' t':'')});
     var g=function(id){var e=document.getElementById(id);return e?e.value.trim():''}, emp=g('q-emp'), dest=g('q-dest'), ent=g('q-ent'), req=g('q-req');
     return 'Buenos días. Quisiera solicitar una cotización a CRILARSA:\n'+l.join('\n')+'\nTotal: '+total().toLocaleString('es-EC')+' sacos'+(secs.length?'\nSector: '+secs.join(', '):'')+(emp?'\nEmpresa o finca: '+emp:'')+(dest?'\nCiudad o destino: '+dest:'')+(ent?'\nEntrega: '+ent:'')+(req?'\nRequerimientos: '+req:'')+'\nPor favor, confírmenme el precio de fábrica, la disponibilidad y la fecha de carga.';
   }

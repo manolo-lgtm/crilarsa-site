@@ -271,6 +271,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .langbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 8px 24px rgba(0,0,0,.2);font:600 15px var(--display);max-width:calc(100% - 32px)}.langbar a{color:var(--navy);text-decoration:none;white-space:nowrap}.langbar a:hover{text-decoration:underline}.langbar button{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;width:40px;height:40px;border-radius:50%;cursor:pointer}.langbar button:hover{background:var(--stone)}@media (max-width:860px){.langbar{bottom:calc(140px + env(safe-area-inset-bottom,0px))}}
 .gform[hidden]{display:none!important}.gsteps{display:grid;gap:14px;margin:20px 0 6px}.grow[hidden]{display:none!important}.grow{display:grid;gap:8px;animation:gin .3s ease both}@keyframes gin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}.glab{display:flex;align-items:center;gap:8px;font:600 14px var(--display);color:var(--navy)}.glab b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px}.gchips{display:flex;flex-wrap:wrap;gap:8px}.gchip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 8px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font:500 15px var(--body);cursor:pointer;text-align:left;transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.gchip:hover{border-color:var(--blue);transform:translateY(-1px);box-shadow:0 4px 12px rgba(30,40,51,.08)}.gchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}.gchip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}.gchip svg{flex:none;width:26px;height:26px;padding:4px;border-radius:50%;background:#1e2833;color:#c3cfdb}.gchip:not(:has(svg)){padding-left:14px}.gchip[data-s=banano] svg{color:#e3c35a}.gchip[data-s=camaron] svg{color:#e8a0ab}.gchip[data-s=agricola] svg{color:#86b56f}.gchip[data-s=agricola] svg path:last-child{stroke:#b08a62}.gchip[data-s=pecuario] svg{background:#f3f1ec;color:#1e2833}.gchip[data-s=pecuario] svg circle{fill:#1e2833}.gchip[data-s=azucar] svg{color:#fff}.gchip[data-s=agua] svg{color:#7fb2e0}.gchip[data-s=construccion] svg{color:#e2a65c}@media (max-width:600px){.grow:first-child .gchips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:2px 24px 6px;scroll-snap-type:x proximity}.grow:first-child .gchips::-webkit-scrollbar{display:none}.grow:first-child .gchip{flex:none;scroll-snap-align:start;white-space:nowrap}.gchip{font-size:14px}}
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px;max-width:720px}.path{display:grid;gap:2px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy);text-decoration:none;transition:border-color .15s,box-shadow .15s}.path b{font:700 15px var(--display)}.path span{font-size:14px;color:var(--muted)}.path:hover{border-color:var(--blue);box-shadow:0 4px 12px rgba(30,40,51,.08)}.path.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}@media (max-width:600px){.paths{gap:8px}.path{padding:10px 12px}.path b{font-size:14px}.path span{font-size:13px}}
+.qerr{color:#b3261e;font-size:14px;margin:6px 0 0;flex-basis:100%}.calc{margin:0 0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;max-width:520px}.calc summary{cursor:pointer;padding:10px 14px;font:600 15px var(--display);color:var(--blue)}.calc .cin{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;padding:0 14px 10px}.calc label{display:grid;gap:4px;font-size:14px;color:var(--muted)}.calc input{font:16px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:140px;min-height:44px}.calc button{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);font:600 15px var(--display);cursor:pointer}.calc .cuse{background:var(--navy);color:#fff;margin-top:6px}.calc .cout{padding:0 14px 12px}.cres{margin:4px 0;font-size:16px;color:var(--ink)}.cex{margin:2px 0;font-size:14px;color:var(--muted)}.spec{width:100%;max-width:820px;border-collapse:collapse;font-size:16px;background:#fff}.spec caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding-top:8px}.spec th,.spec td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}.spec thead th{background:var(--navy);color:#fff;font:600 14px var(--display)}.spec tbody th{width:38%;color:var(--blue);font-weight:600}.specnotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:22px;max-width:1000px}.specnotes div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}.specnotes h3{font:700 15px var(--display);margin:0 0 6px;color:var(--navy)}.specnotes p{margin:0;font-size:15px;line-height:1.5;color:var(--ink)}.speclinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}@media (max-width:600px){.spec{font-size:15px}.spec th,.spec td{padding:8px}}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -551,14 +552,35 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     </div>
   </div>
 </section>
+<section class="asesoria" id="especificaciones">
+  <div class="inner">
+    <div class="head"><div class="eyebrow">Технические данные</div><h2>Технические характеристики</h2></div>
+    <table class="spec">
+      <caption>Данные этикетки или опубликованные Crilarsa; не сертифицированные лабораторные результаты.</caption>
+      <thead><tr><th scope="col">Показатель</th><th scope="col">Значение</th></tr></thead>
+      <tbody>
+          <tr><th scope="row">Минерал (этикетка)</th><td>Природный клиноптилолит</td></tr>
+          <tr><th scope="row">SiO₂ общий (этикетка)</th><td>76 % (химический состав; не равен доле клиноптилолита)</td></tr>
+          <tr><th scope="row">Гранулометрия (этикетка)</th><td>200 меш</td></tr>
+          <tr><th scope="row">Фасовка</th><td>Мешок 25 кг</td></tr>
+      </tbody>
+    </table>
+    <div class="specnotes">
+      <div><h3>Области применения</h3><p>Аквакультура, сельское хозяйство, водоподготовка и сахарная промышленность.</p></div>
+      <div><h3>Технические ограничения</h3><p>Удерживает аммоний и питательные вещества за счёт ионного обмена; применяется вместе с удобрением, а не вместо него. Результат зависит от дозы и системы.</p></div>
+      <div><h3>Хранение и обращение</h3><p>Хранить в сухом крытом месте. При работе использовать противопылевую маску.</p></div>
+    </div>
+    <div class="speclinks"><a class="btn btn-ghost" href="ficha-zeolita.html" target="_blank" rel="noopener">Открыть техническую карту</a><a class="btn btn-ghost" href="ficha-zeolita.pdf" download>Скачать PDF</a></div>
+  </div>
+</section>
 <section class="asesoria" id="usos">
   <div class="inner">
     <div class="head"><div class="eyebrow">Применение</div><h2>Применение по отраслям</h2></div>
     <div class="uses">
-      <article><h3>Бананы</h3><p>Пористая структура удерживает аммоний, калий и влагу у корней и снижает вымывание удобрений в сезон дождей.<em class="uso"><b>Применение:</b> смешивается с удобрением или вносится вместе с ним в зону корней.</em></p><a href="ru.html#banano">Решения для отрасли →</a></article>
-      <article><h3>Аквакультура и креветки</h3><p>Связывает аммоний и помогает поддерживать дно чище, создавая лучшую среду для креветок.<em class="uso"><b>Применение:</b> разбрасывается по воде, особенно в зонах кормления и в системах высокой плотности.</em></p><a href="ru.html#camaron">Решения для отрасли →</a></article>
-      <article><h3>Сельское хозяйство: какао, рис, масличная пальма</h3><p>Удерживает аммоний и калий и снижает потери азота от вымывания и улетучивания.<em class="uso"><b>Применение:</b> смешивается с мочевиной или другим удобрением перед внесением.</em></p><a href="ru.html#agricola">Решения для отрасли →</a></article>
-      <article><h3>Птицеводство и животноводство</h3><p>Поглощает влагу и аммиак в подстилке, улучшает микроклимат в птичнике и уменьшает запах.<em class="uso"><b>Применение:</b> смешивается с подстилкой в птичнике между партиями.</em></p><a href="ru.html#pecuario">Решения для отрасли →</a></article>
+      <article><h3>Бананы</h3><p>Пористая структура удерживает аммоний, калий и влагу у корней и может снизить потери удобрений от вымывания в сезон дождей.<em class="uso"><b>Применение:</b> смешивается с удобрением или вносится вместе с ним в зону корней.</em></p><a href="ru.html#banano">Решения для отрасли →</a></article>
+      <article><h3>Аквакультура и креветки</h3><p>Удерживает аммоний за счёт ионного обмена и может помочь улучшить состояние дна пруда.<em class="uso"><b>Применение:</b> разбрасывается по воде, особенно в зонах кормления и в системах высокой плотности.</em></p><a href="ru.html#camaron">Решения для отрасли →</a></article>
+      <article><h3>Сельское хозяйство: какао, рис, масличная пальма</h3><p>Удерживает аммоний и калий и может снизить потери азота от вымывания и улетучивания.<em class="uso"><b>Применение:</b> смешивается с мочевиной или другим удобрением перед внесением.</em></p><a href="ru.html#agricola">Решения для отрасли →</a></article>
+      <article><h3>Птицеводство и животноводство</h3><p>Поглощает влагу и аммиак в подстилке, что может улучшить микроклимат помещения и уменьшить запахи.<em class="uso"><b>Применение:</b> смешивается с подстилкой в птичнике между партиями.</em></p><a href="ru.html#pecuario">Решения для отрасли →</a></article>
       <article><h3>Сахарные заводы</h3><p>В поле удерживает питательные вещества и влагу в почве плантаций тростника.<em class="uso"><b>Применение:</b> вместе с удобрением при посадке или на отрастающем тростнике.</em></p><a href="ru.html#azucar">Решения для отрасли →</a></article>
       <article><h3>Водоподготовка</h3><p>Удерживает аммоний и некоторые металлы за счёт ионного обмена и задерживает мелкие взвеси.<em class="uso"><b>Применение:</b> как фильтрующая загрузка или дозированно в процессе очистки.</em></p><a href="ru.html#agua">Решения для отрасли →</a></article>
     </div>
@@ -687,9 +709,9 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 /* Pedido: cantidades por producto, carrito y envío por WhatsApp o formulario */
 (function(){
   var P={
-    neutrocal:{n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
-    calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
-    zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
+    neutrocal:{w:45,n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
+    calforte:{w:25,n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
+    zeolita:{w:25,n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
     mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
@@ -714,10 +736,23 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     }else{
       var links=el.querySelector('.links');links.parentNode.insertBefore(o,links);
     }
-    var box=o.querySelector('.qty');
+    var box=o.querySelector('.qty'),err=document.createElement('p');err.className='qerr';err.setAttribute('role','alert');err.hidden=true;o.appendChild(err);
+    if(p.w&&el.tagName!=='LI'){var c=document.createElement('details');c.className='calc';
+      c.innerHTML='<summary>Calcular sacos por toneladas</summary><div class="cin"><label><span>Toneladas requeridas</span><input type="number" min="0" step="0.1" inputmode="decimal"></label><button type="button" class="cgo">Calcular</button></div><div class="cout" aria-live="polite"></div>';
+      o.parentNode.insertBefore(c,o.nextSibling);
+      var ci=c.querySelector('input'),co=c.querySelector('.cout');
+      var calc=function(){var t=parseFloat(String(ci.value).replace(',','.'));co.innerHTML='';
+        if(!(t>0)||t>5000){var m=document.createElement('p');m.className='qerr';m.textContent=t>5000?'Para más de 5.000 t, escríbanos directamente.':'Ingrese una cantidad mayor que cero.';co.appendChild(m);return}
+        var kgReq=Math.round(t*1000),n=Math.ceil(kgReq/p.w),kg=n*p.w,ex=kg-kgReq,fmt=function(v,d){return v.toLocaleString('es-EC',{maximumFractionDigits:d})};
+        var r=document.createElement('p');r.className='cres';var b=document.createElement('b');b.textContent=fmt(n,0)+' sacos';r.appendChild(b);r.appendChild(document.createTextNode(' × '+p.w+' kg = '+fmt(kg/1000,3)+' t'));co.appendChild(r);
+        if(ex>0){var e2=document.createElement('p');e2.className='cex';var sp=document.createElement('span');sp.textContent='Excedente sobre lo solicitado:';e2.appendChild(sp);e2.appendChild(document.createTextNode(' '+fmt(ex,0)+' kg'));co.appendChild(e2)}
+        var u=document.createElement('button');u.type='button';u.className='cuse';u.textContent='Usar esta cantidad';u.addEventListener('click',function(){box.querySelector('input').value=n;err.hidden=true;box.querySelector('input').focus()});co.appendChild(u)};
+      c.querySelector('.cgo').addEventListener('click',calc);ci.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calc()}})}
     box.addEventListener('click',function(e){var b=e.target.closest('button');if(b)step(box,+b.dataset.d)});
     o.querySelector('.add').addEventListener('click',function(){
-      var q=Math.max(1,parseInt(box.querySelector('input').value,10)||0),sec=sectorOf(el);
+      var raw=box.querySelector('input').value,q=parseInt(raw,10),sec=sectorOf(el);
+      if(!(q>=1)||String(raw).indexOf('.')>-1||q>100000){err.textContent=q>100000?'Para más de 100.000 sacos, escríbanos directamente.':'Ingrese una cantidad válida de sacos (número entero mayor que cero).';err.hidden=false;box.querySelector('input').setAttribute('aria-invalid','true');return}
+      err.hidden=true;box.querySelector('input').removeAttribute('aria-invalid');
       var it=cart.filter(function(x){return x.k===k&&x.s===sec})[0];
       if(it){it.q+=q}else{cart.push({k:k,q:q,s:sec})}
       save();render();var a=this;a.textContent='Agregado ✓';a.classList.add('done');setTimeout(function(){a.textContent='Agregar al pedido';a.classList.remove('done')},1600);
@@ -727,7 +762,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function total(){return cart.reduce(function(a,x){return a+x.q},0)}
   function text(){
     var secs=cart.map(function(x){return x.s}).filter(function(v,i,a){return v&&a.indexOf(v)===i});
-    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'});
+    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'+(P[x.k].w?' ≈ '+(x.q*P[x.k].w/1000).toLocaleString('es-EC',{maximumFractionDigits:3})+' t':'')});
     var g=function(id){var e=document.getElementById(id);return e?e.value.trim():''}, emp=g('q-emp'), dest=g('q-dest'), ent=g('q-ent'), req=g('q-req');
     return 'Buenos días. Quisiera solicitar una cotización a CRILARSA:\n'+l.join('\n')+'\nTotal: '+total().toLocaleString('es-EC')+' sacos'+(secs.length?'\nSector: '+secs.join(', '):'')+(emp?'\nEmpresa o finca: '+emp:'')+(dest?'\nCiudad o destino: '+dest:'')+(ent?'\nEntrega: '+ent:'')+(req?'\nRequerimientos: '+req:'')+'\nPor favor, confírmenme el precio de fábrica, la disponibilidad y la fecha de carga.';
   }
