@@ -499,7 +499,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 
 <nav class="nav" aria-label="Головне меню">
   <div class="inner">
-    <a class="logo" href="uk.html" aria-label="Crilarsa, головна"><img src="logo-crilarsa-blanco.png" alt="Crilarsa C.A. Química Inteligente"></a>
+    <a class="logo" href="uk.html" aria-label="Crilarsa, головна"><img src="logo-crilarsa-blanco.png" width="214" height="99" alt="Crilarsa C.A. Química Inteligente"></a>
     <ul id="menu">
       <li><a href="uk.html#sectores">Галузі</a></li>
       <li><a href="uk-productos.html">Продукція</a></li>
@@ -589,7 +589,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 
 <footer>
   <div class="inner top">
-    <div><img src="logo-crilarsa-blanco.png" alt="Crilarsa"><p>Якісні мінерали. Власне виробництво. Напряму виробнику. Досвід з 1989 року.</p></div>
+    <div><img src="logo-crilarsa-blanco.png" width="214" height="99" alt="Crilarsa"><p>Якісні мінерали. Власне виробництво. Напряму виробнику. Досвід з 1989 року.</p></div>
     <div><h2 class="fh">Сайт</h2><ul><li><a href="uk.html">Головна</a></li><li><a href="uk.html#sectores">Рішення за галузями</a></li><li><a href="uk-productos.html">Продукція</a></li><li><a href="uk-productos.html#asesoria">Технічна консультація</a></li><li><a href="uk-planta.html">Наш завод</a></li><li><a href="uk-planta.html#logistica">Логістика</a></li><li><a href="uk-nosotros.html">Про компанію</a></li></ul></div>
     <div><h2 class="fh">Контакти</h2><ul><li>WhatsApp +593 98 521 1202</li><li>finanzas@crilarsa.com</li><li>Vía a la Costa, км 22, Гуаякіль</li><li>RUC 0992110945001</li></ul></div>
   </div>
@@ -664,7 +664,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}}
-  function thumb(p){return '<span class="thumb">'+(p.img?'<img src="'+p.img+'" alt="">':'<b>'+p.f+'</b>')+'</span>'}
+  function thumb(p){return '<span class="thumb">'+(p.img?'<img src="'+p.img.replace('.png','-t.png')+'" width="88" height="96" alt="">':'<b>'+p.f+'</b>')+'</span>'}
   function qtyBox(v){return '<span class="qty"><button type="button" data-d="-1" aria-label="Menos">−</button><input type="number" min="1" step="1" value="'+v+'" inputmode="numeric" aria-label="Cantidad de sacos"><button type="button" data-d="1" aria-label="Más">+</button></span>'}
   function inc(v){return v<10?1:(v<100?10:50)}
   function step(box,d){var i=box.querySelector('input'),v=parseInt(i.value,10)||0;var n=d>0?v+inc(v):v-inc(v-1);i.value=Math.max(1,n)}
@@ -889,7 +889,8 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
       if(cur&&cur!==el){var old=cur;old.classList.remove('on');if(old.tagName==='VIDEO')setTimeout(function(){if(!old.classList.contains('on'))old.pause()},1200)}
       cur=el;i=k;mark(k);setTimeout(next,CL[k].d*1000)},cur?250:0)}
     function next(){var k=(i+1)%CL.length;prep(k,function(el){show(k,el)})}
-    function start(){if(started)return;started=true;prep(0,function(el){show(0,el)})}
+    var cn=navigator.connection||{};if(cn.saveData||/(^|-)(2g|3g)$/.test(cn.effectiveType||'')){CL=CL.map(function(c){return c.src?{img:FB[c.src]||'materia-prima-caliza.jpg',d:c.d,c:c.c,l:c.l}:c})}
+    function start(){if(started)return;started=true;var go=function(){setTimeout(function(){prep(0,function(el){show(0,el)})},1200)};if(document.readyState==='complete')go();else addEventListener('load',go)}
     if(reduce){mark(0);return}
     if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){start();o.disconnect()}})},{rootMargin:'200px'}).observe(reel)}else{start()}
   });
