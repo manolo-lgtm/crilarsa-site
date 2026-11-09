@@ -281,7 +281,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .faq details{background:var(--white,#fff);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
 .faq summary{cursor:pointer;font:600 16px var(--display);color:var(--ink);list-style-position:outside}
 .faq p{margin:10px 0 0;color:var(--muted)}
-.tabs button.all{border-style:dashed}
+/* Colores suaves por sector */
+.tabs button[aria-selected="true"] svg.ti{background:#1e2833}
+#t-banano .ti,#banano .pi{color:#e3c35a}
+#t-camaron .ti,#camaron .pi{color:#e8a0ab}
+#t-agricola .ti,#agricola .pi{color:#86b56f}
+#t-agricola .ti path:last-child,#agricola .pi path:last-child{stroke:#b08a62}
+#t-pecuario .ti,#pecuario .pi{color:#1e2833;background:#f3f1ec}
+#t-pecuario .ti circle,#pecuario .pi circle{fill:#1e2833}
+#t-azucar .ti,#azucar .pi{color:#ffffff}
+#t-agua .ti,#agua .pi{color:#7fb2e0}
+#t-construccion .ti,#construccion .pi{color:#e2a65c}
+#t-todos .ti,#todos .pi{color:#c3cfdb}.tabs button.all{border-style:dashed}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px}
 .tabs button[aria-selected="true"] .ti{background:var(--blue-soft);color:var(--blue)}
 .panel .pi{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e6ebf0;margin-bottom:16px}
