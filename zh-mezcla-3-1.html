@@ -23,7 +23,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Crilarsa","item":"https://crilarsa.com/zh.html"},{"@type":"ListItem","position":2,"name":"3:1 矿物混合料","item":"https://crilarsa.com/zh-mezcla-3-1.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"3:1 矿物混合料","description":"超细 3:1 碳酸钙与硫酸钙矿物混合料，45 或 50 公斤袋装：一次施用即可施石灰并补硫。厄瓜多尔瓜亚基尔。","image":"https://crilarsa.com/saco-mezcla.svg","url":"https://crilarsa.com/zh-mezcla-3-1.html","category":"Industrial minerals","inLanguage":"zh-Hans","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"3:1 矿物混合料","description":"超细 3:1 碳酸钙与硫酸钙矿物混合料，45 或 50 公斤袋装：一次施用即可施石灰并补硫。厄瓜多尔瓜亚基尔。","image":"https://crilarsa.com/saco-mezcla.png","url":"https://crilarsa.com/zh-mezcla-3-1.html","category":"Industrial minerals","inLanguage":"zh-Hans","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"以什么包装销售？","acceptedAnswer":{"@type":"Answer","text":"45 公斤或 50 公斤袋，超细研磨。"}},{"@type":"Question","name":"3:1 混合料含有什么？","acceptedAnswer":{"@type":"Answer","text":"三份碳酸钙对一份硫酸钙，超细研磨。"}},{"@type":"Question","name":"如何询价？","acceptedAnswer":{"@type":"Answer","text":"选择袋数，加入订单，然后通过 WhatsApp 或邮件发送询价。我们将确认出厂价格、库存和装车日期。"}},{"@type":"Question","name":"可以到工厂提货吗？","acceptedAnswer":{"@type":"Answer","text":"可以。在瓜亚基尔 Vía a la Costa 公路 22 公里处的工厂提货，请与您的顾问约定日期和时间。"}},{"@type":"Question","name":"应施用多少剂量？","acceptedAnswer":{"@type":"Answer","text":"取决于您的土壤、水质或工艺。建议以近期的分析结果为准；我们的团队会在购买前为您提供指导。"}}]}</script>
 <link rel="icon" type="image/png" href="logo-crilarsa-blanco.png">
 <style>
@@ -265,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo strong{font:600 14px var(--display);color:var(--ink)}
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -516,7 +517,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   <div class="inner">
     <div class="cat">
       <article class="prod" data-p="mezcla" id="mezcla">
-        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.svg" alt="碳酸钙 + 硫酸钙 3:1 袋装，超细，45 或 50 公斤"></div>
+        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.png" alt="碳酸钙 + 硫酸钙 3:1 袋装，超细，45 或 50 公斤"></div>
         <div class="text">
           <span class="badge">新</span>
           <div class="chem">CaCO₃ + CaSO₄ · 超细</div>
@@ -667,7 +668,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
     zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
-    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.svg',pres:'Saco de 45 o 50 kg · ultrafino'}
+    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}

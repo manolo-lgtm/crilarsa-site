@@ -265,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo strong{font:600 14px var(--display);color:var(--ink)}
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -526,6 +527,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
             <dt>SiO₂ 总量（标签）</dt><dd>76 %（化学成分；不等于斜发沸石含量）</dd>
             <dt>包装规格</dt><dd>25 公斤袋，200 目。</dd>
           </dl>
+          <a class="ficha" href="ficha-zeolita.html" target="_blank" rel="noopener">技术数据表（打印或 PDF，西班牙语）→</a>
           <div class="links"><a class="btn btn-primary js-open-cart" href="#" data-track="cotizar-producto">获取报价</a><a class="btn btn-line js-wa" data-msg="general" href="#contacto">咨询顾问</a></div>
         </div>
       </article>
@@ -671,7 +673,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
     zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
-    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.svg',pres:'Saco de 45 o 50 kg · ultrafino'}
+    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}

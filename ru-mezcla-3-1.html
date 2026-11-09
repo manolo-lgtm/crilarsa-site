@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Crilarsa","item":"https://crilarsa.com/ru.html"},{"@type":"ListItem","position":2,"name":"Минеральная смесь 3:1","item":"https://crilarsa.com/ru-mezcla-3-1.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Минеральная смесь 3:1","description":"Ультратонкая минеральная смесь 3:1 карбоната и сульфата кальция в мешках по 45 или 50 кг: известкование и сера за одно внесение. Гуаякиль, Эквадор.","image":"https://crilarsa.com/saco-mezcla.svg","url":"https://crilarsa.com/ru-mezcla-3-1.html","category":"Industrial minerals","inLanguage":"ru","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Минеральная смесь 3:1","description":"Ультратонкая минеральная смесь 3:1 карбоната и сульфата кальция в мешках по 45 или 50 кг: известкование и сера за одно внесение. Гуаякиль, Эквадор.","image":"https://crilarsa.com/saco-mezcla.png","url":"https://crilarsa.com/ru-mezcla-3-1.html","category":"Industrial minerals","inLanguage":"ru","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"В какой фасовке продаётся?","acceptedAnswer":{"@type":"Answer","text":"Мешок 45 кг или 50 кг, ультратонкий помол."}},{"@type":"Question","name":"Что входит в смесь 3:1?","acceptedAnswer":{"@type":"Answer","text":"Три части карбоната кальция на одну часть сульфата кальция, ультратонкий помол."}},{"@type":"Question","name":"Как запросить цену?","acceptedAnswer":{"@type":"Answer","text":"Выберите количество мешков, добавьте в заказ и отправьте запрос через WhatsApp или по почте. Мы подтвердим заводскую цену, наличие и дату погрузки."}},{"@type":"Question","name":"Можно ли забрать с завода?","acceptedAnswer":{"@type":"Answer","text":"Да. Самовывоз с нашего завода на Vía a la Costa, км 22, Гуаякиль, по согласованию дня и времени с менеджером."}},{"@type":"Question","name":"Какую дозу вносить?","acceptedAnswer":{"@type":"Answer","text":"Зависит от почвы, воды или процесса. Рекомендуем ориентироваться на свежий анализ; наша команда проконсультирует до покупки."}}]}</script>
 <link rel="icon" type="image/png" href="logo-crilarsa-blanco.png">
 <style>
@@ -265,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo strong{font:600 14px var(--display);color:var(--ink)}
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -516,7 +517,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   <div class="inner">
     <div class="cat">
       <article class="prod" data-p="mezcla" id="mezcla">
-        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.svg" alt="Мешок карбоната кальция + сульфата кальция 3:1, ультратонкий помол, 45 или 50 кг"></div>
+        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.png" alt="Мешок карбоната кальция + сульфата кальция 3:1, ультратонкий помол, 45 или 50 кг"></div>
         <div class="text">
           <span class="badge">Новое</span>
           <div class="chem">CaCO₃ + CaSO₄ · Ультратонкий помол</div>
@@ -667,7 +668,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
     zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
-    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.svg',pres:'Saco de 45 o 50 kg · ultrafino'}
+    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}
