@@ -3,7 +3,7 @@
 const { test, expect } = require('@playwright/test');
 
 const PAGES = ['/index.html', '/productos.html', '/hidroxido-de-calcio.html', '/yeso-agricola.html', '/planta.html', '/nosotros.html', '/en.html', '/zh-productos.html'];
-const WIDTHS = [390, 768, 1440];
+const WIDTHS = [320, 390, 768, 1440]; // 320 px = texto ampliado al 400 % (WCAG 1.4.10)
 
 test('Diseño adaptable en tres anchos', async ({ page }, info) => {
   test.skip(info.project.name !== 'desktop', 'los anchos se fijan en la prueba');

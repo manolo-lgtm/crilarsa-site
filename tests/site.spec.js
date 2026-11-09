@@ -246,3 +246,18 @@ test('Fichas: los botones de ficha y PDF son legibles en la página de producto'
   expect(c[0]).not.toBe(c[1]);
   expect(c[0]).not.toBe('rgb(255, 255, 255)');
 });
+
+test('Movimiento reducido: sin video automático ni desplazamiento animado', async ({ browser }, info) => {
+  test.skip(info.project.name !== 'desktop', 'una vez basta');
+  const ctx = await browser.newContext({ reducedMotion: 'reduce', locale: 'es-EC', timezoneId: 'America/Guayaquil' });
+  const page = await ctx.newPage();
+  await page.goto('/index.html');
+  await page.waitForTimeout(4000);
+  const r = await page.evaluate(() => ({
+    videos: [...document.querySelectorAll('.hero-reel video')].filter((v) => v.getAttribute('src')).length,
+    scroll: getComputedStyle(document.documentElement).scrollBehavior,
+  }));
+  expect(r.videos).toBe(0);
+  expect(r.scroll).toBe('auto');
+  await ctx.close();
+});
