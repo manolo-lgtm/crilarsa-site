@@ -710,22 +710,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   render();
 })();/* Video informativo opcional por producto (YouTube, de terceros). Clave: sector|producto; "todos" sirve para el catálogo. */
 (function(){
-  var V={
-    'banano|neutrocal':['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],
-    'banano|sulfato':['43vELVhVG-M','Deficiencia de calcio en banano y su corrección con yeso','Tips y Videoclips'],
-    'banano|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
-    'banano|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'agricola|neutrocal':['cUQaIa4keRA','Encalado de suelos: por qué y cuánto aplicar','Ingeniera Mora'],
-    'agricola|sulfato':['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],
-    'agricola|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay'],
-    'agricola|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'camaron|calforte':['LJCUNelT8zY','Encalado del estanque antes de la siembra','Antonio Vargas'],
-    'construccion|calforte':['iv7zuaoIWBM','Estabilización de subrasante con cal','Fernando Gómez'],
-    'todos|calforte':['LJCUNelT8zY','Encalado del estanque antes de la siembra','Antonio Vargas'],
-    'todos|neutrocal':['HJRODLRIzYo','Cómo el carbonato de calcio corrige el pH del suelo','La Colina Agrotecnología'],
-    'todos|zeolita':['HeRBiDZCGI4','Beneficios de la zeolita en el campo','Los Sabores del Campo'],
-    'todos|sulfato':['NuRWg9uIwtY','Yeso agrícola para mejorar suelos','La Educación Agrícola'],
-    'todos|mezcla':['SvI3dhjSLqk','Cal agrícola y yeso: qué hace cada uno en el suelo','ABC TV Paraguay']
+  var V={ /* Sin videos por ahora: solo se agregan videos educativos de instituciones (universidades, INIAP, FAO) que no promocionen productos ni proveedores. */
   };
   var esc=function(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
   [].forEach.call(document.querySelectorAll('[data-p]'),function(el){
