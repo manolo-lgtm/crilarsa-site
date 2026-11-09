@@ -269,6 +269,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .langbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:6px;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 8px 24px rgba(0,0,0,.2);font:600 15px var(--display);max-width:calc(100% - 32px)}.langbar a{color:var(--navy);text-decoration:none;white-space:nowrap}.langbar a:hover{text-decoration:underline}.langbar button{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;width:40px;height:40px;border-radius:50%;cursor:pointer}.langbar button:hover{background:var(--stone)}@media (max-width:860px){.langbar{bottom:calc(140px + env(safe-area-inset-bottom,0px))}}
 .gform[hidden]{display:none!important}.gsteps{display:grid;gap:14px;margin:20px 0 6px}.grow[hidden]{display:none!important}.grow{display:grid;gap:8px;animation:gin .3s ease both}@keyframes gin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}.glab{display:flex;align-items:center;gap:8px;font:600 14px var(--display);color:var(--navy)}.glab b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px}.gchips{display:flex;flex-wrap:wrap;gap:8px}.gchip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 8px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font:500 15px var(--body);cursor:pointer;text-align:left;transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.gchip:hover{border-color:var(--blue);transform:translateY(-1px);box-shadow:0 4px 12px rgba(30,40,51,.08)}.gchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}.gchip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}.gchip svg{flex:none;width:26px;height:26px;padding:4px;border-radius:50%;background:#1e2833;color:#c3cfdb}.gchip:not(:has(svg)){padding-left:14px}.gchip[data-s=banano] svg{color:#e3c35a}.gchip[data-s=camaron] svg{color:#e8a0ab}.gchip[data-s=agricola] svg{color:#86b56f}.gchip[data-s=agricola] svg path:last-child{stroke:#b08a62}.gchip[data-s=pecuario] svg{background:#f3f1ec;color:#1e2833}.gchip[data-s=pecuario] svg circle{fill:#1e2833}.gchip[data-s=azucar] svg{color:#fff}.gchip[data-s=agua] svg{color:#7fb2e0}.gchip[data-s=construccion] svg{color:#e2a65c}@media (max-width:600px){.grow:first-child .gchips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:2px 24px 6px;scroll-snap-type:x proximity}.grow:first-child .gchips::-webkit-scrollbar{display:none}.grow:first-child .gchip{flex:none;scroll-snap-align:start;white-space:nowrap}.gchip{font-size:14px}}
 .paths{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 26px;max-width:720px}.path{display:grid;gap:2px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy);text-decoration:none;transition:border-color .15s,box-shadow .15s}.path b{font:700 15px var(--display)}.path span{font-size:14px;color:var(--muted)}.path:hover{border-color:var(--blue);box-shadow:0 4px 12px rgba(30,40,51,.08)}.path.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}@media (max-width:600px){.paths{gap:8px}.path{padding:10px 12px}.path b{font-size:14px}.path span{font-size:13px}}
+.qerr{color:#b3261e;font-size:14px;margin:6px 0 0;flex-basis:100%}.calc{margin:0 0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;max-width:520px}.calc summary{cursor:pointer;padding:10px 14px;font:600 15px var(--display);color:var(--blue)}.calc .cin{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;padding:0 14px 10px}.calc label{display:grid;gap:4px;font-size:14px;color:var(--muted)}.calc input{font:16px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:140px;min-height:44px}.calc button{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);font:600 15px var(--display);cursor:pointer}.calc .cuse{background:var(--navy);color:#fff;margin-top:6px}.calc .cout{padding:0 14px 12px}.cres{margin:4px 0;font-size:16px;color:var(--ink)}.cex{margin:2px 0;font-size:14px;color:var(--muted)}.spec{width:100%;max-width:820px;border-collapse:collapse;font-size:16px;background:#fff}.spec caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding-top:8px}.spec th,.spec td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}.spec thead th{background:var(--navy);color:#fff;font:600 14px var(--display)}.spec tbody th{width:38%;color:var(--blue);font-weight:600}.specnotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:22px;max-width:1000px}.specnotes div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}.specnotes h3{font:700 15px var(--display);margin:0 0 6px;color:var(--navy)}.specnotes p{margin:0;font-size:15px;line-height:1.5;color:var(--ink)}.speclinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}@media (max-width:600px){.spec{font-size:15px}.spec th,.spec td{padding:8px}}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -618,10 +619,10 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 14.5c3.5 4.5 11 4 14.5-2.5 1.2-2.3 1.2-5.2 0-7.5l-1.3.8c.1 3.3-1.8 6.5-5.2 7.8-2.8 1.1-5.6 1.2-8 1.4z"/><path d="M17.7 5.3l.8-2.3"/><path d="M8 15.8c3 .6 6.5-.6 8.4-3.6"/></svg></div><h3>Solutions minérales pour le secteur bananier</h3>
         <p>Les sols bananiers ont besoin de calcium pour la fermeté du fruit et d'une bonne structure pour le drainage et les racines. Voici les produits les plus utilisés dans cette culture :</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>Le bananier prélève beaucoup de calcium, et dans les sols acides le phosphore et le potassium sont bloqués. Le carbonate corrige l'acidité progressivement et apporte le calcium qui donne de la fermeté au fruit et renforce les racines.<em class="uso"><b>Usage :</b> à la volée sur la zone racinaire, avant ou avec le plan de fertilisation, selon l'analyse de sol.</em></span></li>
-          <li data-p="sulfato"><strong>Sulfate de calcium (gypse agricole)</strong><span>Apporte du calcium et du soufre sans augmenter le pH. Déplace le sodium et ameublit les sols compactés, ce qui améliore le drainage et le développement des racines.<em class="uso"><b>Usage :</b> en surface sur la zone racinaire ; idéal lorsque le pH est déjà correct mais que le calcium manque ou qu'il y a des problèmes de sodium.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>Le bananier prélève beaucoup de calcium, et dans les sols acides le phosphore et le potassium sont bloqués. Le carbonate corrige l'acidité progressivement et apporte du calcium, un nutriment important pour la qualité du fruit et le développement racinaire.<em class="uso"><b>Usage :</b> à la volée sur la zone racinaire, avant ou avec le plan de fertilisation, selon l'analyse de sol.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfate de calcium (gypse agricole)</strong><span>Apporte du calcium et du soufre sans augmenter le pH. Dans les sols sodiques ou compactés, il peut aider à améliorer la structure et le drainage, selon le type de sol.<em class="uso"><b>Usage :</b> en surface sur la zone racinaire ; idéal lorsque le pH est déjà correct mais que le calcium manque ou qu'il y a des problèmes de sodium.</em></span></li>
           <li data-p="mezcla"><strong>Mélange minéral 3:1</strong><span>Associe la correction de l'acidité du carbonate au calcium et au soufre du sulfate. Une seule application au lieu de deux, avec une économie de main-d'œuvre.<em class="uso"><b>Usage :</b> chaulage d'entretien en un seul passage.</em></span></li>
-          <li data-p="zeolita"><strong>Zéolithe</strong><span>Sa structure poreuse retient l'ammonium, le potassium et l'humidité près des racines et réduit les pertes d'engrais par lessivage en saison des pluies.<em class="uso"><b>Usage :</b> mélangée à l'engrais ou appliquée avec lui sur la zone racinaire.</em></span></li>
+          <li data-p="zeolita"><strong>Zéolithe</strong><span>Sa structure poreuse retient l'ammonium, le potassium et l'humidité près des racines et peut réduire les pertes d'engrais par lessivage en saison des pluies.<em class="uso"><b>Usage :</b> mélangée à l'engrais ou appliquée avec lui sur la zone racinaire.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -638,7 +639,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <ul class="plist">
           <li data-p="neutrocal"><strong>Carbonate de calcium (Neutrocal)</strong><span>Augmente et stabilise l'alcalinité et le pH, qui amortissent les variations brusques entre le jour et la nuit. Apporte du calcium pour la mue et favorise la productivité naturelle du bassin. Notre produit le plus demandé.<em class="uso"><b>Usage :</b> sur le fond lors de la préparation du bassin et à la volée sur l'eau pendant le cycle, selon l'alcalinité mesurée.</em></span></li>
           <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>L'hydroxyde de calcium augmente rapidement le pH du fond ; il sert à préparer le fond entre les cycles, dans le cadre du programme de biosécurité.<em class="uso"><b>Usage :</b> sur le fond après la récolte et avant le remplissage. En raison de son action forte, il ne s'applique pas avec des crevettes dans le bassin.</em></span></li>
-          <li data-p="zeolita"><strong>Zéolithe</strong><span>Piège l'ammonium et aide à garder le fond plus propre, pour un meilleur environnement pour la crevette.<em class="uso"><b>Usage :</b> à la volée sur l'eau, surtout dans les zones d'alimentation et dans les systèmes à forte densité.</em></span></li>
+          <li data-p="zeolita"><strong>Zéolithe</strong><span>Retient l'ammonium par échange d'ions et peut aider à améliorer l'état du fond du bassin.<em class="uso"><b>Usage :</b> à la volée sur l'eau, surtout dans les zones d'alimentation et dans les systèmes à forte densité.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -653,10 +654,10 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-8"/><path d="M12 12C12 8 9 5.6 4.5 5.6c0 4 3 6.4 7.5 6.4z"/><path d="M12 10c0-3.3 2.8-5.6 6.5-5.6 0 3.3-2.8 5.6-6.5 5.6z"/><path d="M5.5 20h13"/></svg></div><h3>Agriculture : cacao, riz, palmier à huile, maïs et autres cultures</h3>
         <p>Une grande partie des sols agricoles du littoral équatorien est acide ou pauvre en calcium. Le chaulage et les amendements minéraux aident la culture à mieux valoriser l'engrais.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>Dans les sols acides, l'aluminium et l'acidité freinent les racines et bloquent les nutriments. Le chaulage corrige cela et rend l'engrais plus efficace.<em class="uso"><b>Usage :</b> à la volée ou incorporé avant le semis ou en début de cycle, selon l'analyse de sol.</em></span></li>
-          <li data-p="sulfato"><strong>Sulfate de calcium</strong><span>Calcium et soufre sans modifier le pH. Améliore les sols lourds ou sodiques, et le soufre est nécessaire à la culture pour former des protéines.<em class="uso"><b>Usage :</b> en surface, seul ou avec le plan de fertilisation.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>Dans les sols acides, l'aluminium et l'acidité freinent les racines et bloquent les nutriments. Le chaulage corrige l'acidité et aide la culture à mieux valoriser l'engrais.<em class="uso"><b>Usage :</b> à la volée ou incorporé avant le semis ou en début de cycle, selon l'analyse de sol.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfate de calcium</strong><span>Calcium et soufre sans modifier le pH. Il peut améliorer les sols lourds ou sodiques, et le soufre est nécessaire à la formation des protéines de la culture.<em class="uso"><b>Usage :</b> en surface, seul ou avec le plan de fertilisation.</em></span></li>
           <li data-p="mezcla"><strong>Mélange minéral 3:1</strong><span>Corrige l'acidité et apporte du soufre en une seule application.<em class="uso"><b>Usage :</b> chaulage d'entretien avant le semis.</em></span></li>
-          <li data-p="zeolita"><strong>Zéolithe</strong><span>Retient l'ammonium et le potassium, et réduit les pertes d'azote par lessivage et volatilisation.<em class="uso"><b>Usage :</b> mélangée à l'urée ou à un autre engrais avant application.</em></span></li>
+          <li data-p="zeolita"><strong>Zéolithe</strong><span>Retient l'ammonium et le potassium, et peut réduire les pertes d'azote par lessivage et volatilisation.<em class="uso"><b>Usage :</b> mélangée à l'urée ou à un autre engrais avant application.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -671,7 +672,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <p>La biosécurité et la gestion de l'humidité sont essentielles en production animale.</p>
         <ul class="plist">
           <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>Son pH élevé la rend utile dans les programmes de nettoyage et de biosécurité de l'élevage, selon les indications techniques.<em class="uso"><b>Usage :</b> saupoudrée ou en lait de chaux sur les sols, murs, enclos, pédiluves et accès, entre deux lots.</em></span></li>
-          <li data-p="zeolita"><strong>Zéolithe</strong><span>Absorbe l'humidité et l'ammoniac de la litière, améliore l'ambiance du poulailler et réduit les odeurs.<em class="uso"><b>Usage :</b> mélangée à la litière du poulailler, entre deux lots.</em></span></li>
+          <li data-p="zeolita"><strong>Zéolithe</strong><span>Absorbe l'humidité et l'ammoniac dans la litière, ce qui peut améliorer l'ambiance du bâtiment et réduire les odeurs.<em class="uso"><b>Usage :</b> mélangée à la litière du poulailler, entre deux lots.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -685,9 +686,9 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 21V3.5M14.5 21V5.5"/><path d="M7.3 8.5h2.4M7.3 14.5h2.4M13.3 10.5h2.4M13.3 16.5h2.4"/><path d="M8.5 6c2.8-.6 4.6-2.3 5.6-4.5M14.5 9c2.2-1.2 4.3-1.3 6.2-.3"/></svg></div><h3>Sucreries</h3>
         <p>L'industrie sucrière utilise de grands volumes de chaux dans son procédé, et la canne a besoin de sols bien chaulés.</p>
         <ul class="plist">
-          <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>La chaux neutralise l'acidité du jus de canne et aide à précipiter les impuretés, ce qui évite les pertes de saccharose.<em class="uso"><b>Usage :</b> sous forme de lait de chaux dosé dans le jus à l'étape de clarification.</em></span></li>
+          <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>La chaux neutralise l'acidité du jus de canne et aide à précipiter les impuretés, ce qui contribue à réduire les pertes de saccharose.<em class="uso"><b>Usage :</b> sous forme de lait de chaux dosé dans le jus à l'étape de clarification.</em></span></li>
           <li data-p="zeolita"><strong>Zéolithe</strong><span>Au champ, elle retient les nutriments et l'humidité dans le sol des cannaies.<em class="uso"><b>Usage :</b> avec l'engrais à la plantation ou sur les repousses.</em></span></li>
-          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>La canne rend davantage sur des sols à l'acidité corrigée et bien pourvus en calcium.<em class="uso"><b>Usage :</b> chaulage avant la plantation ou après la coupe, selon l'analyse de sol.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>La canne se développe mieux dans des sols à l'acidité corrigée et bien pourvus en calcium.<em class="uso"><b>Usage :</b> chaulage avant la plantation ou après la coupe, selon l'analyse de sol.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -717,7 +718,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <p>Matériaux calcaires pour le génie civil et la construction routière.</p>
         <ul class="plist">
           <li data-p="neutrocal"><strong>Carbonate de calcium</strong><span>Carbonate fin utilisé comme charge minérale (filler) dans les enrobés et les mortiers.<em class="uso"><b>Usage :</b> selon la spécification du chantier.</em></span></li>
-          <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>La chaux réagit avec les argiles, réduit leur plasticité et augmente la portance de la plateforme.<em class="uso"><b>Usage :</b> mélangée au sol pour stabiliser les plateformes, ainsi que dans les mortiers et enduits.</em></span></li>
+          <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>La chaux réagit avec les argiles, réduit leur plasticité et peut augmenter la portance de la plateforme, selon la formulation du mélange.<em class="uso"><b>Usage :</b> mélangée au sol pour stabiliser les plateformes, ainsi que dans les mortiers et enduits.</em></span></li>
         </ul>
       </div>
       <div class="side">
@@ -733,7 +734,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
           <li data-p="neutrocal"><strong>Carbonate de calcium (Neutrocal)</strong><span>Carbonate de calcium finement broyé qui corrige l'acidité du sol et de l'eau et apporte du calcium.<em class="uso"><b>Usage :</b> bananeraies, cacao, riz, palmier et canne ; chaulage des bassins à crevettes ; charge minérale dans la construction.</em></span></li>
           <li data-p="calforte"><strong>Hydroxyde de calcium (Cal Forte)</strong><span>Chaux hydratée à action rapide qui augmente le pH.<em class="uso"><b>Usage :</b> préparation des fonds entre les cycles, biosécurité en élevage, ajustement du pH de l'eau et en industrie, stabilisation des sols.</em></span></li>
           <li data-p="zeolita"><strong>Zéolithe</strong><span>Minéral naturel (clinoptilolite) qui retient l'ammonium, le potassium et l'humidité.<em class="uso"><b>Usage :</b> avec l'engrais dans les cultures, gestion du fond des bassins, litière des poulaillers et filtration de l'eau.</em></span></li>
-          <li data-p="sulfato"><strong>Sulfate de calcium (gypse agricole)</strong><span>Apporte du calcium et du soufre sans augmenter le pH et améliore la structure du sol.<em class="uso"><b>Usage :</b> banane et cultures sur sols compactés ou sodiques.</em></span></li>
+          <li data-p="sulfato"><strong>Sulfate de calcium (gypse agricole)</strong><span>Apporte du calcium et du soufre sans augmenter le pH et peut améliorer la structure du sol.<em class="uso"><b>Usage :</b> banane et cultures sur sols compactés ou sodiques.</em></span></li>
           <li data-p="mezcla"><strong>Mélange minéral 3:1</strong><span>Carbonate et sulfate de calcium dans un seul sac.<em class="uso"><b>Usage :</b> chaulage avec apport de soufre en une seule application.</em></span></li>
         </ul>
       </div>
@@ -795,6 +796,22 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
       <a class="card" href="fr-productos.html" style="background-image:url('estiba-pallets-montacargas.jpg')"><div><strong>Produits</strong><span>Catalogue complet, applications et conditionnements, avec conseil technique.</span><em>Voir les produits →</em></div></a>
       <a class="card" href="fr-planta.html" style="background-image:url('molino-elevador.jpg')"><div><strong>Notre usine et notre logistique</strong><span>Visite de l'exploitation, vidéo et capacité de chargement.</span><em>Voir l'usine →</em></div></a>
       <a class="card" href="fr-nosotros.html" style="background-image:url('materia-prima-caliza.jpg')"><div><strong>À propos</strong><span>Notre histoire depuis 1989, mission, vision et valeurs.</span><em>En savoir plus →</em></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="asesoria" id="compras">
+  <div class="inner">
+    <div class="head"><div class="eyebrow">Informations pour les acheteurs</div><h2>Avant d'acheter</h2></div>
+    <div class="faq">
+      <details><summary>Comment demander un devis ?</summary><p>Choisissez le nombre de sacs, ajoutez-les à votre commande et envoyez la demande par WhatsApp ou par e-mail. Nous confirmons le prix d'usine, la disponibilité et la date de chargement.</p></details>
+      <details><summary>Puis-je acheter au sac ou à la tonne ?</summary><p>Nous établissons les devis par sacs. Si vous connaissez le tonnage nécessaire, utilisez le calculateur des pages Neutrocal, Cal Forte ou zéolithe : il convertit les tonnes en sacs entiers et indique l'excédent.</p></details>
+      <details><summary>Quels conditionnements sont disponibles ?</summary><p>Neutrocal en sacs de 45 kg ; Cal Forte et zéolithe en sacs de 25 kg ; mélange 3:1 en sacs de 45 ou 50 kg. Pour le gypse agricole, renseignez-vous sur les conditionnements disponibles.</p></details>
+      <details><summary>Puis-je retirer à l'usine ?</summary><p>Oui. Le retrait se fait à notre usine de la Vía a la Costa, km 22, Guayaquil, en convenant du jour et de l'heure avec votre conseiller.</p></details>
+      <details><summary>La livraison peut-elle être organisée ?</summary><p>Indiquez la ville ou la destination dans votre demande et votre conseiller vous confirmera les options d'expédition.</p></details>
+      <details><summary>Comment les spécifications sont-elles confirmées ?</summary><p>Les données publiées proviennent de l'étiquette de chaque produit ; ce ne sont pas des résultats de laboratoire certifiés. Si votre achat exige d'autres paramètres, demandez-les à votre conseiller avant d'acheter.</p></details>
+      <details><summary>Comment obtenir la fiche technique ?</summary><p>Chaque page produit présente ses spécifications et renvoie à la fiche technique à imprimer ou télécharger en PDF. Vous pouvez aussi la demander par WhatsApp ou e-mail.</p></details>
+      <details><summary>Par quel canal vais-je recevoir la réponse ?</summary><p>Nous répondons par le même canal que celui utilisé pour nous écrire : WhatsApp ou e-mail.</p></details>
     </div>
   </div>
 </section>
@@ -898,9 +915,9 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 /* Pedido: cantidades por producto, carrito y envío por WhatsApp o formulario */
 (function(){
   var P={
-    neutrocal:{n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
-    calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
-    zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
+    neutrocal:{w:45,n:'Carbonato de calcio (Neutrocal)',img:'saco-neutrocal.png',pres:'Saco de 45 kg · malla 200'},
+    calforte:{w:25,n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
+    zeolita:{w:25,n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
     mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
@@ -925,10 +942,23 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     }else{
       var links=el.querySelector('.links');links.parentNode.insertBefore(o,links);
     }
-    var box=o.querySelector('.qty');
+    var box=o.querySelector('.qty'),err=document.createElement('p');err.className='qerr';err.setAttribute('role','alert');err.hidden=true;o.appendChild(err);
+    if(p.w&&el.tagName!=='LI'){var c=document.createElement('details');c.className='calc';
+      c.innerHTML='<summary>Calcular sacos por toneladas</summary><div class="cin"><label><span>Toneladas requeridas</span><input type="number" min="0" step="0.1" inputmode="decimal"></label><button type="button" class="cgo">Calcular</button></div><div class="cout" aria-live="polite"></div>';
+      o.parentNode.insertBefore(c,o.nextSibling);
+      var ci=c.querySelector('input'),co=c.querySelector('.cout');
+      var calc=function(){var t=parseFloat(String(ci.value).replace(',','.'));co.innerHTML='';
+        if(!(t>0)||t>5000){var m=document.createElement('p');m.className='qerr';m.textContent=t>5000?'Para más de 5.000 t, escríbanos directamente.':'Ingrese una cantidad mayor que cero.';co.appendChild(m);return}
+        var kgReq=Math.round(t*1000),n=Math.ceil(kgReq/p.w),kg=n*p.w,ex=kg-kgReq,fmt=function(v,d){return v.toLocaleString('es-EC',{maximumFractionDigits:d})};
+        var r=document.createElement('p');r.className='cres';var b=document.createElement('b');b.textContent=fmt(n,0)+' sacos';r.appendChild(b);r.appendChild(document.createTextNode(' × '+p.w+' kg = '+fmt(kg/1000,3)+' t'));co.appendChild(r);
+        if(ex>0){var e2=document.createElement('p');e2.className='cex';var sp=document.createElement('span');sp.textContent='Excedente sobre lo solicitado:';e2.appendChild(sp);e2.appendChild(document.createTextNode(' '+fmt(ex,0)+' kg'));co.appendChild(e2)}
+        var u=document.createElement('button');u.type='button';u.className='cuse';u.textContent='Usar esta cantidad';u.addEventListener('click',function(){box.querySelector('input').value=n;err.hidden=true;box.querySelector('input').focus()});co.appendChild(u)};
+      c.querySelector('.cgo').addEventListener('click',calc);ci.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calc()}})}
     box.addEventListener('click',function(e){var b=e.target.closest('button');if(b)step(box,+b.dataset.d)});
     o.querySelector('.add').addEventListener('click',function(){
-      var q=Math.max(1,parseInt(box.querySelector('input').value,10)||0),sec=sectorOf(el);
+      var raw=box.querySelector('input').value,q=parseInt(raw,10),sec=sectorOf(el);
+      if(!(q>=1)||String(raw).indexOf('.')>-1||q>100000){err.textContent=q>100000?'Para más de 100.000 sacos, escríbanos directamente.':'Ingrese una cantidad válida de sacos (número entero mayor que cero).';err.hidden=false;box.querySelector('input').setAttribute('aria-invalid','true');return}
+      err.hidden=true;box.querySelector('input').removeAttribute('aria-invalid');
       var it=cart.filter(function(x){return x.k===k&&x.s===sec})[0];
       if(it){it.q+=q}else{cart.push({k:k,q:q,s:sec})}
       save();render();var a=this;a.textContent='Agregado ✓';a.classList.add('done');setTimeout(function(){a.textContent='Agregar al pedido';a.classList.remove('done')},1600);
@@ -938,7 +968,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   function total(){return cart.reduce(function(a,x){return a+x.q},0)}
   function text(){
     var secs=cart.map(function(x){return x.s}).filter(function(v,i,a){return v&&a.indexOf(v)===i});
-    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'});
+    var l=cart.map(function(x){return '- '+x.q.toLocaleString('es-EC')+' sacos de '+P[x.k].n+' ('+P[x.k].pres+')'+(P[x.k].w?' ≈ '+(x.q*P[x.k].w/1000).toLocaleString('es-EC',{maximumFractionDigits:3})+' t':'')});
     var g=function(id){var e=document.getElementById(id);return e?e.value.trim():''}, emp=g('q-emp'), dest=g('q-dest'), ent=g('q-ent'), req=g('q-req');
     return 'Buenos días. Quisiera solicitar una cotización a CRILARSA:\n'+l.join('\n')+'\nTotal: '+total().toLocaleString('es-EC')+' sacos'+(secs.length?'\nSector: '+secs.join(', '):'')+(emp?'\nEmpresa o finca: '+emp:'')+(dest?'\nCiudad o destino: '+dest:'')+(ent?'\nEntrega: '+ent:'')+(req?'\nRequerimientos: '+req:'')+'\nPor favor, confírmenme el precio de fábrica, la disponibilidad y la fecha de carga.';
   }
