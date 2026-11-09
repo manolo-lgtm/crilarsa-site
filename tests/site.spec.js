@@ -98,8 +98,9 @@ test('D — móvil: catálogo, tabla técnica, sacos y pedido', async ({ page },
   await page.locator('#producto .qty button[data-d="1"]').click();
   await expect(page.locator('#producto .qty input')).toHaveValue('150');
   await page.locator('#producto .add').click();
-  await expect(page.locator('#cart-btn')).toBeVisible();
-  await page.locator('#cart-btn').click();
+  // en celular el pedido se abre desde la barra inferior, que muestra el número de productos
+  await expect(page.locator('#mbar-q .mq-n')).toHaveText('1');
+  await page.locator('#mbar-q').click();
   await expect(page.locator('#drawer')).toBeVisible();
   const msg = await waText(page, '#drawer a[href*="wa.me"]');
   expect(msg).toContain('150 sacos de Zeolita');
