@@ -565,6 +565,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
 var PG={neutrocal:'carbonato-de-calcio',calforte:'hidroxido-de-calcio',zeolita:'zeolita',sulfato:'yeso-agricola',mezcla:'mezcla-3-1'};
 var f=document.getElementById('gform'),o=document.getElementById('g-out');if(!f)return;
 function T(k){var e=document.querySelector('#g-txt [data-k='+k+']');return e?e.textContent:''}function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+var sa=f.querySelector('#g-act'),sn=f.querySelector('#g-need');function ok(a,n){if((n==='n5')!==(a==='construccion')&&n!=='n6'&&(n==='n5'||n==='n1'))return false;var ps=[].map.call(document.querySelectorAll('#'+a+' .plist li[data-p]'),function(li){return li.dataset.p});return !N[n]||N[n].some(function(p){return ps.indexOf(p)>-1})}
+function filt(){var a=sa.value;[].forEach.call(sn.options,function(o){if(!o.value)return;var v=!a||ok(a,o.value);o.hidden=!v;o.disabled=!v});if(sn.selectedOptions[0]&&sn.selectedOptions[0].disabled)sn.value='';o.innerHTML=''}
+sa.addEventListener('change',filt);filt();
 f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector('#g-act').value,n=f.querySelector('#g-need').value;o.innerHTML='';
  if(!a||!n){o.appendChild(el('p','gmsg',T('need2')));return}
  var lang=document.documentElement.lang||'es',pre=lang.slice(0,2)==='es'?'':lang.slice(0,2)+'-';
