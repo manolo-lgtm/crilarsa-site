@@ -274,6 +274,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qerr{color:#b3261e;font-size:14px;margin:6px 0 0;flex-basis:100%}.calc{margin:0 0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;max-width:520px}.calc summary{cursor:pointer;padding:10px 14px;font:600 15px var(--display);color:var(--blue)}.calc .cin{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;padding:0 14px 10px}.calc label{display:grid;gap:4px;font-size:14px;color:var(--muted)}.calc input{font:16px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:140px;min-height:44px}.calc button{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);font:600 15px var(--display);cursor:pointer}.calc .cuse{background:var(--navy);color:#fff;margin-top:6px}.calc .cout{padding:0 14px 12px}.cres{margin:4px 0;font-size:16px;color:var(--ink)}.cex{margin:2px 0;font-size:14px;color:var(--muted)}.spec{width:100%;max-width:1000px;border-collapse:collapse;font-size:16px;background:#fff}.spec caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding-top:8px}.spec th,.spec td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}.spec thead th{background:var(--navy);color:#fff;font:600 14px var(--display)}.spec tbody th{width:38%;color:var(--blue);font-weight:600}.specnotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:22px;max-width:1000px}.specnotes div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}.specnotes h3{font:700 15px var(--display);margin:0 0 6px;color:var(--navy)}.specnotes p{margin:0;font-size:15px;line-height:1.5;color:var(--ink)}.speclinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}@media (max-width:600px){.spec{font-size:15px}.spec th,.spec td{padding:8px}}
 .speclinks .btn{background:#fff;color:var(--navy);border:1px solid var(--navy)}.speclinks .btn:hover{background:var(--navy);color:#fff}.compare{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.compare caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding-top:var(--s-2)}.compare th,.compare td{text-align:left;padding:var(--s-3);border-bottom:1px solid var(--line);vertical-align:top}.compare thead th{background:var(--navy);color:#fff;font:600 14px var(--display)}.compare tbody th a{color:var(--navy);font-weight:700}.cmpwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-md)}.gadd{display:flex;flex-wrap:wrap;gap:var(--s-2);align-items:center;margin-top:var(--s-2)}.gadd input{width:90px;min-height:40px;font:16px var(--body);padding:6px 8px;border:1px solid var(--line);border-radius:var(--r-sm)}.gadd button{min-height:40px;padding:0 var(--s-4);border-radius:var(--r-sm);border:0;background:var(--navy);color:#fff;font:600 14px var(--display);cursor:pointer}.gadd label{font-size:14px;color:var(--muted)}@media (max-width:700px){.compare{font-size:14px;min-width:640px}}
 .skip{position:absolute;left:var(--s-3);top:-60px;z-index:100;background:#fff;color:var(--navy);padding:var(--s-2) var(--s-4);border-radius:var(--r-sm);font:600 15px var(--display);text-decoration:none}.skip:focus{top:var(--s-3)}
+figure img,.photo img,.gallery img{background-color:#e6e3dc}.compare .cl{display:none}@media (max-width:700px){.cmpwrap{overflow:visible;border:0}.compare{min-width:0;font-size:15px}.compare thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.compare,.compare tbody,.compare tr,.compare th,.compare td{display:block;width:100%}.compare caption{display:block}.compare tr{border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:var(--s-3);background:#fff;overflow:hidden}.compare tbody th{background:var(--navy);padding:var(--s-3)}.compare tbody th a{color:#fff}.compare td{border-bottom:1px solid var(--line);padding:var(--s-2) var(--s-3)}.compare td:last-child{border-bottom:0}.compare .cl{display:block;font:600 12px var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -556,35 +557,35 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     </div>
     <div class="route">
       <div class="stage wide rv">
-        <div class="ph"><img src="camion-1.jpeg" alt="自卸卡车在原料堆场卸下石灰石" loading="lazy"></div>
+        <div class="ph"><img src="camion-1.jpeg" srcset="camion-1-m.jpg 800w, camion-1.jpeg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="自卸卡车在原料堆场卸下石灰石" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 01</span><h3>原料开采与接收</h3><p>石灰石由重型机械在矿山开采，用自卸卡车运至工厂，存放在原料堆场。</p></div>
       </div>
       <div class="stage rv">
-        <div class="ph"><img src="materia-prima-tolva.jpg" alt="给料斗中的石灰石" loading="lazy"></div>
+        <div class="ph"><img src="materia-prima-tolva.jpg" srcset="materia-prima-tolva-m.jpg 800w, materia-prima-tolva.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="给料斗中的石灰石" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 02</span><h3>进料与破碎</h3><p>矿物进入给料斗，破碎后送入磨机。</p></div>
       </div>
       <div class="stage flip rv">
-        <div class="ph"><img src="molino-elevador.jpg" alt="工厂的摆式磨机和斗式提升机" loading="lazy"></div>
+        <div class="ph"><img src="molino-elevador.jpg" srcset="molino-elevador-m.jpg 800w, molino-elevador.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="工厂的摆式磨机和斗式提升机" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 03</span><h3>研磨</h3><p>我们的磨机将矿物研磨至所需粒度，并配有旋风分离器和除尘系统。</p></div>
       </div>
       <div class="stage rv">
-        <div class="ph"><img src="linea-produccion.jpg" alt="配备提升机、旋风分离器和料斗的生产线" loading="lazy"></div>
+        <div class="ph"><img src="linea-produccion.jpg" srcset="linea-produccion-m.jpg 800w, linea-produccion.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="配备提升机、旋风分离器和料斗的生产线" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 04</span><h3>分级与厂内输送</h3><p>产品经分级后，通过提升机和厂内输送设备送往装袋料斗。</p></div>
       </div>
       <div class="stage flip rv">
-        <div class="ph"><img src="ensacado-big-bag.jpg" alt="在除尘器和发货料斗下装袋" loading="lazy"></div>
+        <div class="ph"><img src="ensacado-big-bag.jpg" srcset="ensacado-big-bag-m.jpg 800w, ensacado-big-bag.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="在除尘器和发货料斗下装袋" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 05</span><h3>装袋</h3><p>成品装袋，并标明净含量。</p></div>
       </div>
       <div class="stage rv">
-        <div class="ph"><img src="estiba-pallets-montacargas.jpg" alt="仓库中码放在托盘上的袋装产品和叉车" loading="lazy"></div>
+        <div class="ph"><img src="estiba-pallets-montacargas.jpg" srcset="estiba-pallets-montacargas-m.jpg 800w, estiba-pallets-montacargas.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="仓库中码放在托盘上的袋装产品和叉车" loading="lazy"></div>
         <div class="tx"><span class="num">阶段 06</span><h3>码垛与装载</h3><p>袋装产品在仓库中码放于托盘上，并用叉车装载，加快每批货物的准备。</p></div>
       </div>
     </div>
     <div class="gallery">
-      <figure class="g-tall"><img src="materia-prima-caliza.jpg" alt="石灰石，我们产品的原料" loading="lazy"><figcaption>原料：石灰石</figcaption></figure>
-      <figure class="g-wide"><img src="crilarsa-DSC_7929.jpg" alt="配备磨机、旋风分离器和过滤器的研磨车间" loading="lazy"><figcaption>研磨厂</figcaption></figure>
-      <figure><img src="crilarsa-DSC_7928.jpg" alt="工厂提升机与筒仓" loading="lazy"><figcaption>提升机与筒仓</figcaption></figure>
-      <figure><img src="fragmentacion-caliza.jpg" alt="滑移装载机用液压锤破碎石灰石" loading="lazy"><figcaption>破碎石灰石</figcaption></figure>
+      <figure class="g-tall"><img src="materia-prima-caliza.jpg" srcset="materia-prima-caliza-m.jpg 800w, materia-prima-caliza.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="石灰石，我们产品的原料" loading="lazy"><figcaption>原料：石灰石</figcaption></figure>
+      <figure class="g-wide"><img src="crilarsa-DSC_7929.jpg" srcset="crilarsa-DSC_7929-m.jpg 800w, crilarsa-DSC_7929.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="配备磨机、旋风分离器和过滤器的研磨车间" loading="lazy"><figcaption>研磨厂</figcaption></figure>
+      <figure><img src="crilarsa-DSC_7928.jpg" srcset="crilarsa-DSC_7928-m.jpg 800w, crilarsa-DSC_7928.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="工厂提升机与筒仓" loading="lazy"><figcaption>提升机与筒仓</figcaption></figure>
+      <figure><img src="fragmentacion-caliza.jpg" srcset="fragmentacion-caliza-m.jpg 800w, fragmentacion-caliza.jpg 1600w" sizes="(max-width: 860px) 100vw, 50vw" alt="滑移装载机用液压锤破碎石灰石" loading="lazy"><figcaption>破碎石灰石</figcaption></figure>
     </div>
     <div class="gmp">
       <div><div class="eyebrow">运营管控</div><h3 style="margin-top:10px">我们如何把控每一批次</h3></div>
@@ -919,6 +920,8 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     var start=q||saved||guess(); if(start!=='es'){ if(sel) sel.value=start; load(start) }
   }
 })();
+/* Si una foto falla al cargar (red móvil inestable), se reintenta una vez */
+window.addEventListener('error',function(e){var i=e.target;if(!i||i.tagName!=='IMG'||i.dataset.retry)return;i.dataset.retry='1';setTimeout(function(){var u=(i.getAttribute('src')||'').split('?')[0];i.removeAttribute('srcset');i.src=u+'?r='+Date.now()},800)},true);
 /* Medición sin costo: cada clic de cotización, WhatsApp, correo o video queda en window.dataLayer.
    Al conectar Google Analytics 4 (gratis) basta con agregar su etiqueta: leerá estos eventos sin más cambios. Un clic no es una venta. */
 (function(){
