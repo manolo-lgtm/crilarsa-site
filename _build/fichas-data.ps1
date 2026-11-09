@@ -2,7 +2,7 @@
 # Solo datos de etiqueta o ya publicados por Crilarsa. Nada inventado. 'kg' = peso verificado del saco (vacío = no verificado: sin calculadora).
 $fichas = @(
  @{key='neutrocal'; file='ficha-neutrocal.html'; name='Carbonato de calcio — Neutrocal'; img='saco-neutrocal.png'; page='carbonato-de-calcio.html'; kg=45;
-   rows=@(@('Nombre químico','Carbonato de calcio'),@('Fórmula','CaCO₃'),@('Principio activo (etiqueta)','93–97 % CaCO₃'),@('Granulometría (etiqueta)','Malla 200'),@('Presentación','Saco de 45 kg'));
+   rows=@(@('Nombre químico','Carbonato de calcio'),@('Fórmula','CaCO₃'),@('Principio activo (etiqueta)','93–97 % CaCO₃'),@('Granulometría (etiqueta)','Malla 200'),@('Otras granulometrías','Bajo consulta'),@('Presentación','Saco de 45 kg'));
    uses='Acuicultura, agricultura, sanidad animal y construcción de carreteras.';
    lim='Acción gradual: cuando se necesita subir el pH con rapidez se usa cal hidratada. La dosis depende del análisis de suelo o de agua.';
    care='Almacenar en lugar seco y cubierto, sobre pallets. Evitar la humedad. Usar mascarilla contra polvo al manipular.'},
