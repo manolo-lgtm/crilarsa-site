@@ -7,6 +7,7 @@ foreach($fi in $fichas){
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ficha técnica · $($fi.name) · Crilarsa</title>
 <meta name="robots" content="noindex">
+<meta name="description" content="Ficha técnica de $($fi.name) (Crilarsa, Guayaquil): composición, granulometría, presentación, usos, limitaciones y manejo. Versión imprimible y PDF.">
 <link rel="canonical" href="https://crilarsa.com/$($fi.page)">
 <style>
 body{font-family:Arial,Helvetica,sans-serif;color:#1e2833;margin:0;background:#eef0f2}
@@ -25,7 +26,7 @@ footer{margin-top:28px;padding-top:14px;border-top:2px solid #1e2833;font-size:1
 @media (max-width:640px){.sheet{padding:24px 18px;margin:0}header{margin:-24px -18px 20px;padding:14px 18px}.grid{grid-template-columns:1fr}.grid img{max-width:180px}}
 @media print{body{background:#fff}.sheet{box-shadow:none;margin:0;max-width:none}.bar{display:none}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style></head><body>
-<div class="sheet">
+<main class="sheet">
 <header><img src="logo-crilarsa-blanco.png" alt="Crilarsa C.A."><span>Ficha técnica</span></header>
 <h1>$($fi.name)</h1><p class="sub">$(if($fi.src){$fi.src}else{'Datos según la etiqueta del producto'}) · Revisión 1 · Noviembre 2026 · No son resultados de laboratorio certificados</p>
 <div class="grid"><div><table>$trs</table></div><img src="$($fi.img)" alt="Saco de $($fi.name)"></div>
@@ -35,7 +36,7 @@ $(if($fi.pend){"<h2>Datos en confirmación</h2><p>$($fi.pend)</p>"})
 <h2>Almacenamiento y manejo</h2><p>$($fi.care)</p>
 <h2>Dosis</h2><p>Depende del suelo, el agua o el proceso de cada cliente. Nuestro equipo técnico le orienta antes de la compra. Para otros parámetros técnicos, consúltenos.</p>
 <footer>Crilarsa C.A. · RUC 0992110945001 · Vía a la Costa, km 22, Guayaquil, Ecuador · WhatsApp +593 98 521 1202 · finanzas@crilarsa.com · crilarsa.com<br>Información referencial basada en la etiqueta del producto y en datos publicados por Crilarsa. No constituye una garantía de resultados.</footer>
-</div>
+</main>
 <div class="bar"><a class="print" href="$($fi.file -replace '\.html$','.pdf')" download>Descargar PDF</a> &nbsp; <button class="print" onclick="window.print()">Imprimir</button> &nbsp; <a class="print" href="$($fi.page)">Volver al producto</a></div>
 </body></html>
 "@
