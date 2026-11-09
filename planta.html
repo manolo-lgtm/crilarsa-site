@@ -3,8 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nuestra planta · Crilarsa</title>
-<meta name="description" content="Planta de Crilarsa en la Vía a la Costa, km 22, Guayaquil: dos naves industriales, maquinaria pesada, muelles de carga y logística preparada para grandes volúmenes.">
+<title>Planta de molienda de piedra caliza en Guayaquil | Crilarsa</title>
+<meta name="description" content="Planta de Crilarsa en la Vía a la Costa, km 22, Guayaquil, Ecuador: extracción, molienda y ensacado de piedra caliza, con carga mecanizada de 1.000 sacos en unos 15 minutos.">
+<link rel="canonical" href="https://crilarsa.com/planta.html">
+<link rel="alternate" hreflang="es" href="https://crilarsa.com/planta.html">
+<link rel="alternate" hreflang="en" href="https://crilarsa.com/en-planta.html">
+<link rel="alternate" hreflang="pt" href="https://crilarsa.com/pt-planta.html">
+<link rel="alternate" hreflang="fr" href="https://crilarsa.com/fr-planta.html">
+<link rel="alternate" hreflang="ru" href="https://crilarsa.com/ru-planta.html">
+<link rel="alternate" hreflang="uk" href="https://crilarsa.com/uk-planta.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://crilarsa.com/zh-planta.html">
+<link rel="alternate" hreflang="x-default" href="https://crilarsa.com/planta.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crilarsa C.A.">
+<meta property="og:title" content="Planta de molienda de piedra caliza en Guayaquil | Crilarsa">
+<meta property="og:description" content="Planta de Crilarsa en la Vía a la Costa, km 22, Guayaquil, Ecuador: extracción, molienda y ensacado de piedra caliza, con carga mecanizada de 1.000 sacos en unos 15 minutos.">
+<meta property="og:url" content="https://crilarsa.com/planta.html">
+<meta property="og:image" content="https://crilarsa.com/planta-bodega-general.jpg">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="logo-crilarsa-blanco.png">
 <style>
 /* Layout: sitio industrial de una página; bandas a todo el ancho, filas editoriales asimétricas, recorrido de planta numerado; azul Crilarsa sobre azul marino */
@@ -756,9 +773,14 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   document.addEventListener('click',function(e){if(e.target.closest('.tabs [role=tab]'))setTimeout(sync,60)});
   window.addEventListener('hashchange',function(){setTimeout(sync,60)});
 })();
-/* Idiomas: el sitio se escribe en español y se traduce en el navegador con los diccionarios i18n/xx.json */
+/* Idiomas. En crilarsa.com cada idioma tiene sus propias páginas (en.html, en-productos.html…) para que Google las indexe;
+   el diccionario i18n/xx.json traduce además los textos que el script crea en español (carrito, botones de video).
+   Fuera del dominio (vista previa) la página se traduce en el mismo lugar. */
 (function(){
   var SUP=['es','en','pt','fr','ru','uk','zh'], KEY='crilarsa-lang', sel=document.getElementById('lang-sel');
+  var PL=(document.documentElement.lang||'es').slice(0,2).toLowerCase(); if(SUP.indexOf(PL)<0) PL='es';
+  var STATIC=/(^|\.)crilarsa\.com$/.test(location.hostname)||/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var BOT=/bot|crawl|spider|slurp|google|bing|yandex|baidu|lighthouse|headless/i.test(navigator.userAgent);
   var dict=null, cur='es', cache={}, T=new WeakMap(), A=new WeakMap(), busy=false, ATTR=['placeholder','aria-label','alt','title'];
   function nrm(t){return t.replace(/\s+/g,' ').trim()}
   function has(k){return Object.prototype.hasOwnProperty.call(dict,k)}
@@ -766,7 +788,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     if(!dict||!s) return null; var k=nrm(s); if(!k) return null; if(has(k)) return dict[k];
     if(/ ↗$/.test(k)){var b=tr(k.slice(0,-2));return b==null?null:b+' ↗'}
     var m=k.match(/^([\d.,]+) sacos$/); if(m&&has('sacos')) return m[1]+' '+dict.sacos;
-    if(k.indexOf('Ver video: ')===0){var r=k.slice(11);return (dict['Ver video:']||'Ver video:')+' '+(has(r)?dict[r]:r)}
+    if(k.indexOf('Ver video: ')===0){var r=k.slice(11),rr=tr(r);return (dict['Ver video:']||'Ver video:')+' '+(rr==null?r:rr)}
     if(k.indexOf(' · ')>0){var p=k.split(' · '),o=[],ok=0,i=0;while(i<p.length){for(var j=p.length;j>i;j--){var c=p.slice(i,j).join(' · ');if(has(c)){o.push(dict[c]);ok=1;i=j;break}}if(j===i){o.push(p[i]);i++}}if(ok)return o.join(' · ')}
     return null;
   }
@@ -794,17 +816,18 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     ms.forEach(function(m){ if(m.type==='characterData') textNode(m.target); else if(m.type==='attributes') attrs(m.target); else [].forEach.call(m.addedNodes,walk) });
     obs.takeRecords(); busy=false });
   function apply(){ busy=true; walk(document.body);
-    document.title=(cur!=='es'&&tr(titleSrc))||titleSrc; if(md) md.content=(cur!=='es'&&tr(descSrc))||descSrc;
-    document.documentElement.lang=cur==='zh'?'zh-Hans':cur; obs.takeRecords(); busy=false }
+    if(!STATIC){ document.title=(cur!=='es'&&tr(titleSrc))||titleSrc; if(md) md.content=(cur!=='es'&&tr(descSrc))||descSrc; document.documentElement.lang=cur==='zh'?'zh-Hans':cur }
+    obs.takeRecords(); busy=false }
   obs.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:ATTR});
-  function set(l){
-    if(SUP.indexOf(l)<0) l='es'; try{localStorage.setItem(KEY,l)}catch(e){} if(sel) sel.value=l;
+  function load(l){
     if(l==='es'){cur='es';dict=null;apply();return}
     (cache[l]?Promise.resolve(cache[l]):fetch('i18n/'+l+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}))
-      .then(function(d){cache[l]=d;cur=l;dict=d;apply()}).catch(function(){if(sel)sel.value=cur});
+      .then(function(d){cache[l]=d;cur=l;dict=d;apply()}).catch(function(){});
   }
-  if(sel) sel.addEventListener('change',function(){set(sel.value)});
-  var q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1], saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+  var PAGES=['index','productos','planta','nosotros'];
+  function base(){var f=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,''); var m=f.match(/^(en|pt|fr|ru|uk|zh)(?:-(.+))?$/); if(m) f=m[2]||'index'; return PAGES.indexOf(f)>=0?f:'index'}
+  function url(l){var b=base(); return (l==='es'?b:(b==='index'?l:l+'-'+b))+'.html'+location.hash}
+  function go(l){ if(STATIC){ if(l!==PL) location.href=url(l) } else load(l) }
   /* Idioma automático: 1) idiomas preferidos del navegador; 2) si ninguno está disponible, la zona horaria del equipo (sin pedir ubicación); 3) inglés para el resto del mundo */
   function guess(){
     var ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);
@@ -818,8 +841,17 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     if(/^(Europe\/Madrid|Atlantic\/Canary|America\/(Guayaquil|Bogota|Lima|Caracas|La_Paz|Santiago|Buenos_Aires|Argentina|Montevideo|Asuncion|Mexico_City|Monterrey|Merida|Cancun|Chihuahua|Hermosillo|Mazatlan|Tijuana|Guatemala|El_Salvador|Tegucigalpa|Managua|Costa_Rica|Panama|Havana|Santo_Domingo|Puerto_Rico)|Pacific\/Galapagos)/.test(tz)) return 'es';
     return 'en';
   }
-  var start=q||saved||guess();
-  if(start!=='es') set(start); else if(sel) sel.value='es';
+  if(sel){ sel.value=STATIC?PL:'es'; sel.addEventListener('change',function(){ try{localStorage.setItem(KEY,sel.value)}catch(e){} go(sel.value) }) }
+  var q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1], saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(STATIC){
+    if(PL!=='es') load(PL);
+    if(!BOT){
+      var want=q||saved||(PL==='es'?guess():PL);
+      if(SUP.indexOf(want)>=0&&want!==PL) location.replace(url(want));
+    }
+  }else{
+    var start=q||saved||guess(); if(start!=='es'){ if(sel) sel.value=start; load(start) }
+  }
 })();
 /* Pestañas de sectores */
 (function(){
