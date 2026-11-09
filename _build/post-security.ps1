@@ -8,6 +8,7 @@ $n=0
 foreach($p in Get-ChildItem "$s\deploy\*.html" | ? { $_.Name -notmatch '^index\.v' }){
   $t=[IO.File]::ReadAllText($p.FullName)
   if($t.Contains('id="contenido"') -and -not $t.Contains('class="skip"')){ $lg=([regex]::Match($t,'<html lang="([a-z]{2})').Groups[1].Value); if(-not $SK.ContainsKey($lg)){ $lg='es' }; $t=[regex]::Replace($t,'(<body[^>]*>)',('$1'+"`n"+'<a class="skip" href="#contenido">'+$SK[$lg]+'</a>'),1); [IO.File]::WriteAllText($p.FullName,$t,(New-Object Text.UTF8Encoding $false)) }
+  $t2=[regex]::Replace($t,'<img (?![^>]*srcset)([^>]*?)src="([A-Za-z0-9._-]+)\.(jpe?g)"',{ param($m) $b=$m.Groups[2].Value; if(Test-Path "$s\deploy\$b-m.jpg"){ "<img $($m.Groups[1].Value)src=`"$b.$($m.Groups[3].Value)`" srcset=`"$b-m.jpg 800w, $b.$($m.Groups[3].Value) 1600w`" sizes=`"(max-width: 860px) 100vw, 50vw`"" } else { $m.Value } }); if($t2 -ne $t){ $t=$t2; [IO.File]::WriteAllText($p.FullName,$t,(New-Object Text.UTF8Encoding $false)) }
   if(-not $t.Contains('Content-Security-Policy')){
     $i=$t.IndexOf('<meta charset="utf-8">'); if($i -lt 0){ throw "sin charset: $($p.Name)" }
     $t=$t.Insert($i+'<meta charset="utf-8">'.Length, "`n"+$add); [IO.File]::WriteAllText($p.FullName,$t,(New-Object Text.UTF8Encoding $false)); $n++ }
