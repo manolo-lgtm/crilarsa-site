@@ -62,7 +62,7 @@ function HeadExtra($l,$p,$html){
     $ld = [ordered]@{
       '@context'='https://schema.org'; '@type'=@('Organization','LocalBusiness'); '@id'="${site}#empresa"
       name='Crilarsa C.A.'; alternateName='Crilarsa'; url=$site; logo="${site}logo-crilarsa-blanco.png"; image="${site}planta-bodega-general.jpg"
-      description=$desc; foundingDate='2000'; telephone='+593985211202'; email='finanzas@crilarsa.com'; taxID='0992110945001'
+      description=$desc; telephone='+593985211202'; email='finanzas@crilarsa.com'; taxID='0992110945001'
       address=[ordered]@{ '@type'='PostalAddress'; streetAddress='Vía a la Costa, km 22'; addressLocality='Guayaquil'; addressRegion='Guayas'; addressCountry='EC' }
       areaServed=@('Ecuador','South America'); inLanguage=$code[$l]
       sameAs=@('https://wa.me/593985211202')
