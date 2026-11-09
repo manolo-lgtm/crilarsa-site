@@ -23,7 +23,7 @@
 <meta property="og:locale" content="es_EC">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Crilarsa","item":"https://crilarsa.com/"},{"@type":"ListItem","position":2,"name":"Mezcla mineral 3:1","item":"https://crilarsa.com/mezcla-3-1.html"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Mezcla mineral 3:1","description":"Mezcla mineral 3:1 ultrafina de carbonato y sulfato de calcio en sacos de 45 o 50 kg: encalado y azufre en una sola aplicación. Guayaquil, Ecuador.","image":"https://crilarsa.com/saco-mezcla.svg","url":"https://crilarsa.com/mezcla-3-1.html","category":"Industrial minerals","inLanguage":"es","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Mezcla mineral 3:1","description":"Mezcla mineral 3:1 ultrafina de carbonato y sulfato de calcio en sacos de 45 o 50 kg: encalado y azufre en una sola aplicación. Guayaquil, Ecuador.","image":"https://crilarsa.com/saco-mezcla.png","url":"https://crilarsa.com/mezcla-3-1.html","category":"Industrial minerals","inLanguage":"es","manufacturer":{"@type":"Organization","@id":"https://crilarsa.com/#empresa","name":"Crilarsa C.A.","url":"https://crilarsa.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿En qué presentación se vende?","acceptedAnswer":{"@type":"Answer","text":"Saco de 45 kg o 50 kg, molienda ultrafina."}},{"@type":"Question","name":"¿Qué contiene la mezcla 3:1?","acceptedAnswer":{"@type":"Answer","text":"Tres partes de carbonato de calcio por una parte de sulfato de calcio, en molienda ultrafina."}},{"@type":"Question","name":"¿Cómo solicito una cotización?","acceptedAnswer":{"@type":"Answer","text":"Elija la cantidad de sacos, agréguelos a su pedido y envíe la solicitud por WhatsApp o correo. Le confirmamos precio de fábrica, disponibilidad y fecha de carga."}},{"@type":"Question","name":"¿Puedo retirar en planta?","acceptedAnswer":{"@type":"Answer","text":"Sí. El retiro es en nuestra planta de la Vía a la Costa, km 22, Guayaquil, coordinando el día y la hora con su asesor."}},{"@type":"Question","name":"¿Qué dosis debo aplicar?","acceptedAnswer":{"@type":"Answer","text":"Depende de su suelo, su agua o su proceso. Recomendamos basarla en un análisis reciente; nuestro equipo le orienta antes de la compra."}}]}</script>
 <link rel="icon" type="image/png" href="logo-crilarsa-blanco.png">
 <style>
@@ -265,6 +265,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .qinfo strong{font:600 14px var(--display);color:var(--ink)}
 .qinfo label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
 .qinfo input,.qinfo select{font:15px var(--body,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.prod .ficha{display:inline-block;margin:0 0 14px 18px;font:600 15px var(--display);color:var(--green,#4a7a5e);text-decoration:none}.prod .ficha:hover{text-decoration:underline}
 .prod .more{display:inline-block;margin:6px 0 14px;font:600 15px var(--display);color:var(--blue);text-decoration:none}
 .prod .more:hover{text-decoration:underline}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -516,7 +517,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
   <div class="inner">
     <div class="cat">
       <article class="prod" data-p="mezcla" id="mezcla">
-        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.svg" alt="Saco de carbonato de calcio + sulfato de calcio 3:1, ultrafino, 45 o 50 kg"></div>
+        <div class="media"><img loading="lazy" decoding="async" class="sack" src="saco-mezcla.png" alt="Saco de carbonato de calcio + sulfato de calcio 3:1, ultrafino, 45 o 50 kg"></div>
         <div class="text">
           <span class="badge">Nuevo</span>
           <div class="chem">CaCO₃ + CaSO₄ · Ultrafino</div>
@@ -667,7 +668,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     calforte:{n:'Hidróxido de calcio (Cal Forte)',img:'saco-calforte.png',pres:'Saco de 25 kg'},
     zeolita:{n:'Zeolita',img:'saco-zeolita.png',pres:'Saco de 25 kg · malla 200'},
     sulfato:{n:'Sulfato de calcio',img:'saco-sulfato.png',pres:'Yeso agrícola · CaSO₄'},
-    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.svg',pres:'Saco de 45 o 50 kg · ultrafino'}
+    mezcla:{n:'Mezcla mineral 3:1',img:'saco-mezcla.png',pres:'Saco de 45 o 50 kg · ultrafino'}
   };
   var KEY='crilarsa-pedido', cart=[];
   try{cart=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){cart=[]}
