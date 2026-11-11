@@ -2,10 +2,10 @@
 # Solo datos de etiqueta o ya publicados por Crilarsa. Nada inventado. 'kg' = peso verificado del saco (vacío = no verificado: sin calculadora).
 $fichas = @(
  @{key='neutrocal'; file='ficha-neutrocal.html'; name='Carbonato de calcio — Neutrocal'; img='saco-neutrocal.png'; page='carbonato-de-calcio.html'; kg=45;
-   rows=@(@('Nombre químico','Carbonato de calcio'),@('Fórmula','CaCO₃'),@('Principio activo (etiqueta)','93–97 % CaCO₃'),@('Granulometría (etiqueta)','Malla 200'),@('Otras granulometrías','Bajo consulta'),@('Presentación','Saco de 45 kg'));
+   src='Datos según la ficha técnica Crilarsa'; rows=@(@('Nombre químico','Carbonato de calcio'),@('Fórmula','CaCO₃'),@('Riqueza garantizada','90–95 % · CaCO₃ 90 % mínimo'),@('Calcio (Ca)','36 % mínimo'),@('Granulometría','Malla 200 · malla #100: 30 % máx. · malla #200: 20 % máx.'),@('Humedad','1,0 % máx.'),@('Aspecto','Polvo fino de color crema'),@('Origen','Caliza de la cordillera Chongón-Colonche (Guayas)'),@('Nivel toxicológico','Bajo'),@('Otras granulometrías','Bajo consulta'),@('Presentación','Saco de 45 kg'));
    uses='Acuicultura, agricultura, sanidad animal y construcción de carreteras.';
    lim='Acción gradual: cuando se necesita subir el pH con rapidez se usa cal hidratada. La dosis depende del análisis de suelo o de agua.';
-   care='Almacenar en lugar seco y cubierto, sobre pallets. Evitar la humedad. Usar mascarilla contra polvo al manipular.'},
+   care='Almacenar en lugar seco, alejado del agua y la humedad. Usar mascarilla con filtro para polvo, guantes, mandil de PVC y gafas protectoras. Evitar el contacto con los ojos.'},
  @{key='calforte'; file='ficha-cal-forte.html'; name='Hidróxido de calcio — Cal Forte'; img='saco-calforte.png'; page='hidroxido-de-calcio.html'; kg=25;
    rows=@(@('Nombre químico','Hidróxido de calcio (cal hidratada)'),@('Fórmula','Ca(OH)₂'),@('Variante (etiqueta)','Cal Forte Plus, Tipo A'),@('Principio activo (etiqueta)','73–79 % Ca(OH)₂'),@('Granulometría (etiqueta)','Malla 300'),@('Presentación','Saco de 25 kg'));
    uses='Acuicultura, agricultura, sanidad animal, construcción y tratamiento de aguas.';
@@ -27,5 +27,5 @@ $fichas = @(
    uses='Agricultura, con especial interés para el productor bananero.';
    lim='Proporción de formulación 3:1. Los porcentajes garantizados de etiqueta están en confirmación.';
    pend='Porcentajes garantizados en etiqueta (CaCO₃, azufre) y granulometría: en confirmación. Solicítelos a su asesor.';
-   care='Almacenar en lugar seco y cubierto, sobre pallets. Evitar la humedad. Usar mascarilla contra polvo al manipular.'}
+   care='Almacenar en lugar seco, alejado del agua y la humedad. Usar mascarilla con filtro para polvo, guantes, mandil de PVC y gafas protectoras. Evitar el contacto con los ojos.'}
 )
