@@ -566,7 +566,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <p class="lead">Responda dos preguntas y le mostramos los productos que suelen usarse en su caso, con la explicación de cada uno.</p>
     <form class="gform" id="gform" novalidate>
       <label><span>Su actividad</span><select id="g-act" required><option value="">Elija una opción</option><option value="banano">Bananero</option><option value="camaron">Acuicultura y camarón</option><option value="agricola">Agricultura: cacao, arroz, palma</option><option value="pecuario">Avícola y ganadero</option><option value="azucar">Ingenios azucareros</option><option value="agua">Tratamiento de agua</option><option value="construccion">Construcción y vías</option></select></label>
-      <label><span>Lo que necesita</span><select id="g-need" required><option value="">Elija una opción</option><option value="n1">Corregir la acidez o subir la alcalinidad de forma gradual</option><option value="n2">Acción rápida: subir el pH, bioseguridad o proceso industrial</option><option value="n3">Aportar calcio y azufre sin subir el pH</option><option value="n4">Retener amonio, nutrientes o humedad</option><option value="n5">Relleno mineral o estabilización de suelos</option><option value="n6">No estoy seguro</option></select></label>
+      <label><span>Lo que necesita</span><select id="g-need" required><option value="">Elija una opción</option><option value="n1">Corregir la acidez o subir la alcalinidad de forma gradual</option><option value="n2">Acción rápida: subir el pH, bioseguridad o proceso industrial</option><option value="n3">Aportar calcio y azufre sin subir el pH</option><option value="n4">Retener amonio, nutrientes o humedad</option><option value="n5">Relleno mineral o estabilización de suelos</option><option value="n7">Materia prima para empastes, pinturas, pegamorteros o pegacerámicos</option><option value="n6">No estoy seguro</option></select></label>
       <button type="submit" class="btn btn-primary">Ver recomendación</button>
     </form>
     <div id="g-out" aria-live="polite"></div>
@@ -574,11 +574,11 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.15);padding-block:18px 24p
     <p class="gdisc">Orientación general basada en los usos habituales de cada producto. No reemplaza un análisis de suelo o de agua ni la recomendación de su técnico; la dosis depende de cada caso.</p>
   </div>
 <script data-guia>
-(function(){var N={n1:['neutrocal','mezcla'],n2:['calforte'],n3:['sulfato','mezcla'],n4:['zeolita'],n5:['neutrocal','calforte'],n6:null};
+(function(){var N={n1:['neutrocal','mezcla'],n2:['calforte'],n3:['sulfato','mezcla'],n4:['zeolita'],n5:['neutrocal','calforte'],n6:null,n7:['neutrocal']};
 var PG={neutrocal:'carbonato-de-calcio',calforte:'hidroxido-de-calcio',zeolita:'zeolita',sulfato:'yeso-agricola',mezcla:'mezcla-3-1'};
 var f=document.getElementById('gform'),o=document.getElementById('g-out');if(!f)return;
 function T(k){var e=document.querySelector('#g-txt [data-k='+k+']');return e?e.textContent:''}function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
-var sa=f.querySelector('#g-act'),sn=f.querySelector('#g-need');function ok(a,n){if((n==='n5')!==(a==='construccion')&&n!=='n6'&&(n==='n5'||n==='n1'))return false;var ps=[].map.call(document.querySelectorAll('#'+a+' .plist li[data-p]'),function(li){return li.dataset.p});return !N[n]||N[n].some(function(p){return ps.indexOf(p)>-1})}
+var sa=f.querySelector('#g-act'),sn=f.querySelector('#g-need');function ok(a,n){if(n==='n7'&&a!=='construccion')return false;if((n==='n5')!==(a==='construccion')&&n!=='n6'&&(n==='n5'||n==='n1'))return false;var ps=[].map.call(document.querySelectorAll('#'+a+' .plist li[data-p]'),function(li){return li.dataset.p});return !N[n]||N[n].some(function(p){return ps.indexOf(p)>-1})}
 function filt(){var a=sa.value;[].forEach.call(sn.options,function(o){if(!o.value)return;var v=!a||ok(a,o.value);o.hidden=!v;o.disabled=!v});if(sn.selectedOptions[0]&&sn.selectedOptions[0].disabled)sn.value='';o.innerHTML=''}
 sa.addEventListener('change',filt);filt();
 var wrap=el('div','gsteps');f.parentNode.insertBefore(wrap,f.nextSibling);f.hidden=true;var labs=f.querySelectorAll('label>span');
@@ -727,7 +727,7 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
         <div class="pi"><svg class="pic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 16v-3a6.5 6.5 0 0113 0v3"/><path d="M12 6.5v4"/><path d="M3 16h18v2.5H3z"/></svg></div><h3>Construcción y vías</h3>
         <p>Materiales calcáreos para obra civil y construcción de carreteras.</p>
         <ul class="plist">
-          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Carbonato fino que se usa como relleno mineral (filler) en mezclas asfálticas y morteros.<em class="uso"><b>Uso:</b> según la especificación de la obra.</em></span></li>
+          <li data-p="neutrocal"><strong>Carbonato de calcio</strong><span>Carbonato fino que se usa como relleno mineral (filler) en mezclas asfálticas y morteros, y como materia prima para empastes, pinturas, pegamorteros y pegacerámicos. Granulometrías de malla 40 a malla 325, bajo pedido.<em class="uso"><b>Uso:</b> según la especificación de la obra.</em></span></li>
           <li data-p="calforte"><strong>Hidróxido de calcio (Cal Forte)</strong><span>La cal reacciona con las arcillas, reduce su plasticidad y puede aumentar la capacidad de soporte de la subrasante, según el diseño de la mezcla.<em class="uso"><b>Uso:</b> mezclada con el suelo para estabilizar subrasantes, y en morteros y enlucidos.</em></span></li>
         </ul>
       </div>
@@ -811,9 +811,9 @@ f.addEventListener('submit',function(e){e.preventDefault();var a=f.querySelector
           <h3>Carbonato de calcio</h3>
           <p>Mineral calcáreo molido, nuestro producto de mayor demanda. Se utiliza para corregir la acidez del suelo y del agua y como fuente de calcio.</p>
           <dl>
-            <dt>Aplicaciones</dt><dd>Agricultura, acuicultura, sanidad animal y construcción de carreteras.</dd>
+            <dt>Aplicaciones</dt><dd>Agricultura, acuicultura, sanidad animal, construcción de carreteras y materia prima para empastes, pinturas, pegamorteros y pegacerámicos.</dd>
             <dt>Riqueza garantizada</dt><dd>90–95 % CaCO₃</dd>
-            <dt>Presentación</dt><dd>Saco de 45 kg, malla 200. Otras granulometrías bajo consulta.</dd>
+            <dt>Presentación</dt><dd>Saco de 45 kg, malla 200. Otras granulometrías, de malla 40 a malla 325, bajo pedido.</dd>
           </dl>
           <a class="more" href="carbonato-de-calcio.html">Ver detalle del producto →</a>
           <a class="ficha" href="ficha-neutrocal.html" target="_blank" rel="noopener">Ficha técnica (imprimir o PDF) →</a>
